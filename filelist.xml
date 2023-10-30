@@ -33,6 +33,7 @@
   <Text file="%ModDir%/Texts/Spanish/EastSpanishRT.xml" />
   <Text file="%ModDir%/Texts/Spanish/WestSpanishRT.xml" />
   <Afflictions file="%ModDir%/Afflictions/Afflictions.xml" />
+  <Afflictions file="%ModDir%/Afflictions/CyberAfflictions.xml" />
   <NPCSets file="%ModDir%/NPC/OutpostBots.xml" />
   <RandomEvents file="%ModDir%/NPC/KATEEspawn.xml" />
   <Talents file="%ModDir%/Achievements.xml" />
