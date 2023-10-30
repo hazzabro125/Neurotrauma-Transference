@@ -36,4 +36,7 @@
   <NPCSets file="%ModDir%/NPC/OutpostBots.xml" />
   <RandomEvents file="%ModDir%/NPC/KATEEspawn.xml" />
   <Talents file="%ModDir%/Achievements.xml" />
+  <Other file="%ModDir%/Lua/Autorun/init.lua" />
+  <Other file="%ModDir%/Lua/Scripts/humanupdate.lua" />
+  <Other file="%ModDir%/Lua/Scripts/items.lua" />
 </contentpackage>
