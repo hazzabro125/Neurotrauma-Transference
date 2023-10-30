@@ -97,7 +97,7 @@ NTRT.RemovedAfflictions = { -- afflictions that are periodically removed from ro
 -- its better to have it like this than verbosely plastering it all over the place
 NTRT.IsRobot = function(character)
     --return true
-    return not character.IsHuman
+    return not character.SpeciesName == "Robot"
 end
 
 local limbtypes = {
