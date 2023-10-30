@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Brazilian Portuguese" nowhitespace="false" translatedname="Português brasileiro">
+  <robotmale>Robot-m</robotmale>
+  <robotfemale>Robot-F</robotfemale>
+  <afflictiondescription.robotpower.low>Sua bateria é carregada o suficiente para executar completamente seus sistemas.</afflictiondescription.robotpower.low>
+  <afflictiondescription.robotpower>Sua bateria está funcionando baixa.</afflictiondescription.robotpower>
+  <afflictiondescription.rinternaldamage.low>Menores faíscas surgem do seu peito.</afflictiondescription.rinternaldamage.low>
+  <afflictiondescription.rinternaldamage>Muitos componentes internos estão fortemente danificados!</afflictiondescription.rinternaldamage>
+  <entityname.frame1>EXO-FRAM MK. EU</entityname.frame1>
+  <entityname.frame2>EXO-FRAM MK. Ii</entityname.frame2>
+  <entityname.frame2safe>EXO-quadro de segurança</entityname.frame2safe>
+  <entityname.Cframe1>"Scout" Combat Exo-Frame</entityname.Cframe1>
+  <entityname.Cframe2>"Sledge" Combat Exo-Frame</entityname.Cframe2>
+  <entityname.v1frame>Protótipo de combate exo-quadro</entityname.v1frame>
+  <entityname.disposablebattery>Bateria descartável</entityname.disposablebattery>
+  <entitydescription.disposablebattery>Uma solução muito desperdiçada para a crise de energia robótica.</entitydescription.disposablebattery>
+  <entitydescription.frame1>Uma estrutura frágil e leve que pode lidar com pressão de até 3000 metros. Uma opção barata ótima para uma equipe de novato, mas as atualizações serão obrigatórias para missões mais profundas no Europa.</entitydescription.frame1>
+  <entitydescription.frame2>Um quadro forte com um carregador automático que suporta a pressão de até 4000 metros. Uma atualização direta construída sobre o exo-quadro MK. 1, ele deve lidar com os perigos mais adequadamente.</entitydescription.frame2>
+  <entitydescription.frame2safe>Um exo-quadro que combina os recursos de ambos o MK do exo-quadro. II e o chicote de segurança. Pode lidar com profundidades de até 4000 metros.</entitydescription.frame2safe>
+  <entitydescription.Cframe1>Uma estrutura forte e leve projetada para a Batalha Deep Sea. Oferece uma boa quantidade de proteção e firmware de combate. Pode suportar a pressão de até 6000 metros.</entitydescription.Cframe1>
+  <entitydescription.Cframe2>Um exo-quadro grande e pesado, projetado para a Batalha Deep Mar, alimentada por barras de combustível. Fortemente blindado e pode suportar a pressão de até 10.000 metros. Sua estrutura pesada permite diminuir o recuo de armas de fogo pesadas</entitydescription.Cframe2>
+  <entitydescription.v1frame>Um protótipo exo-quadro feito com um revestimento fino que se repara em contato com o sangue. Forneceu reforços de até 10.000 Met- Earth é silencioso. Sangue é combustível. Europa está cheia.</entitydescription.v1frame>
+</infotexts>

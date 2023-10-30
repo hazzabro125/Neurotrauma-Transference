@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Korean" nowhitespace="true" translatedname="한국어">
+  <robotmale>로봇 -M</robotmale>
+  <robotfemale>로봇 F</robotfemale>
+  <afflictiondescription.robotpower.low>배터리가 시스템을 완전히 실행할 수있을 정도로 충전됩니다.</afflictiondescription.robotpower.low>
+  <afflictiondescription.robotpower>배터리가 부족합니다.</afflictiondescription.robotpower>
+  <afflictiondescription.rinternaldamage.low>가슴에서 작은 불꽃이 튀어 나옵니다.</afflictiondescription.rinternaldamage.low>
+  <afflictiondescription.rinternaldamage>많은 내부 구성 요소가 크게 손상되었습니다!</afflictiondescription.rinternaldamage>
+  <entityname.frame1>엑소 프레임 MK. 나</entityname.frame1>
+  <entityname.frame2>엑소 프레임 MK. II</entityname.frame2>
+  <entityname.frame2safe>안전 엑소 프레임</entityname.frame2safe>
+  <entityname.Cframe1>"스카우트"전투 엑소 프레임</entityname.Cframe1>
+  <entityname.Cframe2>"썰매"전투 엑소 프레임</entityname.Cframe2>
+  <entityname.v1frame>프로토 타입 전투 엑소 프레임</entityname.v1frame>
+  <entityname.disposablebattery>일회용 배터리</entityname.disposablebattery>
+  <entitydescription.disposablebattery>로봇 에너지 위기에 대한 매우 낭비적인 해결책.</entitydescription.disposablebattery>
+  <entitydescription.frame1>최대 3000m의 압력을 처리 할 수있는 연약하고 경량 프레임. 신인 승무원에게는 저렴한 옵션이지만 Europa의 더 깊은 임무에는 업그레이드가 필수적입니다.</entitydescription.frame1>
+  <entitydescription.frame2>최대 4000 미터의 압력을 견딜 수있는 자동 특징이있는 강한 프레임. 엑소 프레임 MK에 구축 된 직접 업그레이드. 1, 그것은 위험을 더 적절하게 처리해야합니다.</entitydescription.frame2>
+  <entitydescription.frame2safe>엑소 프레임 MK의 기능을 결합한 엑소 프레임. II 및 안전 하네스. 최대 4000 미터까지 깊이를 처리 할 수 ​​있습니다.</entitydescription.frame2safe>
+  <entitydescription.Cframe1>심해 전투를 위해 설계된 강력하고 가벼운 프레임. 많은 양의 보호 및 전투 펌웨어를 제공합니다. 최대 6000m의 압력을 견딜 수 있습니다.</entitydescription.Cframe1>
+  <entitydescription.Cframe2>연료로드로 구동되는 심해 전투를 위해 설계된 크고 무거운 엑소 프레임. 무장 한 장갑과 최대 10,000 미터의 압력을 견딜 수 있습니다. 무거운 프레임은 무거운 총기에서 반동을 줄일 수 있습니다.</entitydescription.Cframe2>
+  <entitydescription.v1frame>혈액과 접촉 할 때 스스로를 수리하는 얇은 도금으로 만든 프로토 타입 엑소 프레임. 그것은 최대 10,000 개의 Met-Earth의 강화를 제공했습니다. 혈액은 연료입니다. 유로파가 가득 차 있습니다.</entitydescription.v1frame>
+</infotexts>

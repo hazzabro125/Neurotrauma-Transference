@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="German" nowhitespace="false" translatedname="Deutsch">
+  <robotmale>Roboter-M</robotmale>
+  <robotfemale>Roboter-F</robotfemale>
+  <afflictiondescription.robotpower.low>Ihr Akku ist genug aufgeladen, um Ihre Systeme vollständig auszuführen.</afflictiondescription.robotpower.low>
+  <afflictiondescription.robotpower>Ihr Akku läuft zu wenig.</afflictiondescription.robotpower>
+  <afflictiondescription.rinternaldamage.low>Kleinere Funken springen aus Ihrer Brust.</afflictiondescription.rinternaldamage.low>
+  <afflictiondescription.rinternaldamage>Viele interne Komponenten sind stark beschädigt!</afflictiondescription.rinternaldamage>
+  <entityname.frame1>Exo-Frame Mk. ICH</entityname.frame1>
+  <entityname.frame2>Exo-Frame Mk. II</entityname.frame2>
+  <entityname.frame2safe>Sicherheit Exo-Frame</entityname.frame2safe>
+  <entityname.Cframe1>"Scout" Combat Exo-Frame</entityname.Cframe1>
+  <entityname.Cframe2>"Schlitten" Kampfexo-Frame</entityname.Cframe2>
+  <entityname.v1frame>Prototyp Combat Exo-Frame</entityname.v1frame>
+  <entityname.disposablebattery>Einwegbatterie</entityname.disposablebattery>
+  <entitydescription.disposablebattery>Eine sehr verschwenderische Lösung für die Roboterenergiekrise.</entitydescription.disposablebattery>
+  <entitydescription.frame1>Ein gebrechlicher und leichtes Rahmen, der Druck bis zu 3000 Meter verarbeiten kann. Eine billige Option für eine Rookie -Crew, aber Upgrades werden für Missionen in Europa obligatorisch sein.</entitydescription.frame1>
+  <entitydescription.frame2>Ein starker Rahmen mit einem Auto-Länder, der in der Lage ist, Druck von bis zu 4000 Metern zu starten. Ein direktes Upgrade, das auf dem Exo-Frame MK basiert. 1, es sollte angemessener mit Gefahren umgehen.</entitydescription.frame2>
+  <entitydescription.frame2safe>Ein Exo-Frame, der die Fähigkeiten sowohl des Exo-Frame MK kombiniert. II und der Sicherheitsgurt. Es kann Tiefen bis zu 4000 Meter umgehen.</entitydescription.frame2safe>
+  <entitydescription.Cframe1>Ein starker und leichter Rahmen für Tiefseekampf. Bietet einen guten Betrag Schutz und bekämpft Firmware. Es kann dem Druck von bis zu 6000 Metern standhalten.</entitydescription.Cframe1>
+  <entitydescription.Cframe2>Ein großer und schwerer Exo-Frame, der für Tiefseekampf entwickelt wurde, der von Kraftstoffstangen angetrieben wird. Stark gepanzert und kann dem Druck von bis zu 10.000 Metern standhalten. Sein schwerer Rahmen ermöglicht es, den Rückstoß durch schwere Schusswaffen zu verringern</entitydescription.Cframe2>
+  <entitydescription.v1frame>Ein Prototypen-Exo-Frame mit einer dünnen Beschichtung, die sich beim Kontakt mit Blut repariert. Es lieferte Verstärkungen von bis zu 10.000 Met-Erde. Blut ist Kraftstoff. Europa ist voll.</entitydescription.v1frame>
+</infotexts>

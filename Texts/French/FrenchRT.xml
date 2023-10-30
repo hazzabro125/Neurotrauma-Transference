@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="French" nowhitespace="false" translatedname="Français">
+  <robotmale>Robot-m</robotmale>
+  <robotfemale>Robot-f</robotfemale>
+  <afflictiondescription.robotpower.low>Votre batterie est suffisamment chargée pour exécuter complètement vos systèmes.</afflictiondescription.robotpower.low>
+  <afflictiondescription.robotpower>Votre batterie est bas.</afflictiondescription.robotpower>
+  <afflictiondescription.rinternaldamage.low>Des étincelles mineures jaillissent de votre poitrine.</afflictiondescription.rinternaldamage.low>
+  <afflictiondescription.rinternaldamage>De nombreux composants internes sont fortement endommagés!</afflictiondescription.rinternaldamage>
+  <entityname.frame1>Exo-Frame MK. je</entityname.frame1>
+  <entityname.frame2>Exo-Frame MK. Ii</entityname.frame2>
+  <entityname.frame2safe>Sécurité Exo-Frame</entityname.frame2safe>
+  <entityname.Cframe1>"Scout" Combat Exo-Frame</entityname.Cframe1>
+  <entityname.Cframe2>"Sledge" Combat Exo-Frame</entityname.Cframe2>
+  <entityname.v1frame>Prototype Combat Exo-Frame</entityname.v1frame>
+  <entityname.disposablebattery>Batterie jetable</entityname.disposablebattery>
+  <entitydescription.disposablebattery>Une solution très inutile à la crise de l'énergie robotique.</entitydescription.disposablebattery>
+  <entitydescription.frame1>Un cadre fragile et léger qui peut gérer la pression jusqu'à 3000 mètres. Une option bon marché idéale pour une équipe recrue, mais les mises à niveau seront obligatoires pour les missions plus profondes à Europa.</entitydescription.frame1>
+  <entitydescription.frame2>Un cadre solide avec un chargeur automatique capable de résister à une pression jusqu'à 4000 mètres. Une mise à niveau directe construite sur le MK Exo-Frame. 1, il devrait gérer les dangers plus adéquatement.</entitydescription.frame2>
+  <entitydescription.frame2safe>Un cadre exo qui combine les capacités à la fois du mk exo-trame. II et le harnais de sécurité. Il peut gérer des profondeurs jusqu'à 4000 mètres.</entitydescription.frame2safe>
+  <entitydescription.Cframe1>Un cadre solide et léger conçu pour la bataille en mer profonde. Offre une bonne protection et le firmware de combat. Il peut résister à la pression jusqu'à 6000 mètres.</entitydescription.Cframe1>
+  <entitydescription.Cframe2>Une grande et lourde cadre exo conçu pour une bataille en mer profonde qui est alimentée par des tiges de carburant. Froisé blindé et peut résister à la pression jusqu'à 10 000 mètres. Son cadre lourd permet de réduire le recul à partir d'armes à feu lourdes</entitydescription.Cframe2>
+  <entitydescription.v1frame>Un prototype d'exo-trame fabriqué avec un placage mince qui se répare en contact avec le sang. Il a fourni des renforts jusqu'à 10 000 Met - la Terre est silencieuse. Le sang est du carburant. Europa est plein.</entitydescription.v1frame>
+</infotexts>

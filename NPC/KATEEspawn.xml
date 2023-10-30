@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Randomevents>
+  <EventSprites>
+    <Sprite identifier="katee_neutral" texture="%ModDir%/UI/katee_portrait.png" sourcerect="0,0,256,256" origin="0.5,0.5" />
+    <Sprite identifier="katee_positive" texture="%ModDir%/UI/katee_portrait.png" sourcerect="256,0,256,256" origin="0.5,0.5" />
+  </EventSprites>
+  <EventPrefabs>
+    <ScriptedEvent identifier="kateespawn" commonness="100">
+      <SpawnAction npcsetidentifier="rtmainnpc" npcidentifier="merchantrobot" spawnlocation="Outpost" spawnpointtype="Path" targetmoduletags="crewmodule" />
+      <TagAction criteria="player" tag="player" />
+      <Label name="beginning" />
+      <TriggerAction target1tag="merchantrobot" target2tag="player" applytotarget2="kate_trig_player" radius="150" waitforinteraction="true" />
+      <ConversationAction targettag="kate_trig_player" text="eventtext.shop.katee.interact" eventsprite="katee_neutral">
+        <Option text="eventtext.shop.katee.option.shop">
+          <CheckItemAction targettag="kate_trig_player" itemidentifiers="batterycell">
+            <Success>
+              <CheckItemAction targettag="kate_trig_player" itemidentifiers="legacyskin_m">
+                <Success>
+                  <CheckItemAction targettag="kate_trig_player" itemidentifiers="legacyskin_f">
+                    <Success>
+                      <CheckItemAction targettag="kate_trig_player" itemidentifiers="wallcharger">
+                        <Success>
+                          <ConversationAction targettag="kate_trig_player" text="eventtext.shop.katee.achievement" eventsprite="katee_positive" />
+                          <AfflictionAction targettag="kate_trig_player" affliction="kateegivetalent" strength="1" />
+                          <ClearTagAction tag="kate_trig_player" />
+                          <GoTo name="beginning" />
+                        </Success>
+                        <Failure>
+                          <GoTo name="shopping" />
+                        </Failure>
+                      </CheckItemAction>
+                    </Success>
+                    <Failure>
+                      <GoTo name="shopping" />
+                    </Failure>
+                  </CheckItemAction>
+                </Success>
+                <Failure>
+                  <GoTo name="shopping" />
+                </Failure>
+              </CheckItemAction>
+            </Success>
+            <Failure>
+              <Label name="shopping" />
+              <ConversationAction targettag="kate_trig_player" text="eventtext.shop.katee.interact" eventsprite="katee_neutral">
+                <Option text="eventtext.shop.katee.option.robotm">
+                  <CheckMoneyAction Amount="300">
+                    <Success>
+                      <MoneyAction amount="-300" />
+                      <SpawnAction itemidentifier="legacyskin_m" targetinventory="kate_trig_player" />
+                      <ConversationAction targettag="kate_trig_player" text="eventtext.shop.katee.option.buy.success" eventsprite="katee_positive" />
+                      <ClearTagAction tag="kate_trig_player" />
+                      <GoTo name="beginning" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="kate_trig_player" text="eventtext.shop.katee.buy.failure" eventsprite="katee_neutral" />
+                      <ClearTagAction tag="kate_trig_player" />
+                      <GoTo name="beginning" />
+                    </Failure>
+                  </CheckMoneyAction>
+                </Option>
+                <Option text="eventtext.shop.katee.option.robotf">
+                  <CheckMoneyAction Amount="300">
+                    <Success>
+                      <MoneyAction amount="-300" />
+                      <SpawnAction itemidentifier="legacyskin_f" targetinventory="kate_trig_player" />
+                      <ConversationAction targettag="kate_trig_player" text="eventtext.shop.katee.option.buy.success" eventsprite="katee_positive" />
+                      <ClearTagAction tag="kate_trig_player" />
+                      <GoTo name="beginning" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="kate_trig_player" text="eventtext.shop.katee.buy.failure" eventsprite="katee_neutral" />
+                      <ClearTagAction tag="kate_trig_player" />
+                      <GoTo name="beginning" />
+                    </Failure>
+                  </CheckMoneyAction>
+                </Option>
+                <Option text="eventtext.shop.katee.option.battery">
+                  <CheckMoneyAction Amount="110">
+                    <Success>
+                      <MoneyAction amount="-110" />
+                      <SpawnAction itemidentifier="batterycell" targetinventory="kate_trig_player" />
+                      <ConversationAction targettag="kate_trig_player" text="eventtext.shop.katee.option.buy.success" eventsprite="katee_positive" />
+                      <ClearTagAction tag="kate_trig_player" />
+                      <GoTo name="beginning" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="kate_trig_player" text="eventtext.shop.katee.buy.failure" eventsprite="katee_neutral" />
+                      <ClearTagAction tag="kate_trig_player" />
+                      <GoTo name="beginning" />
+                    </Failure>
+                  </CheckMoneyAction>
+                </Option>
+                <Option text="eventtext.shop.katee.option.charger">
+                  <CheckMoneyAction Amount="700">
+                    <Success>
+                      <MoneyAction amount="-700" />
+                      <SpawnAction itemidentifier="wallcharger" targetinventory="kate_trig_player" />
+                      <ConversationAction targettag="kate_trig_player" text="eventtext.shop.katee.option.buy.success" eventsprite="katee_positive" />
+                      <ClearTagAction tag="kate_trig_player" />
+                      <GoTo name="beginning" />
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="kate_trig_player" text="eventtext.shop.katee.buy.failure" eventsprite="katee_neutral" />
+                      <ClearTagAction tag="kate_trig_player" />
+                      <GoTo name="beginning" />
+                    </Failure>
+                  </CheckMoneyAction>
+                </Option>
+                <Option text="eventtext.shop.katee.option.leave" endconversation="true">
+                  <GoTo name="beginning" />
+                </Option>
+              </ConversationAction>
+            </Failure>
+          </CheckItemAction>
+        </Option>
+        <Option text="eventtext.shop.katee.option.leave" endconversation="true">
+          <GoTo name="beginning" />
+        </Option>
+      </ConversationAction>
+    </ScriptedEvent>
+  </EventPrefabs>
+  <EventSet identifier="outpostevents.robot" allowatstart="true" minleveldifficulty="5" maxleveldifficulty="80" ignorecooldown="true" chooserandom="true" onceperoutpost="true">
+    <ScriptedEvent identifier="kateespawn" commonness="90" />
+  </EventSet>
+</Randomevents>

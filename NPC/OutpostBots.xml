@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<npcsets>
+  <npcset identifier="rtmainnpc">
+    <npc identifier="merchantrobot" job="assistant" healthmultiplier="1" moduleflags="none" commonness="1" spawnpointtags="shop" behavior="StayInHull">
+      <Character speciesname="human" gender="robotmale" headspriteid="11" hairindex="0" beardindex="0" moustacheindex="0" faceattachmentindex="0" skincolor="255,255,255,255" haircolor="255,255,255,255" facialhaircolor="255,255,255,255" personality="Crazy">
+        <job name="Assistant" identifier="assistant">
+          <skill identifier="electrical" level="5" />
+          <skill identifier="mechanical" level="5" />
+          <skill identifier="weapons" level="5" />
+          <skill identifier="medical" level="5" />
+          <skill identifier="helm" level="5" />
+        </job>
+      </Character>
+      <ItemSet commonness="1">
+        <Item identifier="kateeskin" equip="true" />
+        <Item identifier="idcard" equip="true" />
+        <Item identifier="wrench" equip="true" />
+      </ItemSet>
+    </npc>
+  </npcset>
+</npcsets>

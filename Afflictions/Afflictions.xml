@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Afflictions>
+  <Affliction name="Robotic Hunger" identifier="powerlow" description="Agitation and a tremor are obvious." type="robohunger" causeofdeathdescription="The battery is irreversibly damaged." selfcauseofdeathdescription="You ran out of power and your battery is irreversibly damaged." limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" showinhealthscannerthreshold="50" treatmentthreshold="30" maxstrength="100" affectmachines="false" iconcolors="0,255,0,255;255,255,0,255;255,0,0,255">
+    <Description textidentifier="afflictiondescription.robotpower.low" minstrength="0" maxstrength="30" />
+    <Description textidentifier="afflictiondescription.robotpower" minstrength="30" maxstrength="100" />
+    <!-- no effects at this point -->
+    <Effect minstrength="0" maxstrength="30" strengthchange="0" />
+    <!-- Slow down the character and slightly decrease vitality -->
+    <Effect minstrength="30" maxstrength="50" strengthchange="0" minchromaticaberration="0.0" maxchromaticaberration="1.0" dialogflag="OpiateWithdrawalLow" minspeedmultiplier="1.0" maxspeedmultiplier="0.8"></Effect>
+    <!-- Decrease vitality more. The strength of the affliction drops faster, meaning that 
+    the character needs a stronger opiate addiction for the withdrawal symptoms to stay at this level -->
+    <Effect minstrength="50" maxstrength="80" strengthchange="0" minchromaticaberration="1.0" maxchromaticaberration="5.0" dialogflag="OpiateWithdrawalMedium" minspeedmultiplier="0.8" maxspeedmultiplier="0.6"></Effect>
+    <Effect minstrength="80" maxstrength="95" strengthchange="0" minchromaticaberration="1.0" maxchromaticaberration="5.0" dialogflag="OpiateWithdrawalMedium" minspeedmultiplier="0.8" maxspeedmultiplier="0.3"></Effect>
+    <!-- Withdrawal symptoms start to get lethal at this level -->
+    <Effect minstrength="95" maxstrength="100" minscreendistort="0.0" maxscreendistort="3.0" strengthchange="0" minchromaticaberration="5.0" maxchromaticaberration="20.0" minradialdistort="10.0" maxradialdistort="40.0" dialogflag="OpiateWithdrawalHigh" minspeedmultiplier="0.5" maxspeedmultiplier="0.1">
+      <StatusEffect target="Character" setvalue="true">
+        <Affliction identifier="stun" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" Interval="1.5">
+        <Sound file="%ModDir%/Characters/Robot/helpbeep_1.ogg" range="1500" selectionmode="Random" />
+        <Sound file="%ModDir%/Characters/Robot/helpbeep_2.ogg" range="1500" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/RH.png" sourcerect="0,0,128,128" color="0,255,0,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Water Damage" identifier="rinternaldamage" description="Water has fried your circuts!" type="damage" causeofdeathdescription="Died of water damage" selfcauseofdeathdescription="You have succumbed to your internal water damage." limbspecific="false" indicatorlimb="Torso" maxstrength="200" damageoverlayalpha="1.0">
+    <Description textidentifier="afflictiondescription.rinternaldamage.low" minstrength="0" maxstrength="40" />
+    <Description textidentifier="afflictiondescription.rinternaldamage" minstrength="40" maxstrength="200" />
+    <Effect minstrength="0" maxstrength="20" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0.1"></Effect>
+    <Effect minstrength="20" maxstrength="200" multiplybymaxvitality="true" minvitalitydecrease="0.1" maxvitalitydecrease="2">
+      <StatusEffect target="Character" Interval="3">
+        <Affliction identifier="stun" amount="100" probability="0.5" />
+        <Sound file="Content/Items/Electricity/Zap1.ogg" range="500" selectionmode="Random" />
+        <Sound file="Content/Items/Electricity/Zap2.ogg" range="500" />
+        <Sound file="Content/Items/Electricity/Zap3.ogg" range="500" />
+        <Sound file="Content/Items/Electricity/Zap4.ogg" range="500" />
+        <Sound file="Content/Items/Electricity/Zap5.ogg" range="500" />
+        <ParticleEmitter drawontop="true" particle="spark" distancemin="0" distancemax="30" anglemin="0" anglemax="360" particlespersecond="5" velocitymin="10" velocitymax="50" scalemin="0.4" scalemax="0.7" />
+        <ParticleEmitter drawontop="true" particle="swirlysmoke" particlespersecond="2" scalemin="1" scalemax="2" anglemin="0" anglemax="360" velocitymin="0" velocitymax="10" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/WD.png" sourcerect="0,0,128,128" color="0,255,0,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Frame Buff" identifier="framebuff" type="immunity" isbuff="true" limbspecific="false" indicatorlimb="Torso" showiconthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-0.6" resistancefor="rinternaldamage" minresistance="1" maxresistance="1" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="BLOOD IS FUEL" identifier="v1buff" type="immunity" isbuff="true" limbspecific="false" indicatorlimb="Torso" showiconthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-0.6" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Fuel" identifier="v1debuff" type="immunity" isbuff="true" limbspecific="false" indicatorlimb="Torso" showiconthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-0.6" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <!-- Colours from now on !-->
+  <Affliction name="NanoBlue" identifier="robotblue" type="dye" isbuff="true" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="0" minbodytint="0,0,0,0" maxbodytint="53,120,168,255" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="NanoRed" identifier="robotred" type="dye" isbuff="true" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="0" minbodytint="0,0,0,0" maxbodytint="198,45,45,255" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="NanoGreen" identifier="robotgreen" type="dye" isbuff="true" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="0" minbodytint="0,0,0,0" maxbodytint="89,122,86,255" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="NanoYellow" identifier="robotyellow" type="dye" isbuff="true" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="0" minbodytint="0,0,0,0" maxbodytint="242,210,67,255" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="NanoPurple" identifier="robotpurple" type="dye" isbuff="true" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="0" minbodytint="0,0,0,0" maxbodytint="165,79,198,255" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="NanoOrange" identifier="robotorange" type="dye" isbuff="true" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="0" minbodytint="0,0,0,0" maxbodytint="224,122,33,255" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="NanoPink" identifier="robotpink" type="dye" isbuff="true" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="0" minbodytint="0,0,0,0" maxbodytint="255,140,222,255" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="NanoBlack" identifier="robotblack" type="dye" isbuff="true" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="0" minbodytint="0,0,0,0" maxbodytint="76,76,76,255" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="NanoWhite" identifier="robotwhite" type="dye" isbuff="true" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="0" minbodytint="0,0,0,0" maxbodytint="255,255,255,255" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Overcharge" identifier="robotfast" description="Gotta go fast." type="haste" isbuff="true" showiconthreshold="0" limbspecific="false" maxstrength="600">
+    <Effect minstrength="0" maxstrength="600" strengthchange="-1" minspeedmultiplier="1.0" maxspeedmultiplier="1.15">
+      <StatValue stattype="MeleeAttackSpeed" minvalue="0" maxvalue="0.35" />
+      <StatValue stattype="SwimmingSpeed" minvalue="0" maxvalue="0.3" />
+    </Effect>
+    <!-- Greater than 1.48 and the ragdolls start snapping when turning and characters take damage from colliding with doors & walls -->
+    <icon texture="%ModDir%/UI/RH.png" sourcerect="0,0,128,128" color="0,255,0,255" origin="0,0" />
+  </Affliction>
+  <!-- Tells the game is the character should be immune to EMP -->
+  <Affliction name="Fleshbag" identifier="empimmunity" type="immunity" isbuff="true" limbspecific="false" showiconthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-0.6" resistancefor="emp" minresistance="1" maxresistance="1">
+      <StatusEffect target="Character" type="OnActive">
+        <ReduceAffliction type="augment" amount="100" />
+      </StatusEffect>
+      <StatusEffect target="Character" type="OnActive" Comparison="Or">
+        <Conditional rdronepod="gte 1" />
+        <Conditional rscythe="gte 1" />
+        <Conditional rdronecyst="gte 1" />
+        <Conditional rbayonet="gte 1" />
+        <Conditional rhusk="gte 1" />
+        <Affliction identifier="explosiondamage" amount="100" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Made of Steel" identifier="roboticimmunity" type="immunity" isbuff="true" limbspecific="false" showiconthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-0.6" resistancefor="oxygenlow,huskinfection,bleeding,nausea,organdamage,watchersgaze,concussion,bloodloss,poison,opiateoverdose,opiatewithdrawal,opiateaddiction,drunk,husksymbiosis,paralysis" minresistance="1" maxresistance="1">
+      <StatusEffect target="Character" type="OnActive">
+        <ReduceAffliction identifier="psychosis" amount="100" />
+        <ReduceAffliction type="geneticmaterialbuff" amount="100" />
+        <ReduceAffliction type="medicheal" amount="100" />
+      </StatusEffect>
+      <StatusEffect target="Character" type="OnActive" Comparison="Or">
+        <Conditional naturalmeleeweapon="gte 1" />
+        <Conditional naturalrangedweapon="gte 1" />
+        <Affliction identifier="explosiondamage" amount="100" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="ArcImmunity" identifier="arcframeempimmunity" type="immunity" isbuff="true" limbspecific="false" showiconthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-0.6" resistancefor="emp" minresistance="1" maxresistance="1"></Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Scout Dodge" identifier="scoutdodge" type="immunity" isbuff="true" limbspecific="false" showiconthreshold="0" maxstrength="100" iconcolors="255,0,0,255;0,255,0,255">
+    <Effect minstrength="0" maxstrength="98" strengthchange="-0.5" />
+    <Effect minstrength="99" maxstrength="100" strengthchange="-0.5" resistancefor="damage,bleeding,burn" minresistance="0.99" maxresistance="0.99" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,896,128,128" color="255,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Decay" identifier="dronedecay" type="immunity" isbuff="true" limbspecific="false" showiconthreshold="0" maxstrength="100" iconcolors="255,0,0,255;0,255,0,255">
+    <Effect minstrength="0" maxstrength="98" strengthchange="2" />
+    <Effect minstrength="99" maxstrength="100" strengthchange="2" minvitalitydecrease="100" maxvitalitydecrease="200" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,896,128,128" color="255,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="ImmolatorImmunity" identifier="immolatorimmunity" type="immunity" isbuff="true" limbspecific="false" showiconthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-0.6" resistancefor="burn" minresistance="1" maxresistance="1"></Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <!--
+  
+	GENERIC AUGMENTS
+  
+  
+  !-->
+  <Affliction name="Titanium Plating" identifier="rdamageresistance" type="augment" limbspecific="false" indicatorlimb="Torso" healableinmedicalclinic="false" hideiconafterdelay="true" showiconthreshold="0" treatmentthreshold="100" maxstrength="100" iconcolors="255,255,255">
+    <Effect minstrength="0" maxstrength="100" resistancefor="damage" minresistance="0.1" maxresistance="0.35" />
+    <icon texture="%ModDir%/UI/augmentUI.png" color="255,255,255,255" origin="-8.6465874E-08,0" sourcerect="104,0,82,97" />
+  </Affliction>
+  <Affliction name="Waterproof Circuts" identifier="rwaterproof" type="augment" indicatorlimb="Torso" hideiconafterdelay="true" healableinmedicalclinic="false" showiconthreshold="0" treatmentthreshold="100" maxstrength="1" iconcolors="255,255,255">
+    <Effect minstrength="0" maxstrength="1" resistancefor="rinternaldamage" minresistance="1" maxresistance="1" />
+    <icon texture="%ModDir%/UI/augmentUI.png" sourcerect="25,0,80,97" color="255,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Electrical Insulation" identifier="rempresistance" type="augment" indicatorlimb="Torso" hideiconafterdelay="true" healableinmedicalclinic="false" showiconthreshold="0" treatmentthreshold="100" maxstrength="100" iconcolors="255,255,255">
+    <Effect minstrength="0" maxstrength="100" resistancefor="emp" minresistance="0.3" maxresistance="0.75" />
+    <icon texture="%ModDir%/UI/augmentUI.png" color="255,255,255,255" origin="0,0" sourcerect="265,0,80,97" />
+  </Affliction>
+  <Affliction name="Strong Motors" identifier="rmovespeed" type="augment" limbspecific="false" indicatorlimb="Torso" hideiconafterdelay="true" healableinmedicalclinic="false" showiconthreshold="0" treatmentthreshold="100" maxstrength="100" iconcolors="255,255,255">
+    <Effect minstrength="0" maxstrength="100">
+      <StatValue stattype="WalkingSpeed" minvalue="0.05" maxvalue="0.15" />
+    </Effect>
+    <icon texture="%ModDir%/UI/augmentUI.png" color="255,255,255,255" origin="0,0" sourcerect="753,0,81,97" />
+  </Affliction>
+  <Affliction name="Lubricated Joints" identifier="rswingspeed" type="augment" limbspecific="false" indicatorlimb="Torso" hideiconafterdelay="true" healableinmedicalclinic="false" showiconthreshold="0" treatmentthreshold="100" maxstrength="100" iconcolors="255,255,255">
+    <Effect minstrength="0" maxstrength="100">
+      <StatValue stattype="MeleeAttackSpeed" minvalue="0.03" maxvalue="0.15" />
+    </Effect>
+    <icon texture="%ModDir%/UI/augmentUI.png" color="255,255,255,255" origin="0,0" sourcerect="834,0,83,97" />
+  </Affliction>
+  <Affliction name="Improved Swim Cycle" identifier="rswimspeed" type="augment" limbspecific="false" indicatorlimb="Torso" hideiconafterdelay="true" healableinmedicalclinic="false" showiconthreshold="0" treatmentthreshold="100" maxstrength="100" iconcolors="255,255,255">
+    <Effect minstrength="0" maxstrength="100">
+      <StatValue stattype="SwimmingSpeed" minvalue="0.05" maxvalue="0.20" />
+    </Effect>
+    <icon texture="%ModDir%/UI/augmentUI.png" ccolor="255,255,255,255" origin="0,0" sourcerect="185,0,81,97" />
+  </Affliction>
+  <!--
+  
+	SKILL AUGMENTS
+  
+  
+  !-->
+  <Affliction name="Navigation Firmware" identifier="rskillcaptain" type="augment" limbspecific="false" indicatorlimb="Torso" hideiconafterdelay="true" healableinmedicalclinic="false" showiconthreshold="0" treatmentthreshold="100" maxstrength="100" iconcolors="102,139,183">
+    <Effect minstrength="0" maxstrength="100">
+      <StatValue stattype="HelmSkillBonus" minvalue="1" maxvalue="20" />
+      <StatValue stattype="TurretChargeSpeed" minvalue="0.03" maxvalue="0.30" />
+    </Effect>
+    <icon texture="%ModDir%/UI/augmentUI.png" color="102,139,183,255" origin="0,0" sourcerect="589,0,80,98" />
+  </Affliction>
+  <Affliction name="Combat Firmware" identifier="rskillsecurity" type="augment" limbspecific="false" indicatorlimb="Torso" hideiconafterdelay="true" healableinmedicalclinic="false" showiconthreshold="0" treatmentthreshold="100" maxstrength="100" iconcolors="119,98,80">
+    <Effect minstrength="0" maxstrength="100">
+      <StatValue stattype="WeaponsSkillBonus" minvalue="1" maxvalue="20" />
+      <StatValue stattype="TurretAttackSpeed" minvalue="0.03" maxvalue="0.30" />
+    </Effect>
+    <icon texture="%ModDir%/UI/augmentUI.png" color="119,98,80,255" origin="0,0" sourcerect="507,0,80,98" />
+  </Affliction>
+  <Affliction name="Medical Firmware" identifier="rskillmedic" type="augment" limbspecific="false" indicatorlimb="Torso" hideiconafterdelay="true" healableinmedicalclinic="false" showiconthreshold="0" treatmentthreshold="100" maxstrength="100" iconcolors="255,66,56">
+    <Effect minstrength="0" maxstrength="100">
+      <StatValue stattype="MedicalSkillBonus" minvalue="1" maxvalue="20" />
+      <StatValue stattype="MedicalItemApplyingMultiplier" minvalue="0.03" maxvalue="0.3" />
+    </Effect>
+    <icon texture="%ModDir%/UI/augmentUI.png" color="255,66,56,255" origin="0,0" sourcerect="671,0,80,98" />
+  </Affliction>
+  <Affliction name="Mechanical Firmware" identifier="rskillmechanic" type="augment" limbspecific="false" indicatorlimb="Torso" healableinmedicalclinic="false" hideiconafterdelay="true" showiconthreshold="0" treatmentthreshold="100" maxstrength="100" iconcolors="102,239,255">
+    <Effect minstrength="0" maxstrength="100">
+      <StatValue stattype="MechanicalSkillBonus" minvalue="1" maxvalue="20" />
+      <StatValue stattype="RepairSpeed" minvalue="0.03" maxvalue="0.3" />
+      <StatValue stattype="MaxRepairConditionMultiplierMechanical" minvalue="0.05" maxvalue="0.1" />
+    </Effect>
+    <icon texture="%ModDir%/UI/augmentUI.png" color="102,239,255,255" origin="0,0" sourcerect="589,98,80,99" />
+  </Affliction>
+  <Affliction name="Engineering Firmware" identifier="rskillengineer" type="augment" limbspecific="false" indicatorlimb="Torso" healableinmedicalclinic="false" hideiconafterdelay="true" showiconthreshold="0" treatmentthreshold="100" maxstrength="100" iconcolors="255,203,73">
+    <Effect minstrength="0" maxstrength="100">
+      <StatValue stattype="ElectricalSkillBonus" minvalue="1" maxvalue="20" />
+      <StatValue stattype="RepairSpeed" minvalue="0.03" maxvalue="0.30" />
+      <StatValue stattype="MaxRepairConditionMultiplierElectrical" minvalue="0.05" maxvalue="0.1" />
+    </Effect>
+    <icon texture="%ModDir%/UI/augmentUI.png" color="255,203,73,255" origin="0,0" sourcerect="507,98,81,99" />
+  </Affliction>
+  <!--
+  
+	UNIQUE AUGMENTS
+  
+  
+  !-->
+  <AfflictionHusk name="Drone Synthesis" identifier="rdronepod" type="alieninfection" healableinmedicalclinic="false" limbspecific="false" targets="Robot" huskedspeciesname="husk" indicatorlimb="Torso" hideiconafterdelay="true" showiconthreshold="0" needsair="true" causespeechimpediment="false" treatmentthreshold="1000" dormantthreshold="0" activethreshold="0" transitionthreshold="1000" transformthresholdondeath="1000" sendmessages="false" maxstrength="100" iconcolors="94,255,241">
+    <icon texture="%ModDir%/UI/augmentUI.png" color="94,255,241,255" origin="0,0" sourcerect="345,0,80,97" />
+  </AfflictionHusk>
+  <AfflictionHusk name="Bayonet" identifier="rbayonet" type="alieninfection" healableinmedicalclinic="false" limbspecific="false" targets="Robot" huskedspeciesname="husk" indicatorlimb="LeftArm" hideiconafterdelay="true" showiconthreshold="0" needsair="true" causespeechimpediment="false" treatmentthreshold="1000" dormantthreshold="0" activethreshold="0" transitionthreshold="1000" transformthresholdondeath="1000" sendmessages="false" maxstrength="100" iconcolors="94,255,241">
+    <icon texture="%ModDir%/UI/augmentUI.png" color="94,255,241,255" origin="0,0" sourcerect="425,0,80,97" />
+  </AfflictionHusk>
+  <Affliction name="Microbots" identifier="rmicrobots" type="augment" limbspecific="false" indicatorlimb="Torso" healableinmedicalclinic="false" hideiconafterdelay="true" showiconthreshold="0" treatmentthreshold="100" maxstrength="100" iconcolors="94,255,241">
+    <Effect minstrength="0" maxstrength="20">
+      <StatusEffect target="Character" interval="0.1" disabledeltatime="true">
+        <ReduceAffliction type="damage" amount="0.01" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="20" maxstrength="40">
+      <StatusEffect target="Character" interval="0.1" disabledeltatime="true">
+        <ReduceAffliction type="damage" amount="0.035" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="40" maxstrength="60">
+      <StatusEffect target="Character" interval="0.1" disabledeltatime="true">
+        <ReduceAffliction type="damage" amount="0.05" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="60" maxstrength="80">
+      <StatusEffect target="Character" interval="0.1" disabledeltatime="true">
+        <ReduceAffliction type="damage" amount="0.065" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="80" maxstrength="100">
+      <StatusEffect target="Character" interval="0.1" disabledeltatime="true">
+        <ReduceAffliction type="damage" amount="0.075" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/augmentUI.png" color="94,255,241,255" origin="0,0" sourcerect="917,0,81,97" />
+  </Affliction>
+  <!--
+  
+	CORRUPTED AUGMENTS
+
+  !-->
+  <AfflictionHusk name="Depth Immunity" identifier="rhusk" type="alieninfection" healableinmedicalclinic="false" limbspecific="false" targets="Robot" huskedspeciesname="husk" indicatorlimb="Head" hideiconafterdelay="true" showiconthreshold="0" needsair="false" causespeechimpediment="true" treatmentthreshold="1000" dormantthreshold="0" activethreshold="0" transitionthreshold="1000" transformthresholdondeath="1000" sendmessages="false" maxstrength="100" iconcolors="255,0,0">
+    <Effect minstrength="0" maxstrength="100" resistancefor="rinternaldamage,pressure" minresistance="1" maxresistance="1">
+      <StatusEffect target="Character">
+        <ReduceAffliction identifier="rwaterproof" amount="100" />
+      </StatusEffect>
+      <StatusEffect target="Character" Comparison="Or">
+        <Conditional rnanomachines="gt 0" />
+        <Conditional rdronecyst="gt 0" />
+        <Conditional rscythe="gt 0" />
+        <GiveTalentInfo talentidentifiers="corrupted" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/augmentUI.png" color="255,0,0,255" origin="0,0" sourcerect="4,110,125,100" />
+  </AfflictionHusk>
+  <AfflictionHusk name="Scythe" identifier="rscythe" type="alieninfection" healableinmedicalclinic="false" limbspecific="false" targets="Robot" huskedspeciesname="husk" indicatorlimb="RightArm" hideiconafterdelay="true" showiconthreshold="0" needsair="true" causespeechimpediment="false" treatmentthreshold="1000" dormantthreshold="0" activethreshold="0" transitionthreshold="1000" transformthresholdondeath="1000" sendmessages="false" maxstrength="100" iconcolors="255,0,0">
+    <Effect minstrength="0" maxstrength="100" maxvitalitydecrease="0" strengthchange="0" MinAfflictionOverlayAlphaMultiplier="0.3" MaxAfflictionOverlayAlphaMultiplier="0.7">
+      <StatValue stattype="MeleeAttackMultiplier" minvalue="0" maxvalue="0.35" />
+      <StatusEffect target="Character">
+        <ReduceAffliction identifier="rbayonet" amount="100" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Affliction identifier="robotpsychosis" amount="1000" />
+      </StatusEffect>
+      <StatusEffect target="Character" Comparison="Or">
+        <Conditional rnanomachines="gt 0" />
+        <Conditional rdronecyst="gt 0" />
+        <Conditional rhusk="gt 0" />
+        <GiveTalentInfo talentidentifiers="corrupted" />
+      </StatusEffect>
+    </Effect>
+    <PeriodicEffect mininterval="3" maxinterval="15">
+      <StatusEffect target="Character">
+        <Conditional IsLocalPlayer="True" />
+        <Sound file="%ModDir%/insanity/corruptionvoice1.ogg" selectionmode="Random" />
+        <Sound file="%ModDir%/insanity/corruptionvoice2.ogg" />
+        <Sound file="%ModDir%/insanity/corruptionvoice3.ogg" />
+        <Sound file="%ModDir%/insanity/corruptionvoice4.ogg" />
+        <Sound file="%ModDir%/insanity/corruptionvoice5.ogg" />
+        <Sound file="%ModDir%/insanity/corruptionvoice6.ogg" />
+        <Sound file="%ModDir%/insanity/corruptionvoice7.ogg" />
+        <Sound file="%ModDir%/insanity/corruptionvoice8.ogg" />
+        <Sound file="%ModDir%/insanity/corruptionvoice9.ogg" />
+        <Sound file="%ModDir%/insanity/corruptionvoice10.ogg" />
+        <Sound file="%ModDir%/insanity/corruptionvoice11.ogg" />
+        <Sound file="%ModDir%/insanity/corruptionvoice12.ogg" />
+        <Sound file="%ModDir%/insanity/corruptionvoice13.ogg" />
+        <Sound file="%ModDir%/insanity/glitch1.ogg" />
+        <Sound file="%ModDir%/insanity/glitch2.ogg" />
+        <Sound file="%ModDir%/insanity/glitch3.ogg" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="0.5" maxinterval="1">
+      <StatusEffect target="Character">
+        <Conditional IsLocalPlayer="True" />
+        <Sound file="Content/Sounds/HeartbeatDiastole1.ogg" selectionmode="Random" />
+        <Sound file="Content/Sounds/HeartbeatDiastole2.ogg" />
+        <Sound file="Content/Sounds/HeartbeatDiastole3.ogg" />
+        <Sound file="Content/Sounds/HeartbeatSystole1.ogg" />
+        <Sound file="Content/Sounds/HeartbeatSystole2.ogg" />
+        <Sound file="Content/Sounds/HeartbeatSystole3.ogg" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <Afflictionoverlay texture="%ModDir%/UI/corruptoverlay.png" orgin="0.5,0.5" maintainaspectratio="true" />
+    <icon texture="%ModDir%/UI/augmentUI.png" color="255,0,0,255" origin="0,0" sourcerect="281,110,124,99" />
+  </AfflictionHusk>
+  <AfflictionHusk name="Drone Cysts" identifier="rdronecyst" type="alieninfection" healableinmedicalclinic="false" limbspecific="false" targets="Robot" huskedspeciesname="husk" indicatorlimb="Torso" hideiconafterdelay="true" showiconthreshold="0" needsair="true" causespeechimpediment="false" treatmentthreshold="1000" dormantthreshold="0" activethreshold="0" transitionthreshold="1000" transformthresholdondeath="1000" sendmessages="false" maxstrength="100" iconcolors="255,0,0">
+    <Effect minstrength="0" maxstrength="100" maxvitalitydecrease="0" strengthchange="0">
+      <StatusEffect target="Character">
+        <ReduceAffliction identifier="rdronepod" amount="100" />
+      </StatusEffect>
+      <StatusEffect target="Character" Comparison="Or">
+        <Conditional rscythe="gt 0" />
+        <Conditional rnanomachines="gt 0" />
+        <Conditional rhusk="gt 0" />
+        <GiveTalentInfo talentidentifiers="corrupted" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/augmentUI.png" color="255,0,0,255" origin="0,0" sourcerect="144,110,125,99" />
+  </AfflictionHusk>
+  <Affliction name="Nanomachines" identifier="rnanomachines" type="augment" limbspecific="false" indicatorlimb="Torso" hideiconafterdelay="true" showiconthreshold="0" treatmentthreshold="100" maxstrength="100" iconcolors="255,0,0">
+    <Effect minstrength="0" maxstrength="20">
+      <StatusEffect target="Character" type="OnDamaged">
+        <requiredaffliction type="damage" minstrength="5" />
+        <Affliction identifier="rdamageresistancetemp" amount="2" />
+      </StatusEffect>
+      <StatusEffect target="Character" type="OnActive">
+        <ReduceAffliction identifier="rmicrobots" amount="100" />
+      </StatusEffect>
+      <StatusEffect target="Character" Comparison="Or">
+        <Conditional rscythe="gt 0" />
+        <Conditional rdronecyst="gt 0" />
+        <Conditional rhusk="gt 0" />
+        <GiveTalentInfo talentidentifiers="corrupted" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="20" maxstrength="40">
+      <StatusEffect target="Character" type="OnDamaged">
+        <requiredaffliction type="damage" minstrength="5" />
+        <Affliction identifier="rdamageresistancetemp" amount="4" />
+      </StatusEffect>
+      <StatusEffect target="Character" type="OnActive">
+        <ReduceAffliction identifier="rmicrobots" amount="100" />
+      </StatusEffect>
+      <StatusEffect target="Character" Comparison="Or">
+        <Conditional rscythe="gt 0" />
+        <Conditional rdronecyst="gt 0" />
+        <Conditional rhusk="gt 0" />
+        <GiveTalentInfo talentidentifiers="corrupted" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="40" maxstrength="60">
+      <StatusEffect target="Character" type="OnDamaged">
+        <requiredaffliction type="damage" minstrength="5" />
+        <Affliction identifier="rdamageresistancetemp" amount="6" />
+      </StatusEffect>
+      <StatusEffect target="Character" type="OnActive">
+        <ReduceAffliction identifier="rmicrobots" amount="100" />
+      </StatusEffect>
+      <StatusEffect target="Character" Comparison="Or">
+        <Conditional rscythe="gt 0" />
+        <Conditional rdronecyst="gt 0" />
+        <Conditional rhusk="gt 0" />
+        <GiveTalentInfo talentidentifiers="corrupted" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="60" maxstrength="80">
+      <StatusEffect target="Character" type="OnDamaged">
+        <requiredaffliction type="damage" minstrength="5" />
+        <Affliction identifier="rdamageresistancetemp" amount="8" />
+      </StatusEffect>
+      <StatusEffect target="Character" type="OnActive">
+        <ReduceAffliction identifier="rmicrobots" amount="100" />
+      </StatusEffect>
+      <StatusEffect target="Character" Comparison="Or">
+        <Conditional rscythe="gt 0" />
+        <Conditional rdronecyst="gt 0" />
+        <Conditional rhusk="gt 0" />
+        <GiveTalentInfo talentidentifiers="corrupted" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="80" maxstrength="100">
+      <StatusEffect target="Character" type="OnDamaged">
+        <requiredaffliction type="damage" minstrength="5" />
+        <Affliction identifier="rdamageresistancetemp" amount="10" />
+      </StatusEffect>
+      <StatusEffect target="Character" type="OnActive">
+        <ReduceAffliction identifier="rmicrobots" amount="100" />
+      </StatusEffect>
+      <StatusEffect target="Character" Comparison="Or">
+        <Conditional rscythe="gt 0" />
+        <Conditional rdronecyst="gt 0" />
+        <Conditional rhusk="gt 0" />
+        <GiveTalentInfo talentidentifiers="corrupted" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/augmentUI.png" color="255,0,0,255" origin="0,0" sourcerect="740,107,124,99" />
+  </Affliction>
+  <Affliction name="Temp DR" identifier="rdamageresistancetemp" type="augment" limbspecific="false" indicatorlimb="Torso" hideiconafterdelay="true" showiconthreshold="1000" treatmentthreshold="100" maxstrength="100" iconcolors="255,255,255">
+    <Effect minstrength="0" maxstrength="10" strenghchange="-1" resistancefor="damage" minresistance="0.3" maxresistance="0.8" />
+    <icon texture="%ModDir%/UI/augmentUI.png" color="255,255,255,255" origin="0,0" sourcerect="105,0,80,97" />
+  </Affliction>
+  <AfflictionPsychosis name="Cybercosis" identifier="robotpsychosis" description="The patient rants and mutters in an agitated fashion, a steady commentary of unseen events." type="psychosis" limbspecific="false" indicatorlimb="Head" activationthreshold="0" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false" treatmentthreshold="20" karmachangeonapplied="-1" maxstrength="100" affectmachines="false" achievementonremoved="healpsychosis" healcostmultiplier="3.5">
+    <Description textidentifier="afflictiondescription.psychosis.low" minstrength="0" maxstrength="50" />
+    <Description textidentifier="afflictiondescription.psychosis" minstrength="50" maxstrength="100" />
+    <Effect minstrength="0" maxstrength="100" maxvitalitydecrease="0" strengthchange="-0.1" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="150,26,26,255" origin="0,0" />
+  </AfflictionPsychosis>
+  <Affliction name="Ubercharge" identifier="mediccharge" description="Ability Charge" type="charge" isbuff="true" showiconthreshold="0" limbspecific="false" maxstrength="100" iconcolors="255,0,0;0,255,255">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
+    <icon texture="%ModDir%/UI/RH.png" sourcerect="0,0,128,128" color="0,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="MedframeHealing" identifier="medicheal" type="immunity" limbspecific="false" indicatorlimb="Torso" hideiconafterdelay="true" showiconthreshold="1000" treatmentthreshold="100" maxstrength="100" iconcolors="255,0,0">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-5">
+      <StatusEffect target="Character" type="OnActive">
+        <ReduceAffliction type="damage" amount="10" />
+        <ReduceAffliction identifier="bleeding" amount="15" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/augmentUI.png" color="255,0,0,255" origin="0,0" sourcerect="740,107,124,99" />
+  </Affliction>
+  <Affliction name="" identifier="givetablet" description="" type="immunity" isbuff="true" showiconthreshold="1000" limbspecific="false" maxstrength="1" iconcolors="255,0,0;0,255,255">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.2">
+        <SpawnItem identifier="navtablet" spawnposition="ThisInventory" />
+        <ReduceAffliction identifier="givetablet" amount="100.0" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/RH.png" sourcerect="0,0,128,128" color="0,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="giverivet" description="" type="immunity" isbuff="true" showiconthreshold="1000" limbspecific="false" maxstrength="1" iconcolors="255,0,0;0,255,255">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.2">
+        <SpawnItem identifier="rivetgun" spawnposition="ThisInventory" />
+        <ReduceAffliction identifier="giverivet" amount="100.0" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/RH.png" sourcerect="0,0,128,128" color="0,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="giveflamer" description="" type="immunity" isbuff="true" showiconthreshold="1000" limbspecific="false" maxstrength="1" iconcolors="255,0,0;0,255,255">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.2">
+        <SpawnItem identifier="immolatorflamer" spawnposition="ThisInventory" />
+        <ReduceAffliction identifier="giveflamer" amount="100.0" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/RH.png" sourcerect="0,0,128,128" color="0,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="removeflamer" description="" type="immunity" isbuff="true" showiconthreshold="1000" limbspecific="false" maxstrength="1" iconcolors="255,0,0;0,255,255">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1" />
+    <icon texture="%ModDir%/UI/RH.png" sourcerect="0,0,128,128" color="0,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="removerivet" description="" type="immunity" isbuff="true" showiconthreshold="1000" limbspecific="false" maxstrength="1" iconcolors="255,0,0;0,255,255">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1" />
+    <icon texture="%ModDir%/UI/RH.png" sourcerect="0,0,128,128" color="0,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="removetablet" description="" type="immunity" isbuff="true" showiconthreshold="1000" limbspecific="false" maxstrength="1" iconcolors="255,0,0;0,255,255">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1" />
+    <icon texture="%ModDir%/UI/RH.png" sourcerect="0,0,128,128" color="0,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Heat" identifier="immolatorheat" description="" type="charge" isbuff="true" showiconthreshold="0" limbspecific="false" maxstrength="100" iconcolors="158,158,158;255,0,0">
+    <Effect minstrength="0" maxstrength="75" strengthchange="-10" />
+    <Effect minstrength="76" maxstrength="99" strengthchange="-10">
+      <StatusEffect target="Character">
+        <Affliction identifier="immolatorheatwarning" strength="100" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="99" maxstrength="100" strengthchange="-1">
+      <StatusEffect target="Character">
+        <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" range="2000" />
+        <Explosion range="200.0" ballastfloradamage="80" structuredamage="20" levelwalldamage="120" itemdamage="400" force="5.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.3">
+          <Affliction identifier="explosiondamage" strength="150" />
+          <Affliction identifier="bleeding" strength="400" probability="0.05" />
+          <Affliction identifier="stun" strength="5" />
+          <ReduceAffliction identifier="immolatorheat" amount="100.0" />
+        </Explosion>
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/immolator_affliction_UI.png" sourcerect="0,0,128,128" color="0,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Burnout" identifier="immolatorbuff" description="" type="haste" isbuff="true" showiconthreshold="0" limbspecific="false" iconcolors="61,24,0;255,106,0" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-10" minspeedmultiplier="1.0" resistancefor="damage" minresistance="0.01" maxresistance="0.9" maxspeedmultiplier="2">
+      <StatValue stattype="MeleeAttackSpeed" minvalue="0.01" maxvalue="0.35" />
+      <StatValue stattype="SwimmingSpeed" minvalue="0.01" maxvalue="0.5" />
+    </Effect>
+    <icon texture="%ModDir%/UI/immolator_affliction_UI.png" sourcerect="128,0,128,128" color="0,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Overheat" identifier="immolatorheatwarning" description="" type="charge" isbuff="true" showiconthreshold="0" limbspecific="false" iconcolors="255,255,255;255,255,255" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1">
+      <StatusEffect target="Character">
+        <Sound file="%ModDir%/Items/Frames/immolator_warning.ogg" range="250" loop="true" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/immolator_affliction_UI.png" sourcerect="256,0,128,128" color="255,0,0,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="kateegivetalent" description="" type="immunity" isbuff="true" showiconthreshold="1000" limbspecific="false" maxstrength="1" iconcolors="255,0,0;0,255,255">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.2">
+        <GiveTalentInfo talentidentifiers="valuedcustomer" />
+        <ReduceAffliction identifier="kateegivetalent" amount="100.0" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/RH.png" sourcerect="0,0,128,128" color="0,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="giveharpoon" description="" type="immunity" isbuff="true" showiconthreshold="1000" limbspecific="false" maxstrength="1" iconcolors="255,0,0;0,255,255">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.2">
+        <SpawnItem identifier="sailharpoongun" spawnposition="ThisInventory" />
+        <ReduceAffliction identifier="giveharpoon" amount="100.0" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/RH.png" sourcerect="0,0,128,128" color="0,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="removeharpoon" description="" type="immunity" isbuff="true" showiconthreshold="1000" limbspecific="false" maxstrength="1" iconcolors="255,0,0;0,255,255">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1" />
+    <icon texture="%ModDir%/UI/RH.png" sourcerect="0,0,128,128" color="0,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="" identifier="npcgivenano" description="" type="immunity" isbuff="true" showiconthreshold="0" limbspecific="false" maxstrength="1" iconcolors="255,0,0;0,255,255">
+    <Effect minstrength="0" maxstrength="1" strengthchange="0">
+      <StatusEffect target="Character" disabledeltatime="true">
+        <Affliction identifier="robotwhite" amount="100" />
+        <Affliction identifier="dyed" amount="1" />
+        <ReduceAffliction identifier="npcgivenano" amount="100" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/UI/RH.png" sourcerect="0,0,128,128" color="0,255,255,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="dyed" identifier="dyed" description="" type="immunity" isbuff="true" showiconthreshold="1000" limbspecific="false" maxstrength="1" iconcolors="255,0,0;0,255,255">
+    <Effect minstrength="0" maxstrength="1" strengthchange="0" />
+    <icon texture="%ModDir%/UI/RH.png" sourcerect="0,0,128,128" color="0,255,255,255" origin="0,0" />
+  </Affliction>
+</Afflictions>

@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <robotmale>Robot</robotmale>
+  <robotfemale>Robot-F</robotfemale>
+  <!-- Unused, but just in case !-->
+  <!-- Pre 1.14 Afflictions !-->
+  <afflictionname.powerlow>Robotic Hunger</afflictionname.powerlow>
+  <afflictionname.rinternaldamage>Water Damage</afflictionname.rinternaldamage>
+  <afflictionname.robotinfection>Floral Parasite</afflictionname.robotinfection>
+  <afflictionname.robotfast>Overcharged</afflictionname.robotfast>
+  <afflictionname.scoutdodge>Dodge Charge</afflictionname.scoutdodge>
+  <afflictionname.medicheal>Medi-Charge</afflictionname.medicheal>
+  <afflictiondescription.robotpower.low>Your battery is charged enough to fully run your systems.</afflictiondescription.robotpower.low>
+  <afflictiondescription.robotpower>Your battery is running low.</afflictiondescription.robotpower>
+  <afflictiondescription.rinternaldamage.low>Minor sparks spring out from your chest.</afflictiondescription.rinternaldamage.low>
+  <afflictiondescription.rinternaldamage>Many internal components are heavily damaged!.</afflictiondescription.rinternaldamage>
+  <afflictiondescription.robotinfection.low>This can't be good.</afflictiondescription.robotinfection.low>
+  <afflictiondescription.robotinfection>Your voicebox is not responding, you feel vines entagling your joints.</afflictiondescription.robotinfection>
+  <!-- Post 1.14 Augments !-->
+  <afflictionname.rdamageresistance>Titanium Plating</afflictionname.rdamageresistance>
+  <afflictionname.rwaterproof>Waterproof Circuits</afflictionname.rwaterproof>
+  <afflictionname.rempresistance>Electrical Insulation</afflictionname.rempresistance>
+  <afflictionname.rmovespeed>Strong Motors</afflictionname.rmovespeed>
+  <afflictionname.rswingspeed>Lubricated Joints</afflictionname.rswingspeed>
+  <afflictionname.rswimspeed>Improved Swim Cycle</afflictionname.rswimspeed>
+  <afflictionname.rskillcaptain>Navigation Firmware</afflictionname.rskillcaptain>
+  <afflictionname.rskillmedic>Medical Firmware</afflictionname.rskillmedic>
+  <afflictionname.rskillsecurity>Combat Firmware</afflictionname.rskillsecurity>
+  <afflictionname.rskillmechanic>Mechanical Firmware</afflictionname.rskillmechanic>
+  <afflictionname.rskillengineer>Engineering Firmware</afflictionname.rskillengineer>
+  <afflictionname.rdronepod>Drone Synthesis</afflictionname.rdronepod>
+  <afflictionname.rmicrobots>Microbots</afflictionname.rmicrobots>
+  <afflictionname.rnanomachines>Nanomachines</afflictionname.rnanomachines>
+  <afflictionname.rbayonet>Bayonet</afflictionname.rbayonet>
+  <afflictionname.rhusk>Depth Immunity</afflictionname.rhusk>
+  <afflictionname.rscythe>Scythe</afflictionname.rscythe>
+  <afflictionname.rdronecyst>Drone Cysts</afflictionname.rdronecyst>
+  <afflictiondescription.rdamageresistance>Additional armor plating to protect the frame.</afflictiondescription.rdamageresistance>
+  <afflictiondescription.rwaterproof>Improved circuitry and water cycling to prevent water damage.</afflictiondescription.rwaterproof>
+  <afflictiondescription.rempresistance>Rubber insulation to dampen sudden electromagnetic pulses.</afflictiondescription.rempresistance>
+  <afflictiondescription.rmovespeed>Optimized motors for higher speed travel.</afflictiondescription.rmovespeed>
+  <afflictiondescription.rswingspeed>Lubricated to improve swinging inertia.</afflictiondescription.rswingspeed>
+  <afflictiondescription.rswimspeed>Optimized animation data to increase swimming speeds.</afflictiondescription.rswimspeed>
+  <afflictiondescription.rskillcaptain>Firmware for navigating submarines and faster turret charging.</afflictiondescription.rskillcaptain>
+  <afflictiondescription.rskillmedic>Several medical textbooks worth of data causing more efficent usage of medical supplies.</afflictiondescription.rskillmedic>
+  <afflictiondescription.rskillsecurity>Targeting systems and faster turret firing.</afflictiondescription.rskillsecurity>
+  <afflictiondescription.rskillmechanic>A bookshelfs worth of technical manuals</afflictiondescription.rskillmechanic>
+  <afflictiondescription.rskillengineer>A bookshelfs worth of engineering and wiring manuals</afflictiondescription.rskillengineer>
+  <afflictiondescription.rdronepod>Information on how to synthesize combat drones within the users primary chassis.</afflictiondescription.rdronepod>
+  <afflictiondescription.rmicrobots>Repairs in response to physical trauma</afflictiondescription.rmicrobots>
+  <afflictiondescription.rnanomachines>They harden in response to physical trauma</afflictiondescription.rnanomachines>
+  <afflictiondescription.rbayonet>Construction data for an arm-mounted blade.</afflictiondescription.rbayonet>
+  <afflictiondescription.rhusk>You feel as if you could brave any depth, but you struggle to activate your voice box as its subsumed by the Rot.</afflictiondescription.rhusk>
+  <afflictiondescription.rscythe>DIRECTIVE: HURT.</afflictiondescription.rscythe>
+  <afflictiondescription.rdronecyst>You feel cysts bursting out of your back.</afflictiondescription.rdronecyst>
+  <entityname.legacyskin_m>Gen. 1 Cosmetic Frame- Model: M</entityname.legacyskin_m>
+  <entityname.legacyskin_f>Gen. 1 Cosmetic Frame- Model: F</entityname.legacyskin_f>
+  <entityname.fractalskin>"Fractal" Cosmetic Frame</entityname.fractalskin>
+  <entityname.rotskin>Corrupted Cosmetic Frame</entityname.rotskin>
+  <entityname.kateeskin>Gen. 2 Relations Frame</entityname.kateeskin>
+  <entityname.kateeskinheadless>Gen. 2 Relations Frame (Headless)</entityname.kateeskinheadless>
+  <entityname.duncecap>Dunce Cap</entityname.duncecap>
+  <entityname.frame1>Exo-Frame MK. I</entityname.frame1>
+  <entityname.frame2>Exo-Frame MK. II</entityname.frame2>
+  <entityname.Cframe1>Exo-Frame MK. III</entityname.Cframe1>
+  <entityname.frame2safe>Safety Exo-Frame</entityname.frame2safe>
+  <entityname.medicframe>"Lazarus" Medical Exo-Frame</entityname.medicframe>
+  <entityname.mechframe>"Thrash" Repair Exo-Frame</entityname.mechframe>
+  <entityname.engineerframe>"Arc" Repair Exo-Frame</entityname.engineerframe>
+  <entityname.cargoframe>"Hauler" Cargo Exo-Frame</entityname.cargoframe>
+  <entityname.scoutframe>"Scout" Combat Exo-Frame</entityname.scoutframe>
+  <entityname.Cframe2>"Sledge" Combat Exo-Frame</entityname.Cframe2>
+  <entityname.Cframe3>"Sail" Combat Exo-Frame</entityname.Cframe3>
+  <entityname.v1frame>Prototype Combat Exo-Frame</entityname.v1frame>
+  <entityname.captainframe>"Sovereign" Command Exo-Frame</entityname.captainframe>
+  <entityname.immolatorframe>"Immolator" Pyrotechnic Exo-Frame</entityname.immolatorframe>
+  <entityname.disposablebattery>Disposable Battery</entityname.disposablebattery>
+  <entityname.rex>Bizzare Poster</entityname.rex>
+  <entityname.vacubotspawner>Vacubot</entityname.vacubotspawner>
+  <entityname.modifiedvacubotspawner>Modified Vacubot</entityname.modifiedvacubotspawner>
+  <entityname.headlamp>Headlamp</entityname.headlamp>
+  <entityname.wallcharger>Robot Charging Dock</entityname.wallcharger>
+  <entityname.hevcharger>H.E.V. Charger</entityname.hevcharger>
+  <entityname.nanodyeclear>Nanodye Remover</entityname.nanodyeclear>
+  <entityname.nanodyeblue>Blue Nanodye</entityname.nanodyeblue>
+  <entityname.nanodyered>Red Nanodye</entityname.nanodyered>
+  <entityname.nanodyegreen>Green Nanodye</entityname.nanodyegreen>
+  <entityname.nanodyeyellow>Yellow Nanodye</entityname.nanodyeyellow>
+  <entityname.nanodyeorange>Orange Nanodye</entityname.nanodyeorange>
+  <entityname.nanodyepurple>Purple Nanodye</entityname.nanodyepurple>
+  <entityname.nanodyepink>Pink Nanodye</entityname.nanodyepink>
+  <entityname.nanodyeblack>Black Nanodye</entityname.nanodyeblack>
+  <entityname.nanodyewhite>White Nanodye</entityname.nanodyewhite>
+  <entityname.nail>nail</entityname.nail>
+  <entityname.rivetgun>Rivet Gun</entityname.rivetgun>
+  <entityname.navtablet>Navigation Tablet</entityname.navtablet>
+  <entityname.immolatorflamer>Scorcher</entityname.immolatorflamer>
+  <entityname.sailharpoongun>Meathook</entityname.sailharpoongun>
+  <entityname.sailharpoon>sailharpoon</entityname.sailharpoon>
+  <talentdescription.rtcraftwithlessitems>You can craft ‖color:gui.orange‖FPGA Circuits‖end‖ and ‖color:gui.orange‖Circuit Boxes‖end‖ with much fewer materials. Unlocks recipe: ‖color:gui.orange‖Robot Charging Dock‖end‖</talentdescription.rtcraftwithlessitems>
+  <entitydescription.rivetgun>Drag out of hand to remove</entitydescription.rivetgun>
+  <entitydescription.navtablet>Drag out of hand to remove</entitydescription.navtablet>
+  <entitydescription.sailharpoongun>Drag out of hand to remove</entitydescription.sailharpoongun>
+  <entitydescription.immolatorflamer>Drag out of hand to remove</entitydescription.immolatorflamer>
+  <entitydescription.disposablebattery>A very wasteful solution to the robotic energy crisis.</entitydescription.disposablebattery>
+  <entitydescription.frame1>A frail and lightweight frame that can handle pressure up to 3000 meters. A cheap option great for a rookie crew, but upgrades will be mandatory for missions deeper in Europa.</entitydescription.frame1>
+  <entitydescription.frame2>A strong frame thats capable of withstanding pressure up to 4000 meters. A direct upgrade built upon the Exo-Frame MK. 1, it should handle dangers more adequately.</entitydescription.frame2>
+  <entitydescription.frame2safe>An Exo-Frame that combines the capabilities of both the Exo-Frame MK. II and the Safety harness. It can handle depths up to 4000 meters.</entitydescription.frame2safe>
+  <entitydescription.medicframe>A sturdy Exo-Frame capable of withstanding pressures up to 7000 meters. Equipped with deep pockets for medicine storage and produces gasses that passively heal your human teammates around you.</entitydescription.medicframe>
+  <entitydescription.Cframe1>A strong frame. Offers a good amount protection and can withstand pressure up to 6000 meters.</entitydescription.Cframe1>
+  <entitydescription.scoutframe>A strong and lightweight frame designed for deep sea battle. Offers a good amount protection and combat firmware with the added ability of a recharging shield. It can withstand pressure up to 6000 meters.</entitydescription.scoutframe>
+  <entitydescription.Cframe2>A large and heavy exo-frame designed for deep sea battle that is powered by fuel rods. Heavily armoured and can withstand pressure up to 10,000 meters. Its heavy frame allows to lessen the recoil from heavy firearms</entitydescription.Cframe2>
+  <entitydescription.v1frame>A prototype Exo-Frame made with a thin plating that repairs itself on contact with blood. It provided reinforcements up to 10,000 met- EARTH IS SILENT. BLOOD IS FUEL. EUROPA IS FULL.</entitydescription.v1frame>
+  <entitydescription.mechframe>An exo-frame with a built in hull monitor and a nailgun which can repair hulls and damage enemies. Perfect for keeping the sub leak-free while having a self defense option when Europan creatures inevitably raid your ballasts. it can withstand pressure up to 8,000 meters.</entitydescription.mechframe>
+  <entitydescription.engineerframe>An exo-frame with a built in electric monitor and a special overcharging system. Overcharge speeds up yourself and robots around you, and can be discharged in a static blast. it can withstand pressure up to 7,000 meters.</entitydescription.engineerframe>
+  <entitydescription.Cframe3>An agile exo-frame designed to glide through the water armed with an grappling harpoon. It can handle pressure up to 7000 meters. Its streamlined design sacrifices ground movement for fast speeds underwater. </entitydescription.Cframe3>
+  <entitydescription.cargoframe>A large exo-frame designed to hold cargo crates while still allowing the user to move quickly. It can handle pressure up to a depth of 8000 meters. A built-in flashlight slot allows the user to glow and produce a large amount of light.</entitydescription.cargoframe>
+  <entitydescription.captainframe>A stylish frame capable of depths up to 10,000 meters. Direct your crew with dignity and grace with a wireless connection to your command room, allowing you to pilot your sub no matter the location. This new model even comes with built in thermal vision.</entitydescription.captainframe>
+  <entitydescription.immolatorframe>An improvised frame which blueprints were made by the sepratists. It can support depths of 8000 meters. Using the Schorcher builds up heat that can be fatal, but the Immolator can turn that heat into a powerful buff.</entitydescription.immolatorframe>
+  <arcframedischarge>Electrical Discharge</arcframedischarge>
+  <medframedischarge>Healing Burst</medframedischarge>
+  <framecargolight>Toggle Light</framecargolight>
+  <framesovereignbutton>Control Submarine</framesovereignbutton>
+  <framemechbutton>Activate Weapon</framemechbutton>
+  <researchstation.research.robotinfo>Encrypted drive detected. Contents unknown. Are you sure you want to proceed?</researchstation.research.robotinfo>
+  <researchstation.combine.robotmissingitem>Encrypted drive detected. Burner FPGA circuit required.</researchstation.combine.robotmissingitem>
+  <!-- /// Augment Items /// !-->
+  <entityname.chipdrive1>Drive Reader</entityname.chipdrive1>
+  <entityname.chipdrive2>Drive Reader MK. II</entityname.chipdrive2>
+  <entityname.chipdrive3>Drive Reader MK. III</entityname.chipdrive3>
+  <entityname.chipdresist>Standard Drive (Titanium Plating)</entityname.chipdresist>
+  <entityname.chipwaterproof>Standard Drive (Waterproof Circuts)</entityname.chipwaterproof>
+  <entityname.chipempresist>Standard Drive (Electrical Insulation)</entityname.chipempresist>
+  <entityname.chipmovespeed>Standard Drive (Strong Motors)</entityname.chipmovespeed>
+  <entityname.chipswingspeed>Standard Drive (Lubricated Joints)</entityname.chipswingspeed>
+  <entityname.chipswimspeed>Standard Drive (Improved Swim Cycle)</entityname.chipswimspeed>
+  <entityname.chipdronepod>Unique Drive (Drone Synthesis)</entityname.chipdronepod>
+  <entityname.chipbayonet>Unique Drive (Bayonet)</entityname.chipbayonet>
+  <entityname.chipmicrobots>Unique Drive (Microbots)</entityname.chipmicrobots>
+  <entityname.chipscythe>Corrupted Drive (Bayonet?)</entityname.chipscythe>
+  <entityname.chipdronecyst>Corrupted Drive (Drone Synthesis?)</entityname.chipdronecyst>
+  <entityname.chiphusk>Corrupted Drive (Waterproof Circuts?)</entityname.chiphusk>
+  <entityname.chipnanomachines>Corrupted Drive (Microbots?)</entityname.chipnanomachines>
+  <entityname.encrypteddisk>Encrypted Drive</entityname.encrypteddisk>
+  <entityname.chipcaptain>Firmware Drive (Navigation)</entityname.chipcaptain>
+  <entityname.chipmedic>Firmware Drive (Medical)</entityname.chipmedic>
+  <entityname.chipsecurity>Firmware Drive (Combat)</entityname.chipsecurity>
+  <entityname.chipmechanic>Firmware Drive (Mechanical)</entityname.chipmechanic>
+  <entityname.chipengineer>Firmware Drive (Engineering)</entityname.chipengineer>
+  <entitydescription.chipdrive1>A device capable of reading the information on drives.</entitydescription.chipdrive1>
+  <entitydescription.chipdrive2>A device capable of reading the information on drives. Can read up to two drives at once.</entitydescription.chipdrive2>
+  <entitydescription.chipdrive3>A device capable of reading the information on drives. Can read up to three drives at once.</entitydescription.chipdrive3>
+  <entitydescription.chipdresist>A standard augment drive.</entitydescription.chipdresist>
+  <entitydescription.chipwaterproof>A standard augment drive.</entitydescription.chipwaterproof>
+  <entitydescription.chipempresist>A standard augment drive.</entitydescription.chipempresist>
+  <entitydescription.chipmovespeed>A standard augment drive.</entitydescription.chipmovespeed>
+  <entitydescription.chipswingspeed>A standard augment drive.</entitydescription.chipswingspeed>
+  <entitydescription.chipswimspeed>A standard augment drive.</entitydescription.chipswimspeed>
+  <entitydescription.chipdronepod>A unique augment drive.</entitydescription.chipdronepod>
+  <entitydescription.chipbayonet>A unique augment drive.</entitydescription.chipbayonet>
+  <entitydescription.chipmicrobots>A unique augment drive.</entitydescription.chipmicrobots>
+  <entitydescription.chipscythe>A suspicous augment drive. It contains potentially malicous code, use at your own discretion.</entitydescription.chipscythe>
+  <entitydescription.chipdronecyst>A suspicous augment drive. It contains potentially malicous code, use at your own discretion.</entitydescription.chipdronecyst>
+  <entitydescription.chiphusk>A suspicous augment drive. It contains potentially malicous code, use at your own discretion.</entitydescription.chiphusk>
+  <entitydescription.chipnanomachines>A suspicous augment drive. It contains potentially malicous code, use at your own discretion.</entitydescription.chipnanomachines>
+  <entitydescription.encrypteddisk>An augment drive, its contents are encrypted and would need to be researched to be useful.</entitydescription.encrypteddisk>
+  <entitydescription.chipcaptain>An augment drive containing navigation firmware.</entitydescription.chipcaptain>
+  <entitydescription.chipmedic>An augment drive containing medical firmware.</entitydescription.chipmedic>
+  <entitydescription.chipsecurity>An augment drive containing combat firmware.</entitydescription.chipsecurity>
+  <entitydescription.chipmechanic>An augment drive containing mechanical firmware.</entitydescription.chipmechanic>
+  <entitydescription.chipengineer>An augment drive containing engineering firmware.</entitydescription.chipengineer>
+  <!-- /// Robot Store /// !-->
+  <charactername.merchantrobot>KATE-E</charactername.merchantrobot>
+  <eventtext.shop.katee.interact>Welcome to the Europan Robotics Foundation outlet! How may this unit assist you today?</eventtext.shop.katee.interact>
+  <eventtext.shop.katee.achievement>Congratulations customer! You have shown your loyalty by purchasing every item in this outlet! Please enjoy a complemtary Cosmetic Frame Blueprint!</eventtext.shop.katee.achievement>
+  <eventtext.shop.katee.option.buy.success>Purchase Successful. Enjoy your purchase!</eventtext.shop.katee.option.buy.success>
+  <eventtext.shop.katee.buy.failure>Purchase Error! Insufficent Funds.</eventtext.shop.katee.buy.failure>
+  <eventtext.shop.katee.option.leave>Leave</eventtext.shop.katee.option.leave>
+  <eventtext.shop.katee.option.shop>Go Shopping</eventtext.shop.katee.option.shop>
+  <eventtext.shop.katee.option.battery>Battery Cell (110mk)</eventtext.shop.katee.option.battery>
+  <eventtext.shop.katee.option.robotm>Gen. 1 Cosmetic Frame- Model: M (300mk)</eventtext.shop.katee.option.robotm>
+  <eventtext.shop.katee.option.robotf>Gen. 1 Cosmetic Frame- Model: F (300mk)</eventtext.shop.katee.option.robotf>
+  <eventtext.shop.katee.option.charger>Robot Charging Dock (700mk)</eventtext.shop.katee.option.charger>
+  <!-- /// Achievements /// !-->
+  <talentname.returner>Returner</talentname.returner>
+  <talentname.dunce>Dunce</talentname.dunce>
+  <talentname.corrupted>Corrupted</talentname.corrupted>
+  <talentname.valuedcustomer>Valued Customer</talentname.valuedcustomer>
+  <talentname.highlytrainedprofessional>Highly Trained Professional</talentname.highlytrainedprofessional>
+  <talentdescription.returner>Complete the cycle. Unlocks [itemname]</talentdescription.returner>
+  <talentdescription.dunce>You had one job. Unlocks [itemname]</talentdescription.dunce>
+  <talentdescription.corrupted>Embrace the Rot. Unlocks [itemname]</talentdescription.corrupted>
+  <talentdescription.valuedcustomer>KAT-E Thanks you for your patronage! Unlocks [itemname]</talentdescription.valuedcustomer>
+  <talentdescription.highlytrainedprofessional>Wield a crowbar while looking like an orange ice-pop. Unlocks [itemname]</talentdescription.highlytrainedprofessional>
+</infotexts>

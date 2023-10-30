@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+  <robotmale>Робот</robotmale>
+  <robotfemale>Робот-Ж</robotfemale>
+  <!-- Pre 1.14 Afflictions !-->
+  <afflictionname.powerlow>Заряд аккумулятора</afflictionname.powerlow>
+  <afflictionname.rinternaldamage>Короткое замыкание</afflictionname.rinternaldamage>
+  <afflictionname.robotinfection>Заражение флорой</afflictionname.robotinfection>
+  <afflictionname.robotfast>Перегрузка</afflictionname.robotfast>
+  <afflictionname.scoutdodge>Заряд уклонения</afflictionname.scoutdodge>
+  <afflictiondescription.robotpower.low>В вашем аккумуляторе достаточно энергии для работы всех систем.</afflictiondescription.robotpower.low>
+  <afflictiondescription.robotpower>Ваш аккумулятор разряжается.</afflictiondescription.robotpower>
+  <afflictiondescription.rinternaldamage.low>Из груди вылетают мелкие искры.</afflictiondescription.rinternaldamage.low>
+  <afflictiondescription.rinternaldamage>Множество компонентов серьезно повреждено!</afflictiondescription.rinternaldamage>
+  <afflictiondescription.robotinfection.low>Это явно не к добру.</afflictiondescription.robotinfection.low>
+  <afflictiondescription.robotinfection>Вокодер не отвечает. Вы чувствуете как лианы оплетают ваши шарниры.</afflictiondescription.robotinfection>
+  <!-- Post 1.14 Augments !-->
+  <afflictionname.rdamageresistance>Титановое покрытие</afflictionname.rdamageresistance>
+  <afflictionname.rwaterproof>Влагозащита печатных плат</afflictionname.rwaterproof>
+  <afflictionname.rempresistance>Экранирование ЭМИ</afflictionname.rempresistance>
+  <afflictionname.rmovespeed>Усиленные моторы</afflictionname.rmovespeed>
+  <afflictionname.rswingspeed>Смазанные шарниры</afflictionname.rswingspeed>
+  <afflictionname.rswimspeed>Оптимизированный цикл плавания</afflictionname.rswimspeed>
+  <afflictionname.rskillcaptain>Прошивка капитана</afflictionname.rskillcaptain>
+  <afflictionname.rskillmedic>Прошивка медика</afflictionname.rskillmedic>
+  <afflictionname.rskillsecurity>Прошивка военного</afflictionname.rskillsecurity>
+  <afflictionname.rskillmechanic>Прошивка механика</afflictionname.rskillmechanic>
+  <afflictionname.rskillengineer>Прошивка инженера</afflictionname.rskillengineer>
+  <afflictionname.rdronepod>Создание дронов</afflictionname.rdronepod>
+  <afflictionname.rmicrobots>Микроботы</afflictionname.rmicrobots>
+  <afflictionname.rnanomachines>Наномашины</afflictionname.rnanomachines>
+  <afflictionname.rbayonet>Встроенный клинок</afflictionname.rbayonet>
+  <afflictionname.rhusk>Защита от давления</afflictionname.rhusk>
+  <afflictionname.rscythe>Жнец</afflictionname.rscythe>
+  <afflictionname.rdronecyst>Киста с дронами</afflictionname.rdronecyst>
+  <afflictionname.mediccharge>Исцеляющий газ</afflictionname.mediccharge>
+  <afflictionname.medicheal>Медицинский заряд</afflictionname.medicheal>
+  <afflictiondescription.rdamageresistance>Дополнительное бронирование для защиты экзоскелета.</afflictiondescription.rdamageresistance>
+  <afflictiondescription.mediccharge>Накопление исцеляющего газа.</afflictiondescription.mediccharge>
+  <afflictiondescription.robotfast>Еще быстрее!</afflictiondescription.robotfast>
+  <afflictiondescription.rwaterproof>Использование защитных покрытий для безопасной работы электроники.</afflictiondescription.rwaterproof>
+  <afflictiondescription.rempresistance>Слой из особых эластомеров позволит снизить ущерб электронике от электромагнитных импульсов.</afflictiondescription.rempresistance>
+  <afflictiondescription.rmovespeed>Улучшенные моторы способны повысить скорость передвижения.</afflictiondescription.rmovespeed>
+  <afflictiondescription.rswingspeed>Шарниры смазаны для облегчения взмахов.</afflictiondescription.rswingspeed>
+  <afflictiondescription.rswimspeed>Оптимизированный набор движений, позволяющий набрать более высокую скорость во время плавания.</afflictiondescription.rswimspeed>
+  <afflictiondescription.rskillcaptain>Прошивка, позволяющая упростить навигацию и перезарядку турелей.</afflictiondescription.rskillcaptain>
+  <afflictiondescription.rskillmedic>Информация из множества книг по медицине позволит снизить затраты медикаментов.</afflictiondescription.rskillmedic>
+  <afflictiondescription.rskillsecurity> Улучшение систем наведения и множество хитростей, позволяющих повысить скорость стрельбы.</afflictiondescription.rskillsecurity>
+  <afflictiondescription.rskillmechanic>Информация из кипы книг по механике.</afflictiondescription.rskillmechanic>
+  <afflictiondescription.rskillengineer>Информация из кипы книг по инженерии.</afflictiondescription.rskillengineer>
+  <afflictiondescription.rdronepod>Модуль, позволяющий наладить производство дронов внутри вашего корпуса.</afflictiondescription.rdronepod>
+  <afflictiondescription.rmicrobots>Ремонт после получиния физического урона.</afflictiondescription.rmicrobots>
+  <afflictiondescription.rnanomachines>Твердеют в результате получения повреждений.</afflictiondescription.rnanomachines>
+  <afflictiondescription.rbayonet>Встроенный в ваш манипулятор клинок.</afflictiondescription.rbayonet>
+  <afflictiondescription.rhusk>Вы чувствуете что глубины больше не могут вам навредить, однако ваш вокодер поглощен Гнилью.</afflictiondescription.rhusk>
+  <afflictiondescription.rscythe>ДИРЕКТИВА: БОЛЬ.</afflictiondescription.rscythe>
+  <afflictiondescription.rdronecyst>Вы чувствуете, как из вашей спины вырывается киста.</afflictiondescription.rdronecyst>
+  <entityname.frame1>Экзоскелет Mk. I</entityname.frame1>
+  <entityname.frame2>Экзоскелет Mk. II</entityname.frame2>
+  <entityname.Cframe1>Экзоскелет Mk. III</entityname.Cframe1>
+  <entityname.frame2safe>Страховочный Экзоскелет Mk. II</entityname.frame2safe>
+  <entityname.medicframe>Медицинский Экзоскелет "Лазарь"</entityname.medicframe>
+  <entityname.mechframe>Ремонтный Экзоскелет "Колотушка"</entityname.mechframe>
+  <entityname.engineerframe>Ремонтный Экзоскелет "Дуга"</entityname.engineerframe>
+  <entityname.cargoframe>Грузовой Экзоскелет "Тягач"</entityname.cargoframe>
+  <entityname.scoutframe>Боевой Экзоскелет "Скаут"</entityname.scoutframe>
+  <entityname.Cframe2>Боевой Экзоскелет "Кувалда"</entityname.Cframe2>
+  <entityname.Cframe3>Боевой Экзоскелет "Парусник"</entityname.Cframe3>
+  <entityname.v1frame>Экспериментальный Боевой Экзоскелет</entityname.v1frame>
+  <entityname.captainframe>Командный Экзоскелет "Суверенность"</entityname.captainframe>
+  <entityname.disposablebattery>Одноразовая батарея</entityname.disposablebattery>
+  <entityname.nanodyeclear>Растворитель нанокраски</entityname.nanodyeclear>
+  <entityname.nanodyeblue>Синяя нанокраска</entityname.nanodyeblue>
+  <entityname.nanodyered>Красная нанокраска</entityname.nanodyered>
+  <entityname.nanodyegreen>Зеленая нанокраска</entityname.nanodyegreen>
+  <entityname.nanodyeyellow>Желтая нанокраска</entityname.nanodyeyellow>
+  <entityname.nanodyeorange>Оранжевая нанокраска</entityname.nanodyeorange>
+  <entityname.nanodyepurple>Фиолетовая нанокраска</entityname.nanodyepurple>
+  <entityname.nanodyepink>Розовая нанокраска</entityname.nanodyepink>
+  <entityname.nanodyeblack>Черная нанокраска</entityname.nanodyeblack>
+  <entityname.nanodyewhite>Белая нанокраска</entityname.nanodyewhite>
+  <entityname.nail>Гвоздь</entityname.nail>
+  <entityname.headlamp>налобный фонарь</entityname.headlamp>
+  <entityname.rivetgun>гвоздострел</entityname.rivetgun>
+  <!-- This doesn't appear ingame, its just here to prevent warnings, so you can leave it alone. -->
+  <entityname.navtablet>Навигационный планшет</entityname.navtablet>
+  <entityname.rex>Интересный плакат</entityname.rex>
+  <entityname.vacubotspawner>Робот-пылесос</entityname.vacubotspawner>
+  <!-- You can do "Cleaning Robot" or "Vacuum Robot" -->
+  <entityname.modifiedvacubotspawner>Улучшенный робот-пылесос</entityname.modifiedvacubotspawner>
+  <entitydescription.disposablebattery>Весьма расточительное решение для недостатка энергии у роботов.</entitydescription.disposablebattery>
+  <entitydescription.frame1>Хрупкий но легкий, этот экзоскелет позволит погружаться на глубины до 3 000 метров. Отлично подойдет для новичков, но опытной команде потребуется нечто получше.</entitydescription.frame1>
+  <entitydescription.frame2>Прочный экзоскелет, позволяющий погружаться на 4 000 метров. Прямое улучшение Mk. 1</entitydescription.frame2>
+  <entitydescription.frame2safe>Экзоскелет Mk. 2 со встроенным страховочным ремнем. Позволит легко противостоять мощному напору воды из пробоины.</entitydescription.frame2safe>
+  <entitydescription.medicframe>Этот экзоскелет способен сопротивляться давлению воды на глубинах до 7 000 метров. Имеет множество отделений для хранения медикаментов, способен выпускать исцеляющий газ.</entitydescription.medicframe>
+  <entitydescription.Cframe1>Твердый и гибкий, этот экзоскелет обеспечит носителя прекрасной защитой от большинства опасностей на глубинах до 6 000 метров.</entitydescription.Cframe1>
+  <entitydescription.scoutframe>Мощный и легкий экзоскелет, спроектированный для глубоководных сражений. Позволяет периодически уклоняться от атак врага. Выдерживает давление воды на глубине до 6000 метров.</entitydescription.scoutframe>
+  <entitydescription.Cframe2>Массивный боевой экзоскелет, работающий на топливных стержнях. Тяжело бронирован и может защищать от давления на глубинах до 10 000 метров. Тяжелый каркас позволяет снизить отдачу даже от мощнейшего огнестрельного оружия.</entitydescription.Cframe2>
+  <entitydescription.v1frame>Экспериментальный экзоскелет, созданный из тонкого покрытия, восстанавливающегося при контакте с кровью. Он обеспечивает защиту от давления на глубине до 10 000 ме- ЗЕМЛЯ БЕЗМОЛВСТВУЕТ. КРОВЬ СТАЛА ТОПЛИВОМ.. ЕВРОПА ЕЮ ПОЛНА.</entitydescription.v1frame>
+  <entitydescription.mechframe>Экзоскелет со встроеным монитором повреждений корпуса и гвоздеметом, который способен как ремонтировать обшивку, так и наносить повреждения существам. Идеален для поддержания герметичности судна, сумеет защитить владельца от внезапных опасностей. Выдерживает давление до 8 000 метров.</entitydescription.mechframe>
+  <entitydescription.engineerframe>Экзоскелет со встроеным электромонитором и особой перегружающей системой. Перегрузка ускоряет владельца и роботов вокруг него. Также, с ее помощью можно вызвать мощный статический разряд, повреждающий роботов вокруг. Выдерживает давление до 7 000 метров.</entitydescription.engineerframe>
+  <entitydescription.Cframe3>Стремительный экзоскелет, созданный для работы в воде на глубине до 7 000 метров. В связи с особым дизайном, скорость передвижения на суше серьезно снижена.</entitydescription.Cframe3>
+  <entitydescription.cargoframe>Мощный экзоскелет, созданный для быстрой переноски груза. Выдерживает давление до 8 000 метров. Встроенный прожектор позволяет владельцу освещать местность вокруг.</entitydescription.cargoframe>
+  <entitydescription.captainframe>Стильный экзоскелет, способный выдержать погружение на глубину до 10 000 метров. Беспроводная связь с командной рубкой позволяет управлять подлодкой из любого места неподалеку от нее. В экзоскелет также встроен тепловизор.</entitydescription.captainframe>
+  <arcframedischarge>Электрический разряд</arcframedischarge>
+  <medframedischarge>Исцеляющий газ</medframedischarge>
+  <framecargolight>Отключить прожектор?</framecargolight>
+  <framesovereignbutton>Управление подлодкой</framesovereignbutton>
+  <framemechbutton>Активировать оружие</framemechbutton>
+  <researchstation.research.robotinfo>Обнаружен зашифрованный диск. Содержимое неизвестно. Продолжить?</researchstation.research.robotinfo>
+  <researchstation.combine.robotmissingitem>Обнаружен зашифрованный диск. Требуется Схема на базе ППВМ.</researchstation.combine.robotmissingitem>
+  <entityname.chipdrive1>ШПУ Mk. I</entityname.chipdrive1>
+  <entityname.chipdrive2>ШПУ Мk. II</entityname.chipdrive2>
+  <entityname.chipdrive3>ШПУ Mk. III</entityname.chipdrive3>
+  <entityname.chipdresist>Стандартное устройство (Титановое покрытие)</entityname.chipdresist>
+  <entityname.chipwaterproof>Стандартное устройство (Влагозащита печатных плат)</entityname.chipwaterproof>
+  <entityname.chipempresist>Стандартное устройство (Экранирование ЭМИ)</entityname.chipempresist>
+  <entityname.chipmovespeed>Стандартное устройство (Усиленные моторы)</entityname.chipmovespeed>
+  <entityname.chipswingspeed>Стандартное устройство (Смазанные шарниры)</entityname.chipswingspeed>
+  <entityname.chipswimspeed>Стандартное устройство (Оптимизированный цикл плавания)</entityname.chipswimspeed>
+  <entityname.chipdronepod>Уникальное устройство (Создание дронов)</entityname.chipdronepod>
+  <entityname.chipbayonet>Уникальное устройство (Встроенный клинок)</entityname.chipbayonet>
+  <entityname.chipmicrobots>Уникальное устройство (Микроботы)</entityname.chipmicrobots>
+  <entityname.chipscythe>Искаженное устройство (Встроенный клинок?)</entityname.chipscythe>
+  <entityname.chipdronecyst>Искаженное устройство (Создание дронов?)</entityname.chipdronecyst>
+  <entityname.chiphusk>Искаженное устройство (Влагозащита печатных плат?)</entityname.chiphusk>
+  <entityname.chipnanomachines>Искаженное устройство (Микроботы?)</entityname.chipnanomachines>
+  <entityname.encrypteddisk>Зашифрованный диск</entityname.encrypteddisk>
+  <entityname.chipcaptain>Прошивка (Навигация)</entityname.chipcaptain>
+  <entityname.chipmedic>Прошивка (Медицина)</entityname.chipmedic>
+  <entityname.chipsecurity>Прошивка (Бой)</entityname.chipsecurity>
+  <entityname.chipmechanic>Прошивка (Механика)</entityname.chipmechanic>
+  <entityname.chipengineer>Прошивка (Электрика)</entityname.chipengineer>
+  <entitydescription.chipdrive1>Шина для периферийных устройств.</entitydescription.chipdrive1>
+  <entitydescription.chipdrive2>Шина для периферийных устройств. Может подключить два устройства.</entitydescription.chipdrive2>
+  <entitydescription.chipdrive3>Шина для периферийных устройств. Может подключить три устройства.</entitydescription.chipdrive3>
+  <entitydescription.chipdresist>Стандартное устройство для подключения к роботу.</entitydescription.chipdresist>
+  <entitydescription.chipwaterproof>Стандартное устройство для подключения к роботу.</entitydescription.chipwaterproof>
+  <entitydescription.chipempresist>Стандартное устройство для подключения к роботу.</entitydescription.chipempresist>
+  <entitydescription.chipmovespeed>Стандартное устройство для подключения к роботу.</entitydescription.chipmovespeed>
+  <entitydescription.chipswingspeed>Стандартное устройство для подключения к роботу.</entitydescription.chipswingspeed>
+  <entitydescription.chipswimspeed>Стандартное устройство для подключения к роботу.</entitydescription.chipswimspeed>
+  <entitydescription.chipdronepod>Уникальное устройство для подключения к роботу.</entitydescription.chipdronepod>
+  <entitydescription.chipbayonet>Уникальное устройство для подключения к роботу.</entitydescription.chipbayonet>
+  <entitydescription.chipmicrobots>Уникальное устройство для подключения к роботу.</entitydescription.chipmicrobots>
+  <entitydescription.chipscythe>Подозрительное устройство для подключения к роботу. Содержит вредоносные элементы. Использовать на свой страх и риск.</entitydescription.chipscythe>
+  <entitydescription.chipdronecyst>Подозрительное устройство для подключения к роботу. Содержит вредоносные элементы. Использовать на свой страх и риск.</entitydescription.chipdronecyst>
+  <entitydescription.chiphusk>Подозрительное устройство для подключения к роботу. Содержит вредоносные элементы. Использовать на свой страх и риск.</entitydescription.chiphusk>
+  <entitydescription.chipnanomachines>Подозрительное устройство для подключения к роботу. Содержит вредоносные элементы. Использовать на свой страх и риск.</entitydescription.chipnanomachines>
+  <entitydescription.encrypteddisk>Зашифрованный диск. По записанной в нем информации можно создать периферийное устройство.</entitydescription.encrypteddisk>
+  <entitydescription.chipcaptain>Устройство, содержащее прошивку для робота-капитана.</entitydescription.chipcaptain>
+  <entitydescription.chipmedic>Устройство, содержащее прошивку для робота-медика.</entitydescription.chipmedic>
+  <entitydescription.chipsecurity>Устройство, содержащее прошивку для робота-военного.</entitydescription.chipsecurity>
+  <entitydescription.chipmechanic>Устройство, содержащее прошивку для робота-механика.</entitydescription.chipmechanic>
+  <entitydescription.chipengineer>Устройство, содержащее прошивку для робота-инженера.</entitydescription.chipengineer>
+</infotexts>

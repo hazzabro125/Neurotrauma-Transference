@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Character speciesname="Rotcyst" humanoid="false">
+  <ragdolls folder="%ModDir%/Characters/Rotcyst/Ragdolls/" />
+  <animations folder="%ModDir%/Characters/Rotcyst/Animations/" />
+  <health />
+  <ai />
+</Character>

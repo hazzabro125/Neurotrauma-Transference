@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Character SpeciesName="Jove" SpeciesTranslationOverride="" DisplayName="" Group="ancientalien" Humanoid="False" HasInfo="False" CanInteract="False" Husk="False" UseHuskAppendage="False" NeedsAir="False" NeedsWater="False" CanSpeak="False" ShowHealthBar="False" UseBossHealthBar="True" Noise="100" Visibility="100" BloodDecal="blood" BleedParticleAir="blooddrop" BleedParticleWater="waterblood" BleedParticleMultiplier="10" CanEat="False" EatingSpeed="10" UsePathFinding="False" PathFinderPriority="1" HideInSonar="False" HideInThermalGoggles="False" SonarDisruption="1" DistantSonarRange="0" DisableDistance="1000000" SoundInterval="10" DrawLast="False">
+    <ragdolls folder="Content/Characters/Jove/Ragdolls/" />
+    <animations folder="Content/Characters/Jove/Animations/" />
+    <damageemitter particle="gib" drawontop="True" particleamount="2" velocitymin="200" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+    <bloodemitter particle="waterblood" particleamount="10" velocitymin="0" velocitymax="100" anglemin="0" anglemax="360" scalemin="10" scalemax="20" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+    <gibemitter particle="waterblood" particleamount="2" velocitymin="0" velocitymax="100" anglemin="0" anglemax="360" scalemin="10" scalemax="20" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+    <gibemitter particle="gib" drawontop="True" particleamount="20" velocitymin="200" velocitymax="700" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+    <gibemitter particle="heavygib" particleamount="20" velocitymin="50" velocitymax="1000" anglemin="0" anglemax="360" scalemin="2" scalemax="4" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+    <health Vitality="10000" DoesBleed="False" CrushDepth="Infinity" UseHealthWindow="False" BleedingReduction="0" BurnReduction="0" ConstantHealthRegeneration="0" HealthRegenerationWhenEating="0" StunImmunity="True" PoisonImmunity="True" ApplyAfflictionColors="False" />
+    <ai CombatStrength="10000" Sight="1" Hearing="1" AggressionHurt="100" AggressionGreed="10" FleeHealthThreshold="0" AttackWhenProvoked="False" AvoidGunfire="False" DamageThreshold="0" AvoidTime="3" MinFleeTime="20" AggressiveBoarding="False" EnforceAggressiveBehaviorForMissions="True" TargetOuterWalls="True" RandomAttack="False" CanOpenDoors="False" UsePathFindingToGetInside="False" KeepDoorsClosed="False" AvoidAbyss="True" StayInAbyss="False" PatrolFlooded="False" PatrolDry="False" StartAggression="0" MaxAggression="100" AggressionCumulation="0" WallTargetingMethod="Target" />
+    <sound file="Content/Characters/Jove/JOVE_dead1.ogg" state="Die" range="100000" volume="1" dontmuffle="true" />
+    <!-- Constant effects -->
+    <StatusEffect type="OnActive" target="This">
+      <Conditional HealthPercentage="gt 70" />
+      <Affliction identifier="damageimmunity" strength="100" />
+      <sound file="Content/Characters/Jove/JOVE_sleepingLoop.ogg" range="20000" loop="true" volume="1" />
+    </StatusEffect>
+    <StatusEffect type="OnActive" target="This">
+      <Conditional HealthPercentage="lt 70" />
+      <sound file="Content/Characters/Jove/JOVE_idle1.ogg" range="20000" volume="1" selectionmode="random" />
+      <sound file="Content/Characters/Jove/JOVE_idle2.ogg" range="20000" volume="1" />
+      <sound file="Content/Characters/Jove/JOVE_idle3.ogg" range="20000" volume="1" />
+      <sound file="Content/Characters/Jove/JOVE_idle4.ogg" range="20000" volume="1" />
+    </StatusEffect>
+    <!-- Implement the normal damage sounds here so that they won't trigger when the shield is hit -->
+    <StatusEffect type="OnDamaged" target="This" comparison="and">
+      <Conditional HealthPercentage="lt 70" />
+      <Conditional isdead="false" />
+      <sound file="Content/Characters/Jove/JOVE_damage1.ogg" range="20000" volume="1" selectionmode="random" />
+      <sound file="Content/Characters/Jove/JOVE_damage2.ogg" range="20000" volume="1" />
+      <sound file="Content/Characters/Jove/JOVE_damage3.ogg" range="20000" volume="1" />
+      <sound file="Content/Characters/Jove/JOVE_damage4.ogg" range="20000" volume="1" />
+      <sound file="Content/Characters/Jove/JOVE_damage5.ogg" range="20000" volume="1" />
+      <sound file="Content/Characters/Jove/JOVE_damage6.ogg" range="20000" volume="1" />
+    </StatusEffect>
+    <!-- Scream when pylons are destroyed -->
+    <StatusEffect type="OnDamaged" target="This">
+      <RequiredAffliction identifier="doomofjove" />
+      <Conditional isdead="false" />
+      <sound file="Content/Characters/Jove/JOVE_pylonDestroyed.ogg" range="100000" volume="1" dontmuffle="true" />
+    </StatusEffect>
+    <!-- Disables the shield -->
+    <StatusEffect type="OnDamaged" target="Limb" targetlimb="Jaw" delay="9">
+      <RequiredAffliction identifier="doomofjove" />
+      <Conditional HealthPercentage="lte 70" />
+      <BreakLimb />
+      <HideLimb />
+    </StatusEffect>
+    <!-- Tells the bots to not to shoot while the shield is on -->
+    <StatusEffect type="OnDamaged" target="Character" setvalue="true" AITurretPriority="0" delay="5">
+      <Conditional HealthPercentage="gt 70" />
+    </StatusEffect>
+    <!--Enables bleeding particles and tells the bots to target us-->
+    <StatusEffect type="OnDamaged" target="This" setvalue="true" DoesBleed="true" AITurretPriority="1" delay="10">
+      <RequiredAffliction identifier="doomofjove" />
+      <Conditional HealthPercentage="lte 70" />
+    </StatusEffect>
+    <!-- EMP Blast-->
+    <StatusEffect type="OnActive" target="this" interval="60" stackable="false">
+      <Conditional HealthPercentage="lte 80" />
+      <Explosion ignorecover="true" range="20000" force="1" empstrength="0.5" flames="false" shockwave="true" sparks="false" flash="true" underwaterbubble="false" playtinnitus="false" applyFireEffects="false" smoke="false" camerashake="500" camerashakerange="30000" flashrange="20000" flashduration="5.0" />
+      <Sound file="Content/Characters/Jove/JOVE_emp.ogg" range="30000" selectionmode="All" />
+      <Sound file="Content/Items/Weapons/Emp.ogg" range="30000" />
+      <ParticleEmitter particle="ElectricShock" distancemin="100" distancemax="1000" particleamount="100" anglemin="0" anglemax="360" scalemin="1.0" scalemax="1.2" />
+      <ParticleEmitter particle="EmpBlast" particleamount="100" />
+      <!--TODO: sonar effect?-->
+    </StatusEffect>
+    <!-- Guardian spawns -->
+    <StatusEffect type="OnDamaged" target="This" checkconditionalways="true" comparison="and" delay="1.5" stackable="false" oneshot="true">
+      <Conditional isdead="false" />
+      <Conditional HealthPercentage="lt 69" />
+      <Conditional HealthPercentage="gt 50" />
+      <SpawnCharacter speciesname="fractalguardian_emp" count="1" />
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This" checkconditionalways="true" comparison="and" delay="1.5" stackable="false" oneshot="true">
+      <Conditional isdead="false" />
+      <Conditional HealthPercentage="lte 60" />
+      <Conditional HealthPercentage="gt 40" />
+      <SpawnCharacter speciesname="portalguardian" count="1" />
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This" checkconditionalways="true" comparison="and" delay="1.5" stackable="false" oneshot="true">
+      <Conditional isdead="false" />
+      <Conditional HealthPercentage="lte 50" />
+      <SpawnCharacter speciesname="fractalguardian3" count="1" />
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This" checkconditionalways="true" comparison="and" delay="1.5" stackable="false" oneshot="true">
+      <Conditional isdead="false" />
+      <Conditional HealthPercentage="lte 40" />
+      <SpawnCharacter speciesname="fractalguardian3" count="1" />
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This" checkconditionalways="true" comparison="and" delay="1.5" stackable="false" oneshot="true">
+      <Conditional isdead="false" />
+      <Conditional HealthPercentage="lte 30" />
+      <SpawnCharacter speciesname="fractalguardian_emp" count="1" />
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This" checkconditionalways="true" comparison="and" delay="1.5" stackable="false" oneshot="true">
+      <Conditional isdead="false" />
+      <Conditional HealthPercentage="lte 20" />
+      <SpawnCharacter speciesname="portalguardian" count="1" />
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This" checkconditionalways="true" comparison="and" delay="1.5" stackable="false" oneshot="true">
+      <Conditional isdead="false" />
+      <Conditional HealthPercentage="lte 10" />
+      <SpawnCharacter speciesname="portalguardian" count="1" />
+    </StatusEffect>
+    <StatusEffect type="OnDeath" target="NearbyCharacters" range="100000">
+      <Conditional isplayer="true" />
+      <GiveTalentInfo talentidentifiers="returner" />
+    </StatusEffect>
+  </Character>
+</Override>

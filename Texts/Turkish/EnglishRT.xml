@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <robotmale>Robot-M</robotmale>
+  <robotfemale>Robot-F</robotfemale>
+  <afflictiondescription.robotpower.low>Your battery is charged enough to fully run your systems.</afflictiondescription.robotpower.low>
+  <afflictiondescription.robotpower>Your battery is running low.</afflictiondescription.robotpower>
+  <afflictiondescription.rinternaldamage.low>Minor sparks spring out from your chest.</afflictiondescription.rinternaldamage.low>
+  <afflictiondescription.rinternaldamage>Many internal components are heavily damaged!.</afflictiondescription.rinternaldamage>
+  <entityname.frame1>Exo-Frame MK. I</entityname.frame1>
+  <entityname.frame2>Exo-Frame MK. II</entityname.frame2>
+  <entityname.frame2safe>Safety Exo-Frame</entityname.frame2safe>
+  <entityname.Cframe1>"Scout" Combat Exo-Frame</entityname.Cframe1>
+  <entityname.Cframe2>"Sledge" Combat Exo-Frame</entityname.Cframe2>
+  <entityname.v1frame>Prototype Combat Exo-Frame</entityname.v1frame>
+  <entityname.disposablebattery>Disposable Battery</entityname.disposablebattery>
+  <entitydescription.disposablebattery>A very wasteful solution to the robotic energy crisis.</entitydescription.disposablebattery>
+  <entitydescription.frame1>A frail and lightweight frame that can handle pressure up to 3000 meters. A cheap option great for a rookie crew, but upgrades will be mandatory for missions deeper in Europa.</entitydescription.frame1>
+  <entitydescription.frame2>A strong frame with an auto-charger thats capable of withstanding pressure up to 4000 meters. A direct upgrade built upon the Exo-Frame MK. 1, it should handle dangers more adequately.</entitydescription.frame2>
+  <entitydescription.frame2safe>An Exo-Frame that combines the capabilities of both the Exo-Frame MK. II and the Safety harness. It can handle depths up to 4000 meters.</entitydescription.frame2safe>
+  <entitydescription.Cframe1>A strong and lightweight frame designed for deep sea battle. Offers a good amount protection and combat firmware. It can withstand pressure up to 6000 meters.</entitydescription.Cframe1>
+  <entitydescription.Cframe2>A large and heavy exo-frame designed for deep sea battle that is powered by fuel rods. Heavily armoured and can withstand pressure up to 10,000 meters. Its heavy frame allows to lessen the recoil from heavy firearms</entitydescription.Cframe2>
+  <entitydescription.v1frame>A prototype Exo-Frame made with a thin plating that repairs itself on contact with blood. It provided reinforcements up to 10,000 met- EARTH IS SILENT. BLOOD IS FUEL. EUROPA IS FULL.</entitydescription.v1frame>
+</infotexts>

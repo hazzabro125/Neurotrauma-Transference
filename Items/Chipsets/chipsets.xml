@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Override>
+    <Item name="" identifier="op_researchterminal" tags="geneticresearchstation" width="494" height="297" texturescale="1.0,1.0" scale="0.5" category="Machine">
+      <sprite texture="Content/Map/Outposts/Art/MedicalItemResearch.png" sourcerect="417,6,494,297" depth="0.79" premultiplyalpha="false" origin="0.5,0.5" />
+      <UpgradePreviewSprite texture="Content/UI/WeaponUI.png" sourcerect="134,969,54,45" origin="0.5,0.45" />
+      <LightComponent range="0.0" powerconsumption="5" lightcolor="255,255,255,111" IsOn="true" castshadows="false" allowingameediting="false">
+        <sprite texture="Content/Map/Outposts/Art/MedicalItemResearchLights.png" sourcerect="417,6,494,297" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+      </LightComponent>
+      <Deconstructor canbeselected="true" showoutput="false" powerconsumption="500.0" deconstructitemssimultaneously="true" msg="ItemMsgInteractSelect" activatebuttontext="researchstation.invalidinput" infotext="researchstation.empty.infotext" infoareawidth="0.7">
+        <GuiFrame relativesize="0.25,0.3" style="ItemUI" anchor="Center" />
+        <sound file="Content/Items/Fabricators/Deconstructor.ogg" type="OnActive" range="1000.0" loop="true" />
+        <poweronsound file="Content/Items/PowerOnLight3.ogg" range="600" loop="false" />
+        <StatusEffect type="InWater" target="This" condition="-0.5" />
+      </Deconstructor>
+      <ItemContainer capacity="2" maxstacksize="1" canbeselected="true" hideitems="true" hudpos="0.5, 0.4" slotsperrow="3" uilabel="" allowuioverlap="true">
+        <Containable items="geneticmaterial,stabilozine,unidentifiedgeneticmaterial,fpgacircuit" />
+      </ItemContainer>
+      <ItemContainer capacity="1" maxstacksize="1" canbeselected="true" hideitems="true" hudpos="0.5, 0.8" slotsperrow="5" uilabel="" allowuioverlap="true">
+        <Containable items="geneticmaterial,stabilozine,unidentifiedgeneticmaterial,robotdrive" />
+      </ItemContainer>
+      <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.0" canbeselected="true" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+        <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+        <RequiredSkill identifier="electrical" level="80" />
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      </Repairable>
+      <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <RequiredSkill identifier="electrical" level="55" />
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
+          <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+          <Explosion range="100.0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Affliction identifier="stun" strength="4" />
+          <Affliction identifier="burn" strength="5" />
+        </StatusEffect>
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <input name="power_in" displayname="connection.powerin" />
+        <output name="condition_out" displayname="connection.conditionout" />
+      </ConnectionPanel>
+    </Item>
+  </Override>
+  <Item name="" identifier="chipdrive1" scale="0.3" category="Equipment" tags="smallitem,geneticdevice" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="engcab" secondary="medcab" />
+    <Price baseprice="400" minleveldifficulty="5">
+      <Price storeidentifier="merchantresearch" multiplier="0.9" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" />
+      <Price storeidentifier="merchantoutpost" multiplier="1.5" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="plastic" amount="2" />
+      <Item identifier="copper" amount="2" />
+      <Item identifier="rubber" />
+      <Item identifier="silicon" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="medical" level="50" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="fpgacircuit" amount="2" />
+      <RequiredItem identifier="rubber" amount="2" />
+      <RequiredItem identifier="silicon" amount="2" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="8,13,86,120" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="8,13,86,120" origin="0.5,0.5" />
+    <Body radius="25" width="45" density="25" />
+    <ItemContainer capacity="1" maxstacksize="1" autoinject="true" autoinjectthreshold="Infinity" allowswappingcontaineditems="false">
+      <Containable items="robotdrive" />
+    </ItemContainer>
+    <Wearable limbtype="Head" slots="Any,HealthInterface" msg="ItemMsgPickUpSelect" displaycontainedstatus="true" />
+  </Item>
+  <Item name="" identifier="chipdrive2" scale="0.3" category="Equipment" tags="smallitem,geneticdevice" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="engcab" secondary="medcab" />
+    <Price baseprice="700" minleveldifficulty="20">
+      <Price storeidentifier="merchantresearch" multiplier="0.9" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" />
+      <Price storeidentifier="merchantoutpost" multiplier="1.5" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="copper" amount="2" />
+      <Item identifier="aluminum" />
+      <Item identifier="silicon" />
+      <Item identifier="fulgirumchunk" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="fulgurium" />
+      <RequiredItem identifier="fpgacircuit" amount="2" />
+      <RequiredItem identifier="silicon" amount="3" />
+      <RequiredItem identifier="steel" amount="2" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="8,142,86,120" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="8,142,86,120" origin="0.5,0.5" />
+    <Body radius="25" width="45" density="25" />
+    <ItemContainer capacity="2" maxstacksize="1" autoinject="true" autoinjectthreshold="Infinity" allowswappingcontaineditems="false">
+      <Containable items="robotdrive" />
+    </ItemContainer>
+    <Wearable limbtype="Head" slots="Any,HealthInterface" msg="ItemMsgPickUpSelect" displaycontainedstatus="true" />
+  </Item>
+  <Item name="" identifier="chipdrive3" scale="0.3" category="Equipment" tags="smallitem,geneticdevice" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="engcab" secondary="medcab" />
+    <Price baseprice="1000" minleveldifficulty="40">
+      <Price storeidentifier="merchantresearch" multiplier="0.9" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" />
+      <Price storeidentifier="merchantoutpost" multiplier="1.5" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="copper" amount="2" />
+      <Item identifier="aluminum" />
+      <Item identifier="silicon" />
+      <Item identifier="fulgirumchunk" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="80" />
+      <RequiredItem identifier="physicorium" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fpgacircuit" amount="3" />
+      <RequiredItem identifier="silicon" amount="8" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="98,142,86,120" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="98,142,86,120" origin="0.5,0.5" />
+    <Body radius="25" width="45" density="25" />
+    <ItemContainer capacity="3" maxstacksize="1" autoinject="true" autoinjectthreshold="Infinity" allowswappingcontaineditems="false">
+      <Containable items="robotdrive" />
+    </ItemContainer>
+    <Wearable limbtype="Head" slots="Any,HealthInterface" msg="ItemMsgPickUpSelect" displaycontainedstatus="true" />
+  </Item>
+  <!--
+  
+		Basic Drives
+
+	!-->
+  <Item name="" identifier="chipdresist" category="Material" maxstacksize="1" tags="smallitem,robotdrive" cargocontaineridentifier="metalcrate" description="" scale="0.3" impactsoundtag="impact_metal_light" hideconditionbar="true" hideconditionintooltip="false" allowsellingwhenbroken="true">
+    <PreferredContainer primary="engcab" />
+    <Price baseprice="750" sold="false">
+      <Price storeidentifier="merchantcity" />
+      <Price storeidentifier="merchantresearch" multiplier="1.2" />
+    </Price>
+    <GeneticMaterial nameidentifier="character.robotdamageresistance" effect="rdamageresistance" conditionincreaseoncombinemin="5.0" conditionincreaseoncombinemax="8.0" tooltipvaluemin="10" tooltipvaluemax="50">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <StatusEffect type="OnWearing" target="Character" duration="0.0">
+        <Sound file="%ModDir%/Items/Chipsets/driveinsert.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnSevered" target="Character" duration="0.0">
+        <Sound file="%ModDir%/Items/Chipsets/driveeject.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+    </GeneticMaterial>
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <Body width="23" height="31" density="20" />
+    <Holdable handle1="0,0" slots="Any"></Holdable>
+    <ItemContainer capacity="1" canbeselected="false" hideitems="true" allowaccess="false" showcontainedstateindicator="false">
+      <Containable items="robotdrive" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="chipwaterproof" variantof="chipdresist">
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <GeneticMaterial nameidentifier="character.robotwaterproof" effect="rwaterproof" />
+  </Item>
+  <Item name="" identifier="chipempresist" variantof="chipdresist">
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <GeneticMaterial nameidentifier="character.robotempresistance" effect="rempresistance" />
+  </Item>
+  <Item name="" identifier="chipmovespeed" variantof="chipdresist">
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <GeneticMaterial nameidentifier="character.robotmovespeed" effect="rmovespeed" />
+  </Item>
+  <Item name="" identifier="chipswingspeed" variantof="chipdresist">
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <GeneticMaterial nameidentifier="character.robotswingspeed" effect="rswingspeed" />
+  </Item>
+  <Item name="" identifier="chipswimspeed" variantof="chipdresist">
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <GeneticMaterial nameidentifier="character.robotswimspeed" effect="rswimspeed" />
+  </Item>
+  <!--
+
+		Unique Drives
+
+	!-->
+  <Item name="" identifier="chipdronepod" variantof="chipdresist">
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="252,70,48,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="252,70,48,64" origin="0.5,0.5" />
+    <GeneticMaterial nameidentifier="character.robotdronesynthesis" effect="rdronepod" />
+  </Item>
+  <Item name="" identifier="chipbayonet" variantof="chipdresist">
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="252,70,48,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="252,70,48,64" origin="0.5,0.5" />
+    <GeneticMaterial nameidentifier="character.robotbayonet" effect="rbayonet" />
+  </Item>
+  <Item name="" identifier="chipmicrobots" variantof="chipdresist">
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="252,70,48,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="252,70,48,64" origin="0.5,0.5" />
+    <GeneticMaterial nameidentifier="character.robotmicrobots" effect="rmicrobots" />
+  </Item>
+  <!--
+
+		Corrupted Drives
+
+	!-->
+  <Item name="" identifier="chipdronecyst" category="Material" maxstacksize="1" tags="smallitem,robotdrive" cargocontaineridentifier="metalcrate" description="" scale="0.3" impactsoundtag="impact_metal_light" hideconditionbar="true" hideconditionintooltip="false" allowsellingwhenbroken="true">
+    <PreferredContainer primary="engcab" />
+    <Price baseprice="750" sold="false">
+      <Price storeidentifier="merchantcity" />
+      <Price storeidentifier="merchantresearch" multiplier="1.2" />
+    </Price>
+    <GeneticMaterial nameidentifier="character.robotdronecyst" effect="rdronecyst" conditionincreaseoncombinemin="5.0" conditionincreaseoncombinemax="8.0" tooltipvaluemin="10" tooltipvaluemax="50">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <StatusEffect type="OnWearing" target="Character" duration="0.0">
+        <Sound file="%ModDir%/Items/Chipsets/driveinsert.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnSevered" target="Character" duration="0.0">
+        <Sound file="%ModDir%/Items/Chipsets/driveeject.ogg" type="OnUse" range="500" />
+        <Sound file="Content/Sounds/Damage/Gore1.ogg" type="OnUse" range="500" />
+        <Sound file="Content/Sounds/Damage/Gore2.ogg" type="OnUse" range="500" />
+        <Sound file="Content/Sounds/Damage/Gore3.ogg" type="OnUse" range="500" />
+        <ParticleEmitter particle="bloodsplash" anglemin="0" anglemax="360" particleamount="5" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="1.0" />
+        <Affliction identifier="stun" amount="0.5" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnSevered" target="This" duration="0.0">
+        <Remove />
+      </StatusEffect>
+    </GeneticMaterial>
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="301,63,52,69" origin="0.44888762,0.53466314" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="301,63,52,69" origin="0.44888762,0.53466314" />
+    <Body width="23" height="31" density="20" />
+    <Holdable handle1="0,0" slots="Any"></Holdable>
+    <ItemContainer capacity="1" canbeselected="false" hideitems="true" allowaccess="false" showcontainedstateindicator="false">
+      <Containable items="robotdrive" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="chipscythe" variantof="chipdronecyst">
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="301,63,52,69" origin="0.44888762,0.53466314" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="301,63,52,69" origin="0.44888762,0.53466314" />
+    <GeneticMaterial nameidentifier="character.robotscythe" effect="rscythe" />
+  </Item>
+  <Item name="" identifier="chiphusk" variantof="chipdronecyst">
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="301,63,52,69" origin="0.44888762,0.53466314" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="301,63,52,69" origin="0.44888762,0.53466314" />
+    <GeneticMaterial nameidentifier="character.robothusk" effect="rhusk" />
+  </Item>
+  <Item name="" identifier="chipnanomachines" variantof="chipdronecyst">
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="301,63,52,69" origin="0.44888762,0.53466314" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="301,63,52,69" origin="0.44888762,0.53466314" />
+    <GeneticMaterial nameidentifier="character.robotnanomachines" effect="rnanomachines" />
+  </Item>
+  <Item name="" identifier="chipcaptain" category="Material" maxstacksize="1" tags="smallitem,robotdrive" cargocontaineridentifier="metalcrate" description="" scale="0.3" impactsoundtag="impact_metal_light" hideconditionbar="true" hideconditionintooltip="false" allowsellingwhenbroken="true">
+    <PreferredContainer primary="engcab" />
+    <Price baseprice="400">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantengineering" multiplier="0.9" minavailable="1" maxavailable="1" />
+    </Price>
+    <GeneticMaterial nameidentifier="character.robotskillcaptain" effect="rskillcaptain" conditionincreaseoncombinemin="5.0" conditionincreaseoncombinemax="8.0" tooltipvaluemin="10" tooltipvaluemax="50">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <StatusEffect type="OnWearing" target="Character" duration="0.0">
+        <Sound file="%ModDir%/Items/Chipsets/driveinsert.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnSevered" target="Character" duration="0.0">
+        <Sound file="%ModDir%/Items/Chipsets/driveeject.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+    </GeneticMaterial>
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="153,70,48,65" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <Body width="23" height="31" density="20" />
+    <Holdable handle1="0,0" slots="Any"></Holdable>
+    <ItemContainer capacity="1" canbeselected="false" hideitems="true" allowaccess="false" showcontainedstateindicator="false">
+      <Containable items="robotdrive" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="chipmedic" category="Material" maxstacksize="1" tags="smallitem,robotdrive" cargocontaineridentifier="metalcrate" description="" scale="0.3" impactsoundtag="impact_metal_light" hideconditionbar="true" hideconditionintooltip="false" allowsellingwhenbroken="true">
+    <PreferredContainer primary="engcab" />
+    <Price baseprice="400">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantengineering" multiplier="0.9" minavailable="1" maxavailable="1" />
+    </Price>
+    <GeneticMaterial nameidentifier="character.robotskillmedic" effect="rskillmedic" conditionincreaseoncombinemin="5.0" conditionincreaseoncombinemax="8.0" tooltipvaluemin="10" tooltipvaluemax="50">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <StatusEffect type="OnWearing" target="Character" duration="0.0">
+        <Sound file="%ModDir%/Items/Chipsets/driveinsert.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnSevered" target="Character" duration="0.0">
+        <Sound file="%ModDir%/Items/Chipsets/driveeject.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+    </GeneticMaterial>
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="153,70,48,65" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <Body width="23" height="31" density="20" />
+    <Holdable handle1="0,0" slots="Any"></Holdable>
+    <ItemContainer capacity="1" canbeselected="false" hideitems="true" allowaccess="false" showcontainedstateindicator="false">
+      <Containable items="robotdrive" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="chipsecurity" category="Material" maxstacksize="1" tags="smallitem,robotdrive" cargocontaineridentifier="metalcrate" description="" scale="0.3" impactsoundtag="impact_metal_light" hideconditionbar="true" hideconditionintooltip="false" allowsellingwhenbroken="true">
+    <PreferredContainer primary="engcab" />
+    <Price baseprice="400">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantengineering" multiplier="0.9" minavailable="1" maxavailable="1" />
+    </Price>
+    <GeneticMaterial nameidentifier="character.robotskillsecurity" effect="rskillsecurity" conditionincreaseoncombinemin="5.0" conditionincreaseoncombinemax="8.0" tooltipvaluemin="10" tooltipvaluemax="50">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <StatusEffect type="OnWearing" target="Character" duration="0.0">
+        <Sound file="%ModDir%/Items/Chipsets/driveinsert.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnSevered" target="Character" duration="0.0">
+        <Sound file="%ModDir%/Items/Chipsets/driveeject.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+    </GeneticMaterial>
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="153,70,48,65" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <Body width="23" height="31" density="20" />
+    <Holdable handle1="0,0" slots="Any"></Holdable>
+    <ItemContainer capacity="1" canbeselected="false" hideitems="true" allowaccess="false" showcontainedstateindicator="false">
+      <Containable items="robotdrive" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="chipmechanic" category="Material" maxstacksize="1" tags="smallitem,robotdrive" cargocontaineridentifier="metalcrate" description="" scale="0.3" impactsoundtag="impact_metal_light" hideconditionbar="true" hideconditionintooltip="false" allowsellingwhenbroken="true">
+    <PreferredContainer primary="engcab" />
+    <Price baseprice="400">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantengineering" multiplier="0.9" minavailable="1" maxavailable="1" />
+    </Price>
+    <GeneticMaterial nameidentifier="character.robotskillmechanic" effect="rskillmechanic" conditionincreaseoncombinemin="5.0" conditionincreaseoncombinemax="8.0" tooltipvaluemin="10" tooltipvaluemax="50">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <StatusEffect type="OnWearing" target="Character" duration="0.0">
+        <Sound file="%ModDir%/Items/Chipsets/driveinsert.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnSevered" target="Character" duration="0.0">
+        <Sound file="%ModDir%/Items/Chipsets/driveeject.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+    </GeneticMaterial>
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="153,70,48,65" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <Body width="23" height="31" density="20" />
+    <Holdable handle1="0,0" slots="Any"></Holdable>
+    <ItemContainer capacity="1" canbeselected="false" hideitems="true" allowaccess="false" showcontainedstateindicator="false">
+      <Containable items="robotdrive" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="chipengineer" category="Material" maxstacksize="1" tags="smallitem,robotdrive" cargocontaineridentifier="metalcrate" description="" scale="0.3" impactsoundtag="impact_metal_light" hideconditionbar="true" hideconditionintooltip="false" allowsellingwhenbroken="true">
+    <PreferredContainer primary="engcab" />
+    <Price baseprice="400">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantengineering" multiplier="0.9" minavailable="1" maxavailable="1" />
+    </Price>
+    <GeneticMaterial nameidentifier="character.robotskillengineer" effect="rskillengineer" conditionincreaseoncombinemin="5.0" conditionincreaseoncombinemax="8.0" tooltipvaluemin="10" tooltipvaluemax="50">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <StatusEffect type="OnWearing" target="Character" duration="0.0">
+        <Sound file="%ModDir%/Items/Chipsets/driveinsert.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnSevered" target="Character" duration="0.0">
+        <Sound file="%ModDir%/Items/Chipsets/driveeject.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+    </GeneticMaterial>
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="153,70,48,65" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <Body width="23" height="31" density="20" />
+    <Holdable handle1="0,0" slots="Any"></Holdable>
+    <ItemContainer capacity="1" canbeselected="false" hideitems="true" allowaccess="false" showcontainedstateindicator="false">
+      <Containable items="robotdrive" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="encrypteddisk" category="Material" maxstacksize="1" tags="smallitem,unidentifiedgeneticmaterial,blackmarketgenes" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft" hideinmenus="false">
+    <PreferredContainer primary="researchcontainer" spawnprobability="0" />
+    <PreferredContainer secondary="wreckstoragecab,wreckreactorcab,abandonedstoragecab" spawnprobability="0.15" />
+    <PreferredContainer secondary="outposttrashcan" amount="1" spawnprobability="0.02" />
+    <Price baseprice="300" sold="false" requiresunlock="true">
+      <Price storeidentifier="merchantcity" sold="true" minavailable="5" maxavailable="10" />
+      <Price storeidentifier="merchantresearch" sold="true" multiplier="1.2" minavailable="10" maxavailable="15" />
+    </Price>
+    <Deconstruct time="5" chooserandom="true" amount="1" requireddeconstructor="geneticresearchstation">
+      <Item identifier="chipdresist" commonness="3" requiredotheritem="fpgacircuit" outconditionmin="0.1" outconditionmax="0.2" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipwaterproof" commonness="3" requiredotheritem="fpgacircuit" outconditionmin="0.1" outconditionmax="0.2" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipempresist" commonness="3" requiredotheritem="fpgacircuit" outconditionmin="0.1" outconditionmax="0.2" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipmovespeed" commonness="3" requiredotheritem="fpgacircuit" outconditionmin="0.1" outconditionmax="0.2" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipswingspeed" commonness="3" requiredotheritem="fpgacircuit" outconditionmin="0.1" outconditionmax="0.2" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipswimspeed" commonness="3" requiredotheritem="fpgacircuit" outconditionmin="0.1" outconditionmax="0.2" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipdronepod" commonness="2" requiredotheritem="fpgacircuit" outconditionmin="0.1" outconditionmax="0.2" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipbayonet" commonness="2" requiredotheritem="fpgacircuit" outconditionmin="0.1" outconditionmax="0.2" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipmicrobots" commonness="2" requiredotheritem="fpgacircuit" outconditionmin="0.1" outconditionmax="0.2" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipdronecyst" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.1" outconditionmax="0.2" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipscythe" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.1" outconditionmax="0.2" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chiphusk" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.1" outconditionmax="0.2" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipnanomachines" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.1" outconditionmax="0.2" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipdresist" commonness="2" requiredotheritem="fpgacircuit" outconditionmin="0.2" outconditionmax="0.4" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipwaterproof" commonness="2" requiredotheritem="fpgacircuit" outconditionmin="0.2" outconditionmax="0.4" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipempresist" commonness="2" requiredotheritem="fpgacircuit" outconditionmin="0.2" outconditionmax="0.4" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipmovespeed" commonness="2" requiredotheritem="fpgacircuit" outconditionmin="0.2" outconditionmax="0.4" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipswingspeed" commonness="2" requiredotheritem="fpgacircuit" outconditionmin="0.2" outconditionmax="0.4" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipswimspeed" commonness="2" requiredotheritem="fpgacircuit" outconditionmin="0.2" outconditionmax="0.4" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipdronepod" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.2" outconditionmax="0.4" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipbayonet" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.2" outconditionmax="0.4" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipmicrobots" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.2" outconditionmax="0.4" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipdronecyst" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.2" outconditionmax="0.4" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipscythe" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.2" outconditionmax="0.4" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chiphusk" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.2" outconditionmax="0.4" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipnanomachines" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.4" outconditionmax="1" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipdresist" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.4" outconditionmax="1" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipwaterproof" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.4" outconditionmax="1" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipempresist" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.4" outconditionmax="1" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipmovespeed" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.4" outconditionmax="1" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipswingspeed" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.4" outconditionmax="1" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipswimspeed" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.4" outconditionmax="1" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipdronepod" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.4" outconditionmax="1" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipbayonet" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.4" outconditionmax="1" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipmicrobots" commonness="1" requiredotheritem="fpgacircuit" outconditionmin="0.4" outconditionmax="1" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipdronecyst" commonness="0.5" requiredotheritem="fpgacircuit" outconditionmin="0.4" outconditionmax="1" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipscythe" commonness="0.5" requiredotheritem="fpgacircuit" outconditionmin="0.4" outconditionmax="1" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chiphusk" commonness="0.5" requiredotheritem="fpgacircuit" outconditionmin="0.4" outconditionmax="1" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+      <Item identifier="chipnanomachines" commonness="0.5" requiredotheritem="fpgacircuit" outconditionmin="0.4" outconditionmax="1" activatebuttontext="researchstation.research" infotext="researchstation.research.robotinfo" infotextonotheritemmissing="researchstation.combine.robotmissingitem" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="102,70,48,65" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Chipsets/icons.png" sourcerect="203,70,48,65" origin="0.5,0.5" />
+    <Body width="23" height="31" density="20" />
+    <Pickable slots="Any" />
+  </Item>
+</Items>

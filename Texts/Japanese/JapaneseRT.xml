@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Japanese" nowhitespace="true" translatedname="日本語">
+  <robotmale>ROBOT-M</robotmale>
+  <robotfemale>ロボット-F</robotfemale>
+  <afflictiondescription.robotpower.low>バッテリーにはシステムを完全に実行するのに十分な充電があります。</afflictiondescription.robotpower.low>
+  <afflictiondescription.robotpower>バッテリーは低くなっています。</afflictiondescription.robotpower>
+  <afflictiondescription.rinternaldamage.low>マイナースパークスは胸から出てきます。</afflictiondescription.rinternaldamage.low>
+  <afflictiondescription.rinternaldamage>多くの内部コンポーネントが大きく損傷しています！</afflictiondescription.rinternaldamage>
+  <entityname.frame1>exo-frame mk。私</entityname.frame1>
+  <entityname.frame2>exo-frame mk。 ii</entityname.frame2>
+  <entityname.frame2safe>安全性エクソフレーム</entityname.frame2safe>
+  <entityname.Cframe1>「スカウト」戦闘exoフレーム</entityname.Cframe1>
+  <entityname.Cframe2>「スレッジ」戦闘exoフレーム</entityname.Cframe2>
+  <entityname.v1frame>プロトタイプ戦闘EXOフレーム</entityname.v1frame>
+  <entityname.disposablebattery>使い捨てバッテリー</entityname.disposablebattery>
+  <entitydescription.disposablebattery>ロボットエネルギー危機に対する非常に無駄な解決策。</entitydescription.disposablebattery>
+  <entitydescription.frame1>最大3000メートルまでの圧力を処理できる虚弱で軽量のフレーム。ルーキーの乗組員に最適な安価なオプションですが、アップグレードはヨーロッパのミッションに義務付けられます。</entitydescription.frame1>
+  <entitydescription.frame2>最大4000メートルまでの圧力に耐えることができる自動車用チャージャーを備えた強力なフレーム。 EXOフレームMK上に構築された直接的なアップグレード。 1、それはより適切に危険を処理する必要があります。</entitydescription.frame2>
+  <entitydescription.frame2safe>両方のEXOフレームMKの機能を組み合わせたEXOフレーム。 IIとセーフティハーネス。最大4000メートルまでの深さを処理できます。</entitydescription.frame2safe>
+  <entitydescription.Cframe1>深海戦のために設計された強力で軽量のフレーム。良い量の保護と戦闘ファームウェアを提供します。最大6000メートルまでの圧力に耐えることができます。</entitydescription.Cframe1>
+  <entitydescription.Cframe2>燃料棒を搭載した深海戦のために設計された大きくて重いエクソフレーム。重く装甲されており、最大10,000メートルまでの圧力に耐えることができます。その重いフレームは、重い銃器から反動を軽減することを可能にします</entitydescription.Cframe2>
+  <entitydescription.v1frame>血液との接触時にそれ自体を修理する薄いメッキで作られたプロトタイプのエクソフレーム。それは、最大10,000のメットアースまでの援軍を沈黙させました。血は燃料です。ヨーロッパはいっぱいです。</entitydescription.v1frame>
+</infotexts>

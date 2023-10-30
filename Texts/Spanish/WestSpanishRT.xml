@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Latinamerican Spanish" nowhitespace="false" translatedname="Español Latinoamericano">
+  <robotmale>Robot-m</robotmale>
+  <robotfemale>Robot-F</robotfemale>
+  <afflictiondescription.robotpower.low>Su batería se carga lo suficiente como para ejecutar completamente sus sistemas.</afflictiondescription.robotpower.low>
+  <afflictiondescription.robotpower>Su batería se está agotando.</afflictiondescription.robotpower>
+  <afflictiondescription.rinternaldamage.low>Las chispas menores salen de tu pecho.</afflictiondescription.rinternaldamage.low>
+  <afflictiondescription.rinternaldamage>¡Muchos componentes internos están muy dañados!</afflictiondescription.rinternaldamage>
+  <entityname.frame1>Exo-marco Mk. I</entityname.frame1>
+  <entityname.frame2>Exo-marco Mk. II</entityname.frame2>
+  <entityname.frame2safe>Exo-marco de seguridad</entityname.frame2safe>
+  <entityname.Cframe1>"Scout" de combate exo-marco</entityname.Cframe1>
+  <entityname.Cframe2>"Trineo" de combate exo-marco</entityname.Cframe2>
+  <entityname.v1frame>Prototipo de combate exo-marco</entityname.v1frame>
+  <entityname.disposablebattery>Batería desechable</entityname.disposablebattery>
+  <entitydescription.disposablebattery>Una solución muy derrochadora a la crisis energética robótica.</entitydescription.disposablebattery>
+  <entitydescription.frame1>Un marco frágil y liviano que puede manejar una presión de hasta 3000 metros. Una opción barata ideal para un equipo de novatos, pero las actualizaciones serán obligatorias para las misiones más profundas en Europa.</entitydescription.frame1>
+  <entitydescription.frame2>Un marco fuerte con un cargo automático que es capaz de resistir la presión de hasta 4000 metros. Una actualización directa construida sobre el exo-frame MK. 1, debería manejar los peligros de manera más adecuada.</entitydescription.frame2>
+  <entitydescription.frame2safe>Un marco exo que combina las capacidades de tanto el exo-marco MK. II y el arnés de seguridad. Puede manejar profundidades de hasta 4000 metros.</entitydescription.frame2safe>
+  <entitydescription.Cframe1>Un marco fuerte y liviano diseñado para la batalla de Deep Sea. Ofrece una buena cantidad de protección y firmware de combate. Puede soportar presión hasta 6000 metros.</entitydescription.Cframe1>
+  <entitydescription.Cframe2>Un exo-marco grande y pesado diseñado para una batalla de aguas profundas que funciona con varillas de combustible. Fuertemente blindado y puede soportar presión hasta 10,000 metros. Su marco pesado permite disminuir el retroceso de las armas de fuego pesadas</entitydescription.Cframe2>
+  <entitydescription.v1frame>Un prototipo exo-marco hecho con un revestimiento delgado que se repara en contacto con la sangre. Proporcionó refuerzos de hasta 10,000 metas de metro está en silencio. La sangre es combustible. Europa está lleno.</entitydescription.v1frame>
+</infotexts>

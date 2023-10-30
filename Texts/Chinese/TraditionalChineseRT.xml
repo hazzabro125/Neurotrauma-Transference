@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Traditional Chinese" nowhitespace="true" translatedname="中文(繁體)">
+  <robotmale>機器人-M</robotmale>
+  <robotfemale>Robot-f</robotfemale>
+  <afflictiondescription.robotpower.low>您的電池充滿了充電以完全運行您的系統。</afflictiondescription.robotpower.low>
+  <afflictiondescription.robotpower>您的電池電量低。</afflictiondescription.robotpower>
+  <afflictiondescription.rinternaldamage.low>輕微的火花從你的胸口彈出。</afflictiondescription.rinternaldamage.low>
+  <afflictiondescription.rinternaldamage>許多內部組件受到嚴重損壞！</afflictiondescription.rinternaldamage>
+  <entityname.frame1>EXO-FRAME MK。我</entityname.frame1>
+  <entityname.frame2>EXO-FRAME MK。 ii</entityname.frame2>
+  <entityname.frame2safe>安全外觀框架</entityname.frame2safe>
+  <entityname.Cframe1>“偵察”戰鬥框架</entityname.Cframe1>
+  <entityname.Cframe2>“雪橇”戰鬥外觀框架</entityname.Cframe2>
+  <entityname.v1frame>原型戰鬥外觀框架</entityname.v1frame>
+  <entityname.disposablebattery>一次性電池</entityname.disposablebattery>
+  <entitydescription.disposablebattery>機器人能源危機的一種非常浪費的解決方案。</entitydescription.disposablebattery>
+  <entitydescription.frame1>輕巧且輕巧的框架，可以處理最多3000米的壓力。廉價的選擇非常適合新秀工作人員，但在歐羅巴更深入的任務將必須進行升級。</entitydescription.frame1>
+  <entitydescription.frame2>強大的框架，具有自動授予者，能夠承受高達4000米的壓力。在Exo-Frame MK上建立的直接升級。 1，它應該更充分地處理危險。</entitydescription.frame2>
+  <entitydescription.frame2safe>一個結合了Exo-Frame MK功能的外觀框架。 II和安全帶。它可以處理最多4000米的深度。</entitydescription.frame2safe>
+  <entitydescription.Cframe1>強大而輕巧的框架，專為深海戰而設計。提供大量保護和戰鬥固件。它可以承受高達6000米的壓力。</entitydescription.Cframe1>
+  <entitydescription.Cframe2>由燃油棒提供動力的大型外觀框架，專為深海戰而設計。裝甲齊全，可以承受高達10,000米的壓力。它的重型框架可以減少重型槍支的後坐力</entitydescription.Cframe2>
+  <entitydescription.v1frame>由薄層製成的原型外觀框架，可在與血液接觸時進行修復。它提供了多達10,000局的增援部隊是沉默的。血液是燃料。歐羅巴已經滿了。</entitydescription.v1frame>
+</infotexts>

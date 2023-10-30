@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Polish" nowhitespace="false" translatedname="Polski">
+  <!-- Translation done by Kaofan !-->
+  <robotmale>Robot M.</robotmale>
+  <robotfemale>Robot K.</robotfemale>
+  <!-- Pre 1.14 Afflictions !-->
+  <afflictionname.powerlow>Robotyczny Głód</afflictionname.powerlow>
+  <afflictionname.rinternaldamage>Uszkodzenie od Wody</afflictionname.rinternaldamage>
+  <afflictionname.robotinfection>Pasożyt Kwiatowy</afflictionname.robotinfection>
+  <afflictionname.robotfast>Przeciążenie</afflictionname.robotfast>
+  <afflictionname.scoutdodge>Unikanie Ładowania</afflictionname.scoutdodge>
+  <afflictionname.medicheal>Ładunek Medyczny</afflictionname.medicheal>
+  <afflictiondescription.robotpower.low>Bateria jest wystarczająco naładowana, aby w pełni uruchomić systemy.</afflictiondescription.robotpower.low>
+  <afflictiondescription.robotpower>Twoja bateria jest na wyczerpaniu.</afflictiondescription.robotpower>
+  <afflictiondescription.rinternaldamage.low>Z Twojej piersi wystrzeliwują drobne iskry.</afflictiondescription.rinternaldamage.low>
+  <afflictiondescription.rinternaldamage>Wiele elementów wewnętrznych uległo poważnemu uszkodzeniu!.</afflictiondescription.rinternaldamage>
+  <afflictiondescription.robotinfection.low>To nie może być dobre.</afflictiondescription.robotinfection.low>
+  <afflictiondescription.robotinfection>Twoja krtań nie reaguje, czujesz, jak winorośle oplatają Twoje stawy.</afflictiondescription.robotinfection>
+  <!-- Post 1.14 Augments !-->
+  <afflictionname.rdamageresistance>Powłoka Tytanowa</afflictionname.rdamageresistance>
+  <afflictionname.rwaterproof>Wodoodporne Obwody</afflictionname.rwaterproof>
+  <afflictionname.rempresistance>Izolacja Elektryczna</afflictionname.rempresistance>
+  <afflictionname.rmovespeed>Mocne Silniki</afflictionname.rmovespeed>
+  <afflictionname.rswingspeed>Smarowane Stawy</afflictionname.rswingspeed>
+  <afflictionname.rswimspeed>Udoskonalony cykl pływania</afflictionname.rswimspeed>
+  <afflictionname.rskillcaptain>Oprogramowanie Nawigacyjne</afflictionname.rskillcaptain>
+  <afflictionname.rskillmedic>Oprogramowanie Medyczne</afflictionname.rskillmedic>
+  <afflictionname.rskillsecurity>Oprogramowanie Bojowe</afflictionname.rskillsecurity>
+  <afflictionname.rskillmechanic>Oprogramowanie Mechaniczne</afflictionname.rskillmechanic>
+  <afflictionname.rskillengineer>Oprogramowanie Inżynierskie</afflictionname.rskillengineer>
+  <afflictionname.rdronepod>Synteza Dronów</afflictionname.rdronepod>
+  <afflictionname.rmicrobots>Mikroboty</afflictionname.rmicrobots>
+  <afflictionname.rnanomachines>Nanomaszyny</afflictionname.rnanomachines>
+  <afflictionname.rbayonet>Bagnet</afflictionname.rbayonet>
+  <afflictionname.rhusk>Odporność na Głębokość</afflictionname.rhusk>
+  <afflictionname.rscythe>Kosa</afflictionname.rscythe>
+  <afflictionname.rdronecyst>Cysty Dronów</afflictionname.rdronecyst>
+  <afflictiondescription.rdamageresistance>Dodatkowe poszycie pancerza zabezpieczające ramę.</afflictiondescription.rdamageresistance>
+  <afflictiondescription.rwaterproof>Udoskonalone obwody i obieg wody, aby zapobiec uszkodzeniom spowodowanym przez wodę.</afflictiondescription.rwaterproof>
+  <afflictiondescription.rempresistance>Izolacja gumowa do tłumienia nagłych impulsów elektromagnetycznych.</afflictiondescription.rempresistance>
+  <afflictiondescription.rmovespeed>Zoptymalizowane silniki do podróży z większą prędkością.</afflictiondescription.rmovespeed>
+  <afflictiondescription.rswingspeed>Smarowane w celu poprawy bezwładności wahadłowej.</afflictiondescription.rswingspeed>
+  <afflictiondescription.rswimspeed>Zoptymalizowane dane animacji w celu zwiększenia prędkości pływania.</afflictiondescription.rswimspeed>
+  <afflictiondescription.rskillcaptain>Oprogramowanie sprzętowe do nawigacji łodziami podwodnymi i szybszego ładowania wieży.</afflictiondescription.rskillcaptain>
+  <afflictiondescription.rskillmedic>Dane zawarte w kilku podręcznikach medycznych przyczyniają się do bardziej efektywnego wykorzystania środków medycznych.</afflictiondescription.rskillmedic>
+  <afflictiondescription.rskillsecurity>Systemy celowania i szybsze strzelanie z wieży.</afflictiondescription.rskillsecurity>
+  <afflictiondescription.rskillmechanic>Półka na książki z instrukcjami technicznymi</afflictiondescription.rskillmechanic>
+  <afflictiondescription.rskillengineer>Półka na książki zawierająca instrukcje inżynieryjne i okablowania</afflictiondescription.rskillengineer>
+  <afflictiondescription.rdronepod>Informacje o tym, jak zsyntetyzować drony bojowe w głównej obudowie użytkownika.</afflictiondescription.rdronepod>
+  <afflictiondescription.rmicrobots>Naprawy w reakcji na uraz fizyczny</afflictiondescription.rmicrobots>
+  <afflictiondescription.rnanomachines>Twardnieją w reakcji na uraz fizyczny</afflictiondescription.rnanomachines>
+  <afflictiondescription.rbayonet>Construction data for an arm-mounted blade.</afflictiondescription.rbayonet>
+  <afflictiondescription.rhusk>Czujesz się, jakbyś mógł stawić czoła każdej głębinie, ale masz trudności z aktywacją skrzynki głosowej, gdy zostaje ona opanowana przez Rot.</afflictiondescription.rhusk>
+  <afflictiondescription.rscythe>DYREKTYWA: ZRANIENIE.</afflictiondescription.rscythe>
+  <afflictiondescription.rdronecyst>Czujesz, jak z pleców wypływają cysty.</afflictiondescription.rdronecyst>
+  <entityname.frame1>Egzoszkielet MK. I</entityname.frame1>
+  <entityname.frame2>Egzoszkielet MK. II</entityname.frame2>
+  <entityname.Cframe1>Egzoszkielet MK. III</entityname.Cframe1>
+  <entityname.frame2safe>Zabezpieczenia do Egzoszkieletu</entityname.frame2safe>
+  <entityname.medicframe>Egzoszkielet Medyczny "Lazarus"</entityname.medicframe>
+  <entityname.mechframe>Egzoszkielet Naprawczy "Thrash"</entityname.mechframe>
+  <entityname.engineerframe>Egzoszkielet Naprawczy "Arc"</entityname.engineerframe>
+  <entityname.cargoframe>Egzoszkielet Ładunkowy "Hauler"</entityname.cargoframe>
+  <entityname.scoutframe>Egzoszkielet Bojowy "Skaut"</entityname.scoutframe>
+  <entityname.Cframe2>Egzoszkielet Bojowy "Sledge"</entityname.Cframe2>
+  <entityname.Cframe3>Egzoszkielet Bojowy "Sail"</entityname.Cframe3>
+  <entityname.v1frame>Egzoszkielet Prototyp Bojowy</entityname.v1frame>
+  <entityname.captainframe>Egzoszkielet Dowodzenia "Sovereign"</entityname.captainframe>
+  <entityname.disposablebattery>Jednorazowa Bateria</entityname.disposablebattery>
+  <entityname.nanodyeclear>Środek do Usuwania Nanobarwników</entityname.nanodyeclear>
+  <entityname.nanodyeblue>Niebieski Nanobarwnik</entityname.nanodyeblue>
+  <entityname.nanodyered>Czerwony Nanobarwnik</entityname.nanodyered>
+  <entityname.nanodyegreen>Zielony Nanobarwnik</entityname.nanodyegreen>
+  <entityname.nanodyeyellow>Żółty Nanobarwnik</entityname.nanodyeyellow>
+  <entityname.nanodyeorange>Pomarańczowy Nanobarwnik</entityname.nanodyeorange>
+  <entityname.nanodyepurple>Fioletowy Nanobarwnik</entityname.nanodyepurple>
+  <entityname.nanodyepink>Różowy Nanobarwnik</entityname.nanodyepink>
+  <entityname.nanodyeblack>Czarny Nanobarwnik</entityname.nanodyeblack>
+  <entityname.nanodyewhite>Biały Nanobarwnik</entityname.nanodyewhite>
+  <entityname.nail>gwóźdź</entityname.nail>
+  <entityname.headlamp>Reflektor</entityname.headlamp>
+  <entityname.rivetgun>Pistolet do Nitowania</entityname.rivetgun>
+  <entityname.navtablet>Tablet Nawigacyjny</entityname.navtablet>
+  <entitydescription.rivetgun>Przeciągnij z ręki, aby usunąć</entitydescription.rivetgun>
+  <entitydescription.navtablet>Przeciągnij z ręki, aby usunąć</entitydescription.navtablet>
+  <entityname.rex>Dziwny plakat</entityname.rex>
+  <entityname.vacubotspawner>Vacubot</entityname.vacubotspawner>
+  <entityname.modifiedvacubotspawner>Zmodyfikowany Vacubot</entityname.modifiedvacubotspawner>
+  <entitydescription.disposablebattery>Bardzo marnotrawne rozwiązanie kryzysu związanego z robotyzacją energetyczną.</entitydescription.disposablebattery>
+  <entitydescription.frame1>Delikatna i lekka rama wytrzymuje nacisk do 3000 metrów. Tania opcja, świetna dla początkującej załogi, ale ulepszenia będą obowiązkowe w przypadku misji głębiej w Europie.</entitydescription.frame1>
+  <entitydescription.frame2>Mocna rama wytrzymująca nacisk do 4000 metrów. Bezpośrednie ulepszenie zbudowane na bazie Egzoszkieletu MK. I, powinien lepiej radzić sobie z zagrożeniami.</entitydescription.frame2>
+  <entitydescription.frame2safe>Egzoszkielet, który łączy możliwość z Egzoszkieletem MK. II i szelki bezpieczeństwa. Może pracować na głębokościach do 4000 metrów.</entitydescription.frame2safe>
+  <entitydescription.medicframe>Solidny Egzoszkielet wytrzymująca ciśnienie do 7000 metrów. Wyposażony w głębokie kieszenie do przechowywania leków i wytwarza gazy, które pasywnie leczą twoich ludzkich członków drużyny wokół ciebie.</entitydescription.medicframe>
+  <entitydescription.Cframe1>Mocna rama. Zapewnia dobrą ochronę i wytrzymuje ciśnienie do 6000 metrów.</entitydescription.Cframe1>
+  <entitydescription.scoutframe>Mocna i lekka rama przeznaczona do bitew morskich. Oferuje dobrą ochronę i oprogramowanie bojowe z dodatkową możliwością tarczy ładującej. Wytrzymuje ciśnienie do 6000 metrów.</entitydescription.scoutframe>
+  <entitydescription.Cframe2>Duży i ciężki Egzoszkielet przeznaczona do bitew głębinowych, napędzana prętami paliwowymi. Mocno opancerzony i wytrzymuje ciśnienie do 10 000 metrów. Jego ciężka rama pozwala zmniejszyć odrzut ciężkiej broni palnej</entitydescription.Cframe2>
+  <entitydescription.v1frame>Prototyp Egzoszkieletu wykonany z cienkiej powłoki, która naprawia się samoczynnie w kontakcie z krwią. Zapewnił posiłki do 10 000 jednostek. ZIEMIA JEST CICHA. KREW JEST PALIWEM. EUROPA JEST PEŁNA.</entitydescription.v1frame>
+  <entitydescription.mechframe>Egzoszkielet z wbudowanym monitorem kadłuba i pistoletem na gwoździe, który może naprawiać kadłuby i zadawać obrażenia wrogom. Idealny do zapewnienia szczelności łodzi podwodnej, mając jednocześnie opcję samoobrony, gdy stworzenia europejskie nieuchronnie atakują twoje balast. wytrzymuje ciśnienie do 8000 </entitydescription.mechframe>
+  <entitydescription.engineerframe>Egzoszkielet z wbudowanym monitorem elektrycznym i specjalnym systemem przeładowania. Przeładowanie przyspiesza ciebie i roboty wokół ciebie i może zostać rozładowane w postaci statycznego wybuchu. wytrzymuje ciśnienie do 7000 metrów.</entitydescription.engineerframe>
+  <entitydescription.Cframe3>Zwinny Egzoszkielet zaprojektowana do szybowania po wodzie i wytrzymująca ciśnienie do 7000 metrów. Jego opływowa konstrukcja rezygnuje z ruchu naziemnego na rzecz dużych prędkości pod wodą. </entitydescription.Cframe3>
+  <entitydescription.cargoframe>Duży Egzoszkielet zaprojektowana do przechowywania skrzyń ładunkowych, jednocześnie umożliwiając użytkownikowi szybkie poruszanie się. Wytrzymuje ciśnienie do głębokości 8000 metrów. Wbudowane gniazdo latarki pozwala użytkownikowi świecić i wytwarzać dużą ilość światła.</entitydescription.cargoframe>
+  <entitydescription.captainframe>Stylowa rama zdolna do głębokości do 10 000 metrów. Kieruj swoją załogą z godnością i wdziękiem, korzystając z bezprzewodowego połączenia z pomieszczeniem dowodzenia, dzięki czemu możesz pilotować łódź podwodną bez względu na lokalizację. Ten nowy model ma nawet wbudowaną funkcję termowizji.</entitydescription.captainframe>
+  <arcframedischarge>Wyładowanie Elektryczne</arcframedischarge>
+  <medframedischarge>Uzdrawiający Wybuch</medframedischarge>
+  <framecargolight>Przełącz Światło</framecargolight>
+  <framesovereignbutton>Kontroluj Łódzią Podwodną</framesovereignbutton>
+  <framemechbutton>Aktywuj Broń</framemechbutton>
+  <researchstation.research.robotinfo>Wykryto zaszyfrowany dysk. Treść nieznana. Na pewno chcesz kontynuować?</researchstation.research.robotinfo>
+  <researchstation.combine.robotmissingitem>Wykryto zaszyfrowany dysk. Wymagany obwód palnika FPGA.</researchstation.combine.robotmissingitem>
+  <entityname.chipdrive1>Czytnik Dysku</entityname.chipdrive1>
+  <entityname.chipdrive2>Czytnik Dysku MK. II</entityname.chipdrive2>
+  <entityname.chipdrive3>Czytnik Dysku MK. III</entityname.chipdrive3>
+  <entityname.chipdresist>Standardowy Napęd (Pokrycie Tytanowe)</entityname.chipdresist>
+  <entityname.chipwaterproof>Standardowy Napęd (Obwody Wodoodporne)</entityname.chipwaterproof>
+  <entityname.chipempresist>Standardowy Napęd (Izolacja Elektryczna)</entityname.chipempresist>
+  <entityname.chipmovespeed>Standardowy Napęd (Mocne Silniki)</entityname.chipmovespeed>
+  <entityname.chipswingspeed>Standardowy Napęd (Smarowane Przeguby)</entityname.chipswingspeed>
+  <entityname.chipswimspeed>Standardowy Napęd (Ulepszony Cykl Pływania)</entityname.chipswimspeed>
+  <entityname.chipdronepod>Unikalny Napęd (Synteza Dronów)</entityname.chipdronepod>
+  <entityname.chipbayonet>Unikalny Napęd (Bagnet)</entityname.chipbayonet>
+  <entityname.chipmicrobots>Unikalny Napęd (Mikroboty)</entityname.chipmicrobots>
+  <entityname.chipscythe>Uszkodzony Dysk (Bagnet?)</entityname.chipscythe>
+  <entityname.chipdronecyst>Uszkodzony Dysk (Synteza Dronów?)</entityname.chipdronecyst>
+  <entityname.chiphusk>Uszkodzony Dysk (Obwody Wodoodporne?)</entityname.chiphusk>
+  <entityname.chipnanomachines>Uszkodzony Dysk (Mikroboty?)</entityname.chipnanomachines>
+  <entityname.encrypteddisk>Zaszyfrowany Dysk</entityname.encrypteddisk>
+  <entityname.chipcaptain>Napęd z Oprogramowaniem Sprzętowym (Nawigacyjny)</entityname.chipcaptain>
+  <entityname.chipmedic>Napęd z Oprogramowaniem Sprzętowym (Medyczny)</entityname.chipmedic>
+  <entityname.chipsecurity>Napęd z Oprogramowaniem Sprzętowym (Bojowy)</entityname.chipsecurity>
+  <entityname.chipmechanic>Napęd z Oprogramowaniem Sprzętowym (Mechaniczny)</entityname.chipmechanic>
+  <entityname.chipengineer>Napęd z Oprogramowaniem Sprzętowym (Inżynieryjny)</entityname.chipengineer>
+  <entitydescription.chipdrive1>Urządzenie umożliwiające odczyt informacji zapisanych na dyskach.</entitydescription.chipdrive1>
+  <entitydescription.chipdrive2>Urządzenie umożliwiające odczyt informacji zapisanych na dyskach. Możliwość odczytu do dwóch dysków jednocześnie.</entitydescription.chipdrive2>
+  <entitydescription.chipdrive3>Urządzenie umożliwiające odczyt informacji zapisanych na dyskach. Możliwość odczytu do trzech dysków jednocześnie.</entitydescription.chipdrive3>
+  <entitydescription.chipdresist>Standardowy napęd wzmacniający.</entitydescription.chipdresist>
+  <entitydescription.chipwaterproof>Standardowy napęd wzmacniający.</entitydescription.chipwaterproof>
+  <entitydescription.chipempresist>Standardowy napęd wzmacniający.</entitydescription.chipempresist>
+  <entitydescription.chipmovespeed>Standardowy napęd wzmacniający.</entitydescription.chipmovespeed>
+  <entitydescription.chipswingspeed>Standardowy napęd wzmacniający.</entitydescription.chipswingspeed>
+  <entitydescription.chipswimspeed>Standardowy napęd wzmacniający.</entitydescription.chipswimspeed>
+  <entitydescription.chipdronepod>Unikalny napęd wzmacniający.</entitydescription.chipdronepod>
+  <entitydescription.chipbayonet>Unikalny napęd wzmacniający.</entitydescription.chipbayonet>
+  <entitydescription.chipmicrobots>Unikalny napęd wzmacniający.</entitydescription.chipmicrobots>
+  <entitydescription.chipscythe>Podejrzany napęd wzmacniający. Zawiera potencjalnie złośliwy kod, użyj go według własnego uznania.</entitydescription.chipscythe>
+  <entitydescription.chipdronecyst>Podejrzany napęd wzmacniający. Zawiera potencjalnie złośliwy kod, użyj go według własnego uznania.</entitydescription.chipdronecyst>
+  <entitydescription.chiphusk>Podejrzany napęd wzmacniający. Zawiera potencjalnie złośliwy kod, użyj go według własnego uznania.</entitydescription.chiphusk>
+  <entitydescription.chipnanomachines>Podejrzany napęd wzmacniający. Zawiera potencjalnie złośliwy kod, użyj go według własnego uznania.</entitydescription.chipnanomachines>
+  <entitydescription.encrypteddisk>Dysk rozszerzający, jego zawartość jest zaszyfrowana i należy ją zbadać, aby była użyteczna.</entitydescription.encrypteddisk>
+  <entitydescription.chipcaptain>Rozszerzony dysk zawierający oprogramowanie nawigacyjne.</entitydescription.chipcaptain>
+  <entitydescription.chipmedic>Rozszerzający dysk zawierający oprogramowanie medyczne.</entitydescription.chipmedic>
+  <entitydescription.chipsecurity>Rozszerzający dysk zawierający oprogramowanie bojowe.</entitydescription.chipsecurity>
+  <entitydescription.chipmechanic>Rozszerzający dysk zawierający oprogramowanie mechaniczne.</entitydescription.chipmechanic>
+  <entitydescription.chipengineer>Rozszerzony dysk zawierający oprogramowanie sprzętowe.</entitydescription.chipengineer>
+</infotexts>

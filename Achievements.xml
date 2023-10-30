@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+  <Talent identifier="dunce">
+    <Icon texture="%ModDir%/UI/AcheivementIcons.png" sheetindex="4,1" sheetelementsize="128,128" />
+    <Description tag="talentdescription.dunce">
+      <Replace tag="[itemname]" value="entityname.duncecap" color="gui.orange" />
+    </Description>
+    <AddedRecipe itemidentifier="duncecap" />
+  </Talent>
+  <Talent identifier="highlytrainedprofessional">
+    <Icon texture="%ModDir%/UI/AcheivementIcons.png" sheetindex="0,1" sheetelementsize="128,128" />
+    <Description tag="talentdescription.highlytrainedprofessional">
+      <Replace tag="[itemname]" value="entityname.hevcharger" color="gui.orange" />
+    </Description>
+    <AddedRecipe itemidentifier="hevcharger" />
+  </Talent>
+  <Talent identifier="valuedcustomer">
+    <Icon texture="%ModDir%/UI/AcheivementIcons.png" sheetindex="2,1" sheetelementsize="128,128" />
+    <Description tag="talentdescription.valuedcustomer">
+      <Replace tag="[itemname]" value="entityname.kateeskin" color="gui.orange" />
+    </Description>
+    <AddedRecipe itemidentifier="kateeskin" />
+    <AddedRecipe itemidentifier="kateeskinheadless" />
+  </Talent>
+  <Talent identifier="returner">
+    <Icon texture="%ModDir%/UI/AcheivementIcons.png" sheetindex="1,1" sheetelementsize="128,128" />
+    <Description tag="talentdescription.returner">
+      <Replace tag="[itemname]" value="entityname.fractalskin" color="gui.orange" />
+    </Description>
+    <AddedRecipe itemidentifier="fractalskin" />
+  </Talent>
+  <Talent identifier="corrupted">
+    <Icon texture="%ModDir%/UI/AcheivementIcons.png" sheetindex="3,1" sheetelementsize="128,128" />
+    <Description tag="talentdescription.corrupted">
+      <Replace tag="[itemname]" value="entityname.rotskin" color="gui.orange" />
+    </Description>
+    <AddedRecipe itemidentifier="rotskin" />
+  </Talent>
+  <!-- Not an achievement, but I couldn't be bothered to make another file !-->
+  <Override>
+    <Talent identifier="submarineofthings">
+      <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="1,7" sheetelementsize="128,128" />
+      <Description tag="talentdescription.rtcraftwithlessitems" />
+      <AddedRecipe itemidentifier="fpgacircuit" />
+      <AddedRecipe itemidentifier="circuitbox" />
+      <AddedRecipe itemidentifier="wallcharger" />
+    </Talent>
+  </Override>
+</Talents>

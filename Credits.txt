@@ -1,0 +1,38 @@
+-- GENERAL CREDITS --
+
+Code, Design, Writing, Art, Sound Design, Everything else - Versus
+Item descriptions, Sound Design, Community management - Hyperblazing
+
+-- LOCALIZATION CREDITS --
+
+Full Russian Translation - DarkThunderer, CrazyB0T, and e4y5vq on Discord
+Full Polish Translation - Kaofan on Steam
+Basic German - ZoranZal on Discord
+Basic French - ZoranZal on Discord
+Basic Japanese - ZoranZal on Discord
+Basic Korean - ZoranZal on Discord
+Basic Portuguese - ZoranZal on Discord
+Basic Turkish - ZoranZal on Discord
+Basic Latinamerican Spanish - ZoranZal on Discord
+Basic Simple Chinese - ZoranZal on Discord
+Basic Traditional Chinese - ZoranZal on Discord
+
+-- ART CREDITS --
+
+Vacubot Sprite - Roomba 560 by IRobot
+H.E.V. Charger Sprite - Half-Life (1998) By Valve Software
+Head 1 - UNKNOWN on Sketchfab: If found please contact!
+Head 2 - UNKNOWN on Sketchfab: If found please contact!
+Head 4, Prototype Exo-Frame Sprites - ULTRAKILL By Arsi "Hakita" Patala and New Blood Entertainment
+Head 5 - "Cyberpunk Azura Robot" By 3dbowl
+Head 8 - "Bot" By Odobenus
+Head 9 and 12 - Planetside 2 By Rouge Planet Games
+Head 13 and 14 - Titanfall 2 By Respawn Entertainment
+
+-- SOUND CREDITS --
+
+Corruption voices - Software Automatic Mouth By SoftVoice, Inc.
+Battery Recharge Sound - System Shock (2023) By Nightdive Studios
+H.E.V. Charger Loop - Half-Life (1998) By Valve Software
+Robot Charger Loop - Black Mesa (2020) By Crowbar Collective
+Drive Sound Effects, Rivet Gun Shots - Freesound.org

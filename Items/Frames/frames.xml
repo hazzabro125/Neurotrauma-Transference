@@ -1,0 +1,1924 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="frame1" aliases="framemk1" category="Equipment" tags="diving,deepdiving,divinggear_wearableindoors" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="crewcab" />
+    <ContainedSprite name="Frame MK. I Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+    <Price baseprice="250">
+      <Price storeidentifier="merchantoutpost" multiplier="0.9" minavailable="4" />
+      <Price storeidentifier="merchantcity" multiplier="0.85" minavailable="6" />
+      <Price storeidentifier="merchantresearch" minavailable="3" />
+      <Price storeidentifier="merchantmilitary" minavailable="3" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="5" />
+    </Price>
+    <Deconstruct time="20">
+      <Item identifier="aluminium" />
+      <Item identifier="copper" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredItem identifier="aluminium" amount="2" />
+      <RequiredItem identifier="copper" />
+      <RequiredItem identifier="steel" amount="1" />
+    </Fabricate>
+    <InventoryIcon name="MK. I Frame Icon" texture="%ModDir%/Items/Frames/frameicons.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
+    <Sprite name="Frame MK. I" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="7,52,130,54" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Frame MK. I Torso" texture="mk1.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. I Right Lower Arm" texture="mk1.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. I Left Lower Arm" texture="mk1.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. I Right Upper Arm" texture="mk1.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. I Left Upper Arm" texture="mk1.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. I Right Leg" texture="mk1.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. I Left Leg" texture="mk1.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. I Left Shoe" texture="mk1.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. I Right Shoe" texture="mk1.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <StatusEffect type="OnWearing" target="Character" Comparison="And" PressureProtection="3000.0">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="framebuff" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+        <Conditional robotblue="0" />
+        <Conditional robotred="0" />
+        <Conditional robotgreen="0" />
+        <Conditional robotyellow="0" />
+        <Conditional robotorange="0" />
+        <Conditional robotpurple="0" />
+        <Conditional robotpink="0" />
+        <Conditional robotblack="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+        <Conditional robotblue="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+        <Conditional robotred="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+        <Conditional robotgreen="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+        <Conditional robotyellow="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+        <Conditional robotorange="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+        <Conditional robotpurple="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+        <Conditional robotpink="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+        <Conditional robotblack="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+        <Conditional robotwhite="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+        <Conditional ismale="true" />
+        <Conditional isfemale="true" />
+        <Affliction identifier="lacerations" amount="1" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,radiationsickness,burn" damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <Item name="" identifier="frame2" aliases="framemk2" category="Equipment" tags="diving,deepdiving,divinggear_wearableindoors" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="crewcab" />
+    <ContainedSprite name="Frame MK. II Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+    <Price baseprice="350" minleveldifficulty="10">
+      <Price storeidentifier="merchantoutpost" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="0.85" minavailable="3" />
+      <Price storeidentifier="merchantresearch" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" minavailable="2" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="5" />
+    </Price>
+    <Deconstruct time="20">
+      <Item identifier="aluminium" />
+      <Item identifier="steel" />
+      <Item identifier="titanium" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="frame1" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="steel" amount="2" />
+    </Fabricate>
+    <InventoryIcon name="MK. I Frame Icon" texture="%ModDir%/Items/Frames/frameicons.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
+    <Sprite name="Frame MK. II" texture="%ModDir%/Items/Frames/mk2_case.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Frame MK. II Torso" texture="mk2.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Right Lower Arm" texture="mk2.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Left Lower Arm" texture="mk2.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Right Leg" texture="mk2.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Left Leg" texture="mk2.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Left Shoe" texture="mk2.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Right Shoe" texture="mk2.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Right Upper Arm" texture="mk2.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Left Upper Arm" texture="mk2.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Waist" texture="mk2.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Right Thigh" texture="mk2.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Left Thigh" texture="mk2.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <StatusEffect type="OnWearing" target="Character" Comparison="And" PressureProtection="4500.0">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="framebuff" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+        <Conditional ismale="true" />
+        <Conditional isfemale="true" />
+        <Affliction identifier="lacerations" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+        <Conditional robotblue="0" />
+        <Conditional robotred="0" />
+        <Conditional robotgreen="0" />
+        <Conditional robotyellow="0" />
+        <Conditional robotorange="0" />
+        <Conditional robotpurple="0" />
+        <Conditional robotpink="0" />
+        <Conditional robotblack="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+        <Conditional robotblue="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+        <Conditional robotred="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+        <Conditional robotgreen="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+        <Conditional robotyellow="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+        <Conditional robotorange="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+        <Conditional robotpurple="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+        <Conditional robotpink="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+        <Conditional robotblack="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+        <Conditional robotwhite="1" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,radiationsickness,burn" damagemultiplier="0.70" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <Item name="" identifier="frame2safe" aliases="framemk2safe" category="Equipment" tags="diving,divinggear_wearableindoors,deepdiving" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="crewcab" />
+    <ContainedSprite name="Frame MK. II Safe Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+    <Price baseprice="300">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantcity" sold="false" multiplier="0.85" minavailable="3" />
+      <Price storeidentifier="merchantresearch" sold="false" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" sold="false" minavailable="2" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" minavailable="5" />
+    </Price>
+    <Deconstruct time="20">
+      <Item identifier="frame2" />
+      <Item identifier="safetyharness" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="25" />
+      <RequiredItem identifier="frame2" />
+      <RequiredItem identifier="safetyharness" />
+    </Fabricate>
+    <InventoryIcon name="Saftey Frame Icon" texture="%ModDir%/Items/Frames/frameicons.png" sourcerect="384,0,128,128" origin="0.5,0.5" />
+    <Sprite name="Frame MK. II" texture="%ModDir%/Items/Frames/mk2safe_case.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Frame MK. II Torso" texture="mk2safe.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Right Lower Arm" texture="mk2safe.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Left Lower Arm" texture="mk2safe.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Right Leg" texture="mk2safe.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Left Leg" texture="mk2safe.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Left Shoe" texture="mk2safe.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Right Shoe" texture="mk2safe.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Right Upper Arm" texture="mk2safe.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Left Upper Arm" texture="mk2safe.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Waist" texture="mk2safe.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Right Thigh" texture="mk2safe.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Frame MK. II Left Thigh" texture="mk2safe.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <StatValue stattype="FlowResistance" value="0.9" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.1" />
+      <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.1" />
+      <damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.25" />
+      <StatusEffect type="OnWearing" target="Character" Comparison="And" PressureProtection="4500.0">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="framebuff" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, Character" Condition="-0.30">
+        <RequiredItem items="mobilebattery" type="Contained" />
+        <ReduceAffliction identifier="powerlow" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+        <Conditional robotblue="0" />
+        <Conditional robotred="0" />
+        <Conditional robotgreen="0" />
+        <Conditional robotyellow="0" />
+        <Conditional robotorange="0" />
+        <Conditional robotpurple="0" />
+        <Conditional robotpink="0" />
+        <Conditional robotblack="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+        <Conditional robotblue="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+        <Conditional robotred="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+        <Conditional robotgreen="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+        <Conditional robotyellow="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+        <Conditional robotorange="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+        <Conditional robotpurple="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+        <Conditional robotpink="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+        <Conditional robotblack="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+        <Conditional robotwhite="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+        <Conditional ismale="true" />
+        <Conditional isfemale="true" />
+        <Affliction identifier="lacerations" amount="1" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,radiationsickness" damagemultiplier="0.70" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <Item name="" identifier="Cframe1" aliases="Combatframe1" category="Equipment" tags="diving,deepdiving,divinggear_wearableindoors" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="crewcab" />
+    <ContainedSprite name="mk3 Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+    <Price baseprice="560" minleveldifficulty="35">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="0.9" />
+      <Price storeidentifier="merchantcity" multiplier="0.85" minavailable="2" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" minavailable="3" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" />
+      <Price storeidentifier="merchantarmory" multiplier="0.85" minavailable="3" />
+    </Price>
+    <Deconstruct time="30">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="45">
+      <RequiredSkill identifier="mechanical" level="50" />
+      <RequiredSkill identifier="weapons" level="50" />
+      <RequiredItem identifier="frame2" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <InventoryIcon name="mk3 Frame Icon" texture="%ModDir%/Items/Frames/frameicons.png" sourcerect="0,128,128,128" origin="0.5,0.5" />
+    <Sprite name="mk3 Combat Frame" texture="%ModDir%/Items/Frames/mk3_case.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="mk3 Combat Frame Torso" texture="mk3.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="mk3 Combat Frame Right Lower Arm" texture="mk3.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="mk3 Combat Frame Left Lower Arm" texture="mk3.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="mk3 Combat Frame Right Leg" texture="mk3.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="mk3 Combat Frame Left Leg" texture="mk3.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="mk3 Combat Frame Left Shoe" texture="mk3.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="mk3 Combat Frame Right Shoe" texture="mk3.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="mk3 Combat Frame Right Upper Arm" texture="mk3.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="mk3 Combat Frame Left Upper Arm" texture="mk3.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="mk3 Combat Frame Waist" texture="mk3.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="mk3 Combat Frame Right Thigh" texture="mk3.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="mk3 Combat Frame Left Thigh" texture="mk3.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <StatusEffect type="OnWearing" target="Character" Comparison="And" setvalue="true" disabledeltatime="true" PressureProtection="6000.0">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="framebuff" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, Character" Condition="-0.25">
+        <RequiredItem items="mobilebattery" type="Contained" />
+        <ReduceAffliction identifier="powerlow" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+        <Conditional robotblue="0" />
+        <Conditional robotred="0" />
+        <Conditional robotgreen="0" />
+        <Conditional robotyellow="0" />
+        <Conditional robotorange="0" />
+        <Conditional robotpurple="0" />
+        <Conditional robotpink="0" />
+        <Conditional robotblack="0" />
+        <Conditional robotwhite="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+        <Conditional robotblue="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+        <Conditional robotred="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+        <Conditional robotgreen="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+        <Conditional robotyellow="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+        <Conditional robotorange="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+        <Conditional robotpurple="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+        <Conditional robotpink="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+        <Conditional robotblack="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+        <Conditional robotwhite="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+        <Conditional ismale="true" />
+        <Conditional isfemale="true" />
+        <Affliction identifier="lacerations" amount="1" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,bitewounds,lacerations,burn,radiationsickness" damagemultiplier="0.60" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound" damagemultiplier="0.50" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <Item name="" identifier="Cframe2" aliases="Combatframe2" category="Equipment" tags="diving,deepdiving,divinggear_wearableindoors" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="crewcab" />
+    <ContainedSprite name="Sledge Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+    <Price baseprice="700" minleveldifficulty="50">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="0.9" />
+      <Price storeidentifier="merchantcity" multiplier="0.85" minavailable="2" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" />
+      <Price storeidentifier="merchantarmory" multiplier="0.85" minavailable="1" />
+    </Price>
+    <Deconstruct time="30">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="physicorium" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="45">
+      <RequiredSkill identifier="mechanical" level="60" />
+      <RequiredSkill identifier="weapons" level="70" />
+      <RequiredItem identifier="Cframe1" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="physicorium" />
+    </Fabricate>
+    <InventoryIcon name="Sledge Frame Icon" texture="%ModDir%/Items/Frames/frameicons.png" sourcerect="256,0,128,128" origin="0.5,0.5" />
+    <Sprite name="Sledge Combat Frame" texture="%ModDir%/Items/Frames/sledge_case.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Sledge Combat Frame Torso" texture="sledge.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sledge Combat Frame Right Lower Arm" texture="sledge.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sledge Combat Frame Left Lower Arm" texture="sledge.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sledge Combat Frame Right Hand" texture="sledge.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Sledge Combat Frame Left Hand" texture="sledge.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Sledge Combat Frame Right Leg" texture="sledge.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sledge Combat Frame Left Leg" texture="sledge.png" limb="LeftLeg" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sledge Combat Frame Left Shoe" texture="sledge.png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sledge Combat Frame Right Shoe" texture="sledge.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sledge Combat Frame Right Upper Arm" texture="sledge.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Sledge Combat Frame Left Upper Arm" texture="sledge.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Sledge Combat Frame Waist" texture="sledge.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Sledge Combat Frame Right Thigh" texture="sledge.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Sledge Combat Frame Left Thigh" texture="sledge.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <StatusEffect type="OnWearing" target="Character" Comparison="And" SpeedMultiplier="0.4" setvalue="true" disabledeltatime="true" PressureProtection="10000.0">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="framebuff" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" interval="0.9" disabledeltatime="true">
+        <Affliction identifier="recoilstabilized" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, Character" Condition="-0.15">
+        <RequiredItem items="reactorfuel" type="Contained" />
+        <ReduceAffliction identifier="stun" amount="0.15" />
+        <ReduceAffliction identifier="powerlow" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, Character" SpeedMultiplier="1.5" setvalue="true" disabledeltatime="true">
+        <RequiredItem items="reactorfuel" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+        <Conditional robotblue="0" />
+        <Conditional robotred="0" />
+        <Conditional robotgreen="0" />
+        <Conditional robotyellow="0" />
+        <Conditional robotorange="0" />
+        <Conditional robotpurple="0" />
+        <Conditional robotpink="0" />
+        <Conditional robotblack="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+        <Conditional robotblue="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+        <Conditional robotred="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+        <Conditional robotgreen="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+        <Conditional robotyellow="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+        <Conditional robotorange="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+        <Conditional robotpurple="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+        <Conditional robotpink="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+        <Conditional robotblack="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+        <Conditional robotwhite="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+        <Conditional ismale="true" />
+        <Conditional isfemale="true" />
+        <Affliction identifier="lacerations" amount="1" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,bitewounds,lacerations,burn,radiationsickness" damagemultiplier="0.30" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound" damagemultiplier="0.20" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.25" />
+      <SkillModifier skillidentifier="weapons" skillvalue="15" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="192,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="reactorfuel" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <Item name="" identifier="v1frame" aliases="Combatframe3" category="Equipment" tags="diving,deepdiving,divinggear_wearableindoors" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="crewcab" />
+    <ContainedSprite name="V1 Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+    <Price baseprice="630" sold="false" />
+    <Deconstruct time="20">
+      <Item identifier="dementonite" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="weapons" level="80" />
+      <RequiredItem identifier="dementonite" amount="5" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="aliencircuitry" amount="2" />
+      <RequiredItem identifier="plastic" amount="2" />
+      <RequiredItem identifier="alienblood" amount="2" />
+    </Fabricate>
+    <InventoryIcon name="Prototype Frame Icon" texture="%ModDir%/Items/Frames/frameicons.png" sourcerect="128,0,128,128" origin="0.5,0.5" />
+    <Sprite name="Prototype Combat Frame" texture="%ModDir%/Items/Frames/prototype_case.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Prototype Combat Frame Torso" texture="prototype.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Prototype Combat Frame Right Lower Arm" texture="prototype.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Prototype Combat Frame Left Lower Arm" texture="prototype.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Prototype Combat Frame Right Leg" texture="prototype.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Prototype Combat Frame Left Leg" texture="prototype.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Prototype Combat Frame Left Shoe" texture="prototype.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Prototype Combat Frame Right Shoe" texture="prototype.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Prototype Combat Frame Right Upper Arm" texture="prototype.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Prototype Combat Frame Left Upper Arm" texture="prototype.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Prototype Combat Frame Waist" texture="prototype.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Prototype Combat Frame Right Thigh" texture="prototype.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Prototype Combat Frame Left Thigh" texture="prototype.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <StatusEffect type="OnWearing" target="Character" Comparison="And" SpeedMultiplier="1.1" setvalue="true" disabledeltatime="true" PressureProtection="10000.0">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="framebuff" amount="1" />
+        <Affliction identifier="v1buff" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, Character" Condition="-0.20">
+        <RequiredItem items="reactorfuel,mobilebattery" type="Contained" />
+        <ReduceAffliction identifier="stun" amount="0.15" />
+        <ReduceAffliction identifier="powerlow" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, Character" SpeedMultiplier="1.2" setvalue="true" disabledeltatime="true">
+        <RequiredItem items="reactorfuel" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+        <Conditional ismale="true" />
+        <Conditional isfemale="true" />
+        <Affliction identifier="lacerations" amount="2" />
+        <Affliction identifier="bleeding" amount="2" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="NearbyCharacters" range="300">
+        <Conditional bleeding="gt 3" />
+        <Affliction identifier="v1debuff" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character,Contained" Condition="+2" Comparison="And">
+        <Conditional v1buff="gt 0" />
+        <Conditional v1debuff="gt 0" />
+        <ReduceAffliction identifier="damage" amount="5" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+        <Conditional robotblue="0" />
+        <Conditional robotred="0" />
+        <Conditional robotgreen="0" />
+        <Conditional robotyellow="0" />
+        <Conditional robotorange="0" />
+        <Conditional robotpurple="0" />
+        <Conditional robotpink="0" />
+        <Conditional robotblack="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+        <Conditional robotblue="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+        <Conditional robotred="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+        <Conditional robotgreen="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+        <Conditional robotyellow="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+        <Conditional robotorange="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+        <Conditional robotpurple="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+        <Conditional robotpink="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+        <Conditional robotblack="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+        <Conditional robotwhite="1" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,bitewounds,lacerations,burn,radiationsickness,gunshotwound" damagemultiplier="0.50" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.4" />
+      <SkillModifier skillidentifier="weapons" skillvalue="15" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery,reactorfuel" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <Item name="" identifier="mechframe" aliases="mechanic frame" category="Equipment" tags="diving,divinggear_wearableindoors,deepdiving" fireproof="true" isshootable="true" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="crewcab" />
+    <ContainedSprite name="Thrash Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+    <Price baseprice="630" sold="false" />
+    <Deconstruct time="20">
+      <Item identifier="titaniumaluminiumalloy" amount="2" />
+      <Item identifier="frame2safe" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredItem identifier="frame2safe" />
+      <RequiredItem identifier="flashpowder" amount="2" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+    </Fabricate>
+    <InventoryIcon name="Thrash Icon" texture="%ModDir%/Items/Frames/frameicons.png" sourcerect="256,129,128,128" origin="0.5,0.5" />
+    <Sprite name="Thrash" texture="%ModDir%/Items/Frames/thrashcase.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Thrash Torso" texture="mechanicframePH.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Thrash Right Lower Arm" texture="mechanicframePH.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Thrash Left Lower Arm" texture="mechanicframePH.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Thrash Right Leg" texture="mechanicframePH.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Thrash Left Leg" texture="mechanicframePH.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Thrash Left Shoe" texture="mechanicframePH.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Thrash Right Shoe" texture="mechanicframePH.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Thrash Right Forearm" texture="mechanicframePH.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="false" depth="0.049" SourceRect="275,86,50,107" />
+      <sprite name="Thrash Left Upper Arm" texture="mechanicframePH.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Thrash Waist" texture="mechanicframePH.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Thrash Right Thigh" texture="mechanicframePH.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Thrash Left Thigh" texture="mechanicframePH.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Thrash Right Hand" texture="mechanicframePH.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="0,0,1,1" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.3" />
+      <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.25" />
+      <damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.35" />
+      <StatusEffect type="OnWearing" target="Character" Comparison="And" PressureProtection="8000.0">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="framebuff" amount="1" />
+        <Affliction identifier="removerivet" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, Character" Condition="-0.30">
+        <RequiredItem items="mobilebattery" type="Contained" />
+        <ReduceAffliction identifier="powerlow" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+        <Conditional robotblue="0" />
+        <Conditional robotred="0" />
+        <Conditional robotgreen="0" />
+        <Conditional robotyellow="0" />
+        <Conditional robotorange="0" />
+        <Conditional robotpurple="0" />
+        <Conditional robotpink="0" />
+        <Conditional robotblack="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+        <Conditional robotblue="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+        <Conditional robotred="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+        <Conditional robotgreen="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+        <Conditional robotyellow="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+        <Conditional robotorange="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+        <Conditional robotpurple="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+        <Conditional robotpink="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+        <Conditional robotblack="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+        <Conditional robotwhite="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+        <Conditional ismale="true" />
+        <Conditional isfemale="true" />
+        <Affliction identifier="lacerations" amount="1" />
+      </StatusEffect>
+      <MiniMap enableitemfinder="false" enableelectricalview="false" enablehullcondition="true" drawhudwhenequipped="true" displaybordersize="-0.1" characterusable="false" allowuioverlap="true">
+        <GuiFrame relativesize="0.25,0.25" anchor="TopRight" relativeoffset="0.006, -0.001" style="ItemUI" />
+      </MiniMap>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,radiationsickness" damagemultiplier="0.70" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="framemechbutton" connection="signal_out1">
+        <StatusEffect type="OnUse" target="Character">
+          <Affliction identifier="giverivet" strength="1" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <Item name="" identifier="rivetgun" category="Weapon" interactthroughwalls="true" cargocontaineridentifier="metalcrate" hideinmenus="true" tags="" Scale="0.5" impactsoundtag="impact_metal_light">
+    <InventoryIcon texture="mechanicframePH.png" sourcerect="414,8,97,100" origin="0.5,0.5" />
+    <Sprite texture="mechanicframePH.png" sourcerect="405,9,11,12" depth="0.55" origin="0.5,0.5" />
+    <Body width="38" height="15" density="30" />
+    <Holdable slots="RightHand" controlpose="true" aimpos="70,5" handle1="-25,-7">
+      <StatusEffect type="OnNotContained" targettype="This" condition="-100" disabledeltatime="true" />
+      <StatusEffect type="OnBroken" targettype="This">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="This,Character" condition="-100" disabledeltatime="true">
+        <Conditional removerivet="0" />
+      </StatusEffect>
+    </Holdable>
+    <RangedWeapon barrelpos="29,11" spread="5" unskilledspread="5" combatPriority="70" holdtrigger="true" drawhudwhenequipped="true" crosshairscale="0.2" reload="0.2" suitableprojectiles="nail">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="%ModDir%/Items/Frames/rivetgun.ogg" type="OnUse" range="500" selectionmode="Random" />
+      <Sound file="%ModDir%/Items/Frames/rivetgun2.ogg" type="OnUse" range="500" />
+      <Sound file="%ModDir%/Items/Frames/rivetgun3.ogg" type="OnUse" range="500" />
+      <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
+      <StatusEffect type="OnUse" target="This">
+        <SpawnItem identifier="nail" spawnposition="ThisInventory" count="1" />
+        <Explosion range="500.0" force="2" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" applyfireeffects="false" camerashake="6.0" />
+      </StatusEffect>
+      <RequiredItems items="nail" type="Contained" />
+    </RangedWeapon>
+    <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" hideitems="true" allowaccess="false" spawnwithid="nail">
+      <Containable items="nail" />
+    </ItemContainer>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+  <Item name="" identifier="nail" category="Weapon" maxstacksize="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" hideinmenus="true" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,960,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Frames/nail.png" sourcerect="0,0,40,17" depth="0.55" origin="0.5,0.5" />
+    <Body width="38" height="15" density="30" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="false">
+      <Attack structuredamage="-1" targetforce="5" itemdamage="-1" severlimbsprobability="0.1">
+        <Affliction identifier="gunshotwound" strength="5" />
+        <Affliction identifier="lacerations" strength="6" />
+        <Affliction identifier="bleeding" strength="5.5" />
+        <Affliction identifier="stun" strength="0.2" probability="0.05" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="this">
+        <Explosion range="100" force="0.0" camerashake="0" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" structuredamage="-60" />
+        <Sound file="Content\Sounds\Impact\MetalImpactHeavy1.ogg" type="OnUse" range="1000" selectionmode="Random" />
+        <Sound file="Content\Sounds\Impact\MetalImpactHeavy2.ogg" type="OnUse" range="1000" />
+        <Sound file="Content\Sounds\Impact\MetalImpactHeavy3.ogg" type="OnUse" range="1000" />
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+  <Item name="" identifier="engineerframe" aliases="ltgframe" category="Equipment" tags="diving,deepdiving,divinggear_wearableindoors" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="crewcab" />
+    <ContainedSprite name="Arc Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+    <Price baseprice="630" sold="false" />
+    <Deconstruct time="20">
+      <Item identifier="titaniumaluminiumalloy" amount="2" />
+      <Item identifier="rubber" amount="2" />
+      <Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredSkill identifier="electrical" level="60" />
+      <RequiredItem identifier="rubber" amount="3" />
+      <RequiredItem identifier="frame2" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+    </Fabricate>
+    <InventoryIcon name="Arc Frame Icon" texture="%ModDir%/Items/Frames/frameicons.png" sourcerect="127,130,129,129" origin="0.5,0.5" />
+    <Sprite name="Arc Frame" texture="%ModDir%/Items/Frames/arccase.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Arc Frame Torso" texture="arc.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="false" hideotherwearables="false" inheritsourcerect="false" origin="0.6,0.5" SourceRect="134,0,138,192" />
+      <sprite name="Arc Frame Right Lower Arm" texture="arc.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="false" inheritsourcerect="true" />
+      <sprite name="Arc Frame Left Lower Arm" texture="arc.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="false" inheritsourcerect="true" />
+      <sprite name="Arc Frame Right Leg" texture="arc.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="false" inheritsourcerect="true" />
+      <sprite name="Arc Frame Left Leg" texture="arc.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="false" inheritsourcerect="true" />
+      <sprite name="Arc Frame Left Shoe" texture="arc.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="false" inheritsourcerect="true" />
+      <sprite name="Arc Frame Right Shoe" texture="arc.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="false" inheritsourcerect="true" />
+      <sprite name="Arc Frame Right Upper Arm" texture="arc.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Arc Frame Left Upper Arm" texture="arc.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Arc Frame Waist" texture="arc.png" limb="Waist" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Arc Frame Right Thigh" texture="arc.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Arc Frame Left Thigh" texture="arc.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="false" SourceRect="0,0,1,1" />
+      <StatusEffect type="OnWearing" target="Character" Comparison="And" PressureProtection="4500.0">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="framebuff" amount="1" />
+        <Affliction identifier="arcframeempimmunity" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, NearbyCharacters" range="500" Condition="-0.5">
+        <RequiredItem items="mobilebattery" type="Contained" />
+        <ReduceAffliction identifier="powerlow" amount="8" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, NearbyCharacters" Comparison="And" range="500">
+        <RequiredItem items="mobilebattery" type="Contained" />
+        <Conditional powerlow="lte 0.05" />
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="robotfast" amount="15" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+        <Conditional ismale="true" />
+        <Conditional isfemale="true" />
+        <Affliction identifier="lacerations" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+        <Conditional robotblue="0" />
+        <Conditional robotred="0" />
+        <Conditional robotgreen="0" />
+        <Conditional robotyellow="0" />
+        <Conditional robotorange="0" />
+        <Conditional robotpurple="0" />
+        <Conditional robotpink="0" />
+        <Conditional robotblack="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+        <Conditional robotblue="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+        <Conditional robotred="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+        <Conditional robotgreen="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+        <Conditional robotyellow="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+        <Conditional robotorange="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+        <Conditional robotpurple="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+        <Conditional robotpink="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+        <Conditional robotblack="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+        <Conditional robotwhite="1" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations" damagemultiplier="0.60" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.30" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.1" />
+      <damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.25" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="arcframedischarge" connection="signal_out1">
+        <StatusEffect type="OnUse" target="Character">
+          <Conditional robotfast="gte 300" />
+          <Spawnitem identifier="arcblast" spawnposition="This" />
+          <ReduceAffliction identifier="robotfast" amount="300" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" duration="2" target="Limb,This" targetlimbs="Torso" range="500" camerashake="5">
+          <Conditional robotfast="gte 300" />
+          <sound file="Content/Items/Weapons/WEAPONS_electricalDischarge1.ogg" range="5000" />
+          <ParticleEmitter particle="ElectricShock" distancemin="100" distancemax="120" particlespersecond="5.0" particleamount="5" emitinterval="2.1" anglemin="0" anglemax="360" scalemin="1.0" scalemax="1.2" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character">
+          <Conditional robotfast="gte 300" />
+          <ReduceAffliction identifier="stun" strength="1" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <MiniMap enableitemfinder="false" enablehullstatus="false" enablehullcondition="false" drawhudwhenequipped="true" displaybordersize="-0.1" characterusable="false" allowuioverlap="true">
+      <GuiFrame relativesize="0.25,0.25" anchor="TopRight" relativeoffset="0.006, -0.001" style="ItemUI" />
+    </MiniMap>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <Item name="" identifier="Cframe3" aliases="Combatframe3" category="Equipment" tags="diving,deepdiving,divinggear_wearableindoors" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="crewcab" />
+    <ContainedSprite name="Sail Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+    <Price baseprice="560" minleveldifficulty="35">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="0.9" />
+      <Price storeidentifier="merchantcity" multiplier="0.85" minavailable="2" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" minavailable="3" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" />
+      <Price storeidentifier="merchantarmory" multiplier="0.85" minavailable="3" sold="false" />
+    </Price>
+    <Deconstruct time="30">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="45">
+      <RequiredSkill identifier="mechanical" level="50" />
+      <RequiredSkill identifier="weapons" level="60" />
+      <RequiredItem identifier="frame2" />
+      <RequiredItem identifier="harpoongun" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <InventoryIcon name="Sail Frame Icon" texture="%ModDir%/Items/Frames/frameicons.png" sourcerect="0,130,128,128" origin="0.5,0.5" />
+    <Sprite name="Sail Combat Frame" texture="%ModDir%/Items/Frames/sailcase.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Sail Combat Frame Torso" texture="sail.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sail Combat Frame Right Lower Arm" texture="sail.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sail Combat Frame Left Lower Arm" texture="sail.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sail Combat Frame Right Leg" texture="sail.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sail Combat Frame Left Leg" texture="sail.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sail Combat Frame Left Shoe" texture="sail.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sail Combat Frame Right Shoe" texture="sail.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sail Combat Frame Right Upper Arm" texture="sail.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" sourcerect="284,97,30,82" origin="0.5371904,0.14963186" />
+      <sprite name="Sail Combat Frame Left Upper Arm" texture="sail.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Sail Combat Frame Waist" texture="sail.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Sail Combat Frame Right Thigh" texture="sail.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Sail Combat Frame Left Thigh" texture="sail.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <StatusEffect type="OnWearing" target="Character" Comparison="And" setvalue="true" disabledeltatime="true" PressureProtection="7000.0">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="framebuff" amount="1" />
+        <Affliction identifier="removeharpoon" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, Character" Condition="-0.25">
+        <RequiredItem items="mobilebattery" type="Contained" />
+        <ReduceAffliction identifier="powerlow" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character">
+        <Conditional InWater="true" condition="gt 0" />
+        <ParticleEmitter particle="bubbles" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="1" velocitymin="-10" velocitymax="-100" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+        <Conditional robotblue="0" />
+        <Conditional robotred="0" />
+        <Conditional robotgreen="0" />
+        <Conditional robotyellow="0" />
+        <Conditional robotorange="0" />
+        <Conditional robotpurple="0" />
+        <Conditional robotpink="0" />
+        <Conditional robotblack="0" />
+        <Conditional robotwhite="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+        <Conditional robotblue="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+        <Conditional robotred="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+        <Conditional robotgreen="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+        <Conditional robotyellow="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+        <Conditional robotorange="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+        <Conditional robotpurple="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+        <Conditional robotpink="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+        <Conditional robotblack="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+        <Conditional robotwhite="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+        <Conditional ismale="true" />
+        <Conditional isfemale="true" />
+        <Affliction identifier="lacerations" amount="1" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,bitewounds,lacerations,burn,radiationsickness" damagemultiplier="0.60" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound" damagemultiplier="0.40" damagesound="LimbArmor" deflectprojectiles="true" />
+      <StatValue stattype="SwimmingSpeed" value="0.6" />
+      <StatValue stattype="WalkingSpeed" value="-0.1" />
+    </Wearable>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="framemechbutton" connection="signal_out1">
+        <StatusEffect type="OnUse" target="Character">
+          <Affliction identifier="giveharpoon" strength="1" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <Item name="" identifier="cargoframe" aliases="HaulerFrame" category="Equipment" tags="diving,deepdiving,divinggear_wearableindoors" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="crewcab" />
+    <ContainedSprite name="Hauler Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+    <Price baseprice="560" minleveldifficulty="35">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="0.9" />
+      <Price storeidentifier="merchantcity" multiplier="0.85" minavailable="2" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" minavailable="3" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" />
+      <Price storeidentifier="merchantarmory" multiplier="0.85" minavailable="3" />
+    </Price>
+    <Deconstruct time="30">
+      <Item identifier="steel" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="45">
+      <RequiredSkill identifier="mechanical" level="60" />
+      <RequiredItem identifier="frame2" />
+      <RequiredItem identifier="metalcrate" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="3" />
+    </Fabricate>
+    <InventoryIcon name="MK. I Frame Icon" texture="%ModDir%/Items/Frames/frameicons.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
+    <Sprite name="Hauler Cargo Frame" texture="%ModDir%/Items/Frames/haulercase.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Hauler Cargo Frame Torso" texture="hauler.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="false" hideotherwearables="true" inheritsourcerect="false" origin="0.6,0.5" SourceRect="160,0,112,192">
+        <LightComponent range="400.0" lightcolor="250,224,165,255" powerconsumption="10" IsOn="true" allowingameediting="false">
+          <Upgrade gameversion="0.1300.0.3" allowingameediting="false" />
+          <LightTexture texture="Content/Lights/light.png" origin="0.5, 0.5" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Hauler Cargo Frame Right Lower Arm" texture="hauler.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Hauler Cargo Frame Left Lower Arm" texture="hauler.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Hauler Cargo Frame Right Leg" texture="hauler.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Hauler Cargo Frame Left Leg" texture="hauler.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Hauler Cargo Frame Left Shoe" texture="hauler.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Hauler Cargo Frame Right Shoe" texture="hauler.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Hauler Cargo Frame Right Upper Arm" texture="hauler.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Hauler Cargo Frame Left Upper Arm" texture="hauler.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Hauler Cargo Frame Waist" texture="hauler.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Hauler Cargo Frame Right Thigh" texture="hauler.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Hauler Cargo Frame Left Thigh" texture="hauler.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <StatusEffect type="OnWearing" target="Character" Comparison="And" SpeedMultiplier="0.8" setvalue="true" disabledeltatime="true" PressureProtection="8000.0">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="framebuff" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="This,Character" Voltage="20.0" setvalue="true">
+        <Conditional IsDead="false" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, Character" targetslot="0" Condition="-0.25">
+        <RequiredItem items="mobilebattery" targetslot="0" type="Contained" />
+        <ReduceAffliction identifier="powerlow" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+        <Conditional robotblue="0" />
+        <Conditional robotred="0" />
+        <Conditional robotgreen="0" />
+        <Conditional robotyellow="0" />
+        <Conditional robotorange="0" />
+        <Conditional robotpurple="0" />
+        <Conditional robotpink="0" />
+        <Conditional robotblack="0" />
+        <Conditional robotwhite="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+        <Conditional robotblue="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+        <Conditional robotred="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+        <Conditional robotgreen="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+        <Conditional robotyellow="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+        <Conditional robotorange="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+        <Conditional robotpurple="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+        <Conditional robotpink="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+        <Conditional robotblack="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+        <Conditional robotwhite="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+        <Conditional ismale="true" />
+        <Conditional isfemale="true" />
+        <Affliction identifier="lacerations" amount="1" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,bitewounds,lacerations,burn,radiationsickness,gunshotwound" damagemultiplier="0.60" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+      <SubContainer capacity="1">
+        <Containable items="crate,smallitem" />
+      </SubContainer>
+      <SubContainer capacity="1">
+        <Containable items="crate,smallitem" />
+      </SubContainer>
+      <SubContainer capacity="1">
+        <Containable items="crate,smallitem" />
+      </SubContainer>
+      <SubContainer capacity="1">
+        <Containable items="crate,smallitem" />
+      </SubContainer>
+      <SubContainer capacity="1">
+        <Containable items="crate,smallitem" />
+      </SubContainer>
+      <SubContainer capacity="1">
+        <Containable items="crate,smallitem" />
+      </SubContainer>
+    </ItemContainer>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <TickBox text="framecargolight">
+        <StatusEffect type="OnUse" target="This" Voltage="0.0" duration="0.1" setvalue="true" disabledeltatime="true" interval="0.1" stackable="false" />
+      </TickBox>
+    </CustomInterface>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <Item name="" identifier="scoutframe" aliases="combatframe4" category="Equipment" tags="diving,deepdiving,divinggear_wearableindoors" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="crewcab" />
+    <ContainedSprite name="Scout Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+    <Price baseprice="560" minleveldifficulty="35">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="0.9" />
+      <Price storeidentifier="merchantcity" multiplier="0.85" minavailable="2" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" minavailable="3" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" />
+      <Price storeidentifier="merchantarmory" multiplier="0.85" minavailable="3" />
+    </Price>
+    <Deconstruct time="30">
+      <Item identifier="ballisticfiber" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="45">
+      <RequiredSkill identifier="mechanical" level="50" />
+      <RequiredSkill identifier="weapons" level="50" />
+      <RequiredItem identifier="Cframe1" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />\
+	  <RequiredItem identifier="fpgacircuit" /></Fabricate>
+    <InventoryIcon name="Scout Frame Icon" texture="%ModDir%/Items/Frames/frameicons.png" sourcerect="386,132,123,123" origin="0.5,0.5" />
+    <Sprite name="Scout Combat Frame" texture="%ModDir%/Items/Frames/scout_case.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Scout Combat Frame Torso" texture="scout.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Scout Combat Frame Right Lower Arm" texture="scout.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Scout Combat Frame Left Lower Arm" texture="scout.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Scout Combat Frame Right Leg" texture="scout.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Scout Combat Frame Left Leg" texture="scout.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Scout Combat Frame Left Shoe" texture="scout.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Scout Combat Frame Right Shoe" texture="scout.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Scout Combat Frame Right Upper Arm" texture="scout.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Scout Combat Frame Left Upper Arm" texture="scout.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Scout Combat Frame Waist" texture="scout.png" limb="Waist" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Scout Combat Frame Right Thigh" texture="scout.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Scout Combat Frame Left Thigh" texture="scout.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+      <StatusEffect type="OnWearing" target="Character" Comparison="And" SpeedMultiplier="1.25" setvalue="true" disabledeltatime="true" PressureProtection="6000.0">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="framebuff" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" disabledeltatime="true">
+        <Affliction identifier="scoutdodge" amount="0.4" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, Character" Condition="-0.25">
+        <RequiredItem items="mobilebattery" type="Contained" />
+        <ReduceAffliction identifier="powerlow" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+        <Conditional robotblue="0" />
+        <Conditional robotred="0" />
+        <Conditional robotgreen="0" />
+        <Conditional robotyellow="0" />
+        <Conditional robotorange="0" />
+        <Conditional robotpurple="0" />
+        <Conditional robotpink="0" />
+        <Conditional robotblack="0" />
+        <Conditional robotwhite="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+        <Conditional robotblue="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+        <Conditional robotred="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+        <Conditional robotgreen="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+        <Conditional robotyellow="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+        <Conditional robotorange="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+        <Conditional robotpurple="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+        <Conditional robotpink="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+        <Conditional robotblack="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+        <Conditional robotwhite="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+        <Conditional ismale="true" />
+        <Conditional isfemale="true" />
+        <Affliction identifier="lacerations" amount="1" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,bitewounds,lacerations,burn,radiationsickness" damagemultiplier="0.65" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
+      <SkillModifier skillidentifier="weapons" skillvalue="5" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <Item name="" identifier="medicframe" category="Equipment" tags="diving,deepdiving,divinggear_wearableindoors" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="crewcab" />
+    <ContainedSprite name="Frame MK. II Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+    <Price baseprice="500" minleveldifficulty="15">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" sold="false" />
+      <Price storeidentifier="merchantresearch" multiplier="1" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.5" />
+      <Price storeidentifier="merchantmine" sold="false" />
+    </Price>
+    <Deconstruct time="20">
+      <Item identifier="aluminium" />
+      <Item identifier="steel" />
+      <Item identifier="titanium" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="50" />
+      <RequiredSkill identifier="medical" level="20" />
+      <RequiredItem identifier="rubber" amount="2" />
+      <RequiredItem identifier="frame2" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="opium" amount="2" />
+    </Fabricate>
+    <InventoryIcon name="Lazarus Frame Icon" texture="%ModDir%/Items/Frames/frameicons.png" sourcerect="1,259,128,128" origin="0.5,0.5" />
+    <Sprite name="Lazarus Frame" texture="%ModDir%/Items/Frames/mediccase.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Lazarus Torso" texture="medicframe.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Lazarus Right Lower Arm" texture="medicframe.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="false" inheritsourcerect="true" />
+      <sprite name="Lazarus Left Lower Arm" texture="medicframe.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="false" inheritsourcerect="true" />
+      <sprite name="Lazarus Right Leg" texture="medicframe.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Lazarus Left Leg" texture="medicframe.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Lazarus Left Shoe" texture="medicframe.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Lazarus Right Shoe" texture="medicframe.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Lazarus Right Upper Arm" texture="medicframe.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Lazarus Left Upper Arm" texture="medicframe.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Lazarus Waist" texture="medicframe.png" limb="Waist" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Lazarus Right Thigh" texture="medicframe.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Lazarus Left Thigh" texture="medicframe.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+      <StatusEffect type="OnWearing" target="Character" Comparison="And" PressureProtection="7000.0">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="framebuff" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, Character" targetslot="0" Condition="-0.25">
+        <RequiredItem items="mobilebattery" type="Contained" />
+        <ReduceAffliction identifier="powerlow" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="And">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="mediccharge" amount="3" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+        <Conditional ismale="true" />
+        <Conditional isfemale="true" />
+        <Affliction identifier="lacerations" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+        <Conditional robotblue="0" />
+        <Conditional robotred="0" />
+        <Conditional robotgreen="0" />
+        <Conditional robotyellow="0" />
+        <Conditional robotorange="0" />
+        <Conditional robotpurple="0" />
+        <Conditional robotpink="0" />
+        <Conditional robotblack="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+        <Conditional robotblue="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+        <Conditional robotred="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+        <Conditional robotgreen="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+        <Conditional robotyellow="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+        <Conditional robotorange="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+        <Conditional robotpurple="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+        <Conditional robotpink="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+        <Conditional robotblack="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+        <Conditional robotwhite="1" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,radiationsickness,burn" damagemultiplier="0.70" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="medframedischarge" connection="signal_out1">
+        <StatusEffect type="OnUse" target="Character">
+          <Conditional mediccharge="gte 99" />
+          <Spawnitem identifier="mediblast" spawnposition="This" />
+          <ReduceAffliction identifier="mediccharge" amount="100" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+      <SubContainer capacity="6" maxstacksize="8">
+        <Containable items="chem,medical,syringe" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <Item name="" identifier="mediblast" hideinmenus="true" category="Machine" scale="0.5">
+    <Body width="1" height="1" density="1" />
+    <Sprite texture="%ModDir%/Items/Frames/mediccase.png" sourcerect="0,0,0,0" depth="0.55" origin="0.5,0.5" />
+    <ItemComponent>
+      <StatusEffect type="Always" targettype="This">
+        <RemoveItem />
+        <sound file="Content/Items/Tools/Sprayer.ogg" range="1000" volume="0.5" />
+        <sound file="Content/Items/Tools/FlareLoop.ogg" range="1000" />
+        <ParticleEmitter particle="fixfoam" anglemax="360" velocitymin="4000" velocitymax="4000" particlespersecond="64" />
+        <ParticleEmitter particle="fixfoamgoosplash" anglemax="360" distancemax="10" particlespersecond="60" />
+        <ParticleEmitter particle="fixfoamgoosplash" anglemax="360" distancemax="10" scalemultiplier="2.0,2.0" particlespersecond="20" />
+        <Explosion range="1000" force="0.0" camerashake="0" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" structuredamage="0">
+          <Affliction identifier="medicheal" amount="100" />
+        </Explosion>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="" identifier="arcblast" hideinmenus="true" category="Machine" scale="0.5">
+    <Body width="1" height="1" density="1" />
+    <Sprite texture="%ModDir%/Characters/DefenseDrone/DefenseDrone.png" depth="0.55" sourcerect="0,0,0,0" origin="0.5,0.5" />
+    <ItemComponent>
+      <StatusEffect type="Always" targettype="This">
+        <RemoveItem />
+        <Explosion range="5000.0" camerashake="5" stun="0" force="50.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false">
+          <Affliction identifier="stun" strength="8" />
+          <Affliction identifier="burn" strength="10" />
+          <Affliction identifier="emp" strength="50" multiplybymaxvitality="true" />
+        </Explosion>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="" identifier="captainframe" category="Equipment" tags="diving,deepdiving,divinggear_wearableindoors" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="crewcab" />
+    <ContainedSprite name="V1 Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+    <Price baseprice="630" sold="false" />
+    <Deconstruct time="20">
+      <Item identifier="physicorium" />
+      <Item identifier="titaniumaluminiumalloy" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="helm" level="80" />
+      <RequiredItem identifier="physicorium" amount="2" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="aliencircuitry" amount="1" />
+      <RequiredItem identifier="Cframe1" />
+      <RequiredItem identifier="sonarbeacon" />
+    </Fabricate>
+    <InventoryIcon name="Sovereign Frame Icon" texture="%ModDir%/Items/Frames/frameicons.png" sourcerect="131,257,128,128" origin="0.5,0.5" />
+    <Sprite name="Sovereign Combat Frame" texture="%ModDir%/Items/Frames/sovereign_case.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Sovereign Frame Torso" texture="sovereign.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sovereign Combat Frame Right Lower Arm" texture="sovereign.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sovereign Combat Frame Left Lower Arm" texture="sovereign.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sovereign Combat Frame Right Leg" texture="sovereign.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sovereign Combat Frame Left Leg" texture="sovereign.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sovereign Combat Frame Left Shoe" texture="sovereign.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sovereign Combat Frame Right Shoe" texture="sovereign.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Sovereign Combat Frame Right Upper Arm" texture="sovereign.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Sovereign Combat Frame Left Upper Arm" texture="sovereign.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Sovereign Combat Frame Waist" texture="sovereign.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Sovereign Combat Frame Right Thigh" texture="sovereign.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Sovereign Combat Frame Left Thigh" texture="sovereign.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <StatusEffect type="OnWearing" target="Character" Comparison="And" SpeedMultiplier="1.05" setvalue="true" disabledeltatime="true" PressureProtection="10000.0">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="framebuff" amount="1" />
+        <Affliction identifier="removetablet" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, Character" Condition="-0.20">
+        <RequiredItem items="reactorfuel,mobilebattery" type="Contained" />
+        <ReduceAffliction identifier="stun" amount="0.15" />
+        <ReduceAffliction identifier="powerlow" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, Character" SpeedMultiplier="1.1" setvalue="true" disabledeltatime="true">
+        <RequiredItem items="reactorfuel" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+        <Conditional ismale="true" />
+        <Conditional isfemale="true" />
+        <Affliction identifier="lacerations" amount="2" />
+        <Affliction identifier="bleeding" amount="2" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+        <Conditional robotblue="0" />
+        <Conditional robotred="0" />
+        <Conditional robotgreen="0" />
+        <Conditional robotyellow="0" />
+        <Conditional robotorange="0" />
+        <Conditional robotpurple="0" />
+        <Conditional robotpink="0" />
+        <Conditional robotblack="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+        <Conditional robotblue="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+        <Conditional robotred="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+        <Conditional robotgreen="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+        <Conditional robotyellow="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+        <Conditional robotorange="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+        <Conditional robotpurple="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+        <Conditional robotpink="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+        <Conditional robotblack="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+        <Conditional robotwhite="1" />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,bitewounds,lacerations,burn,radiationsickness,gunshotwound" damagemultiplier="0.50" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.4" />
+      <StatValue stattype="FlowResistance" value="0.9" />
+      <SkillModifier skillidentifier="helm" skillvalue="20" />
+    </Wearable>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery,reactorfuel" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+    </ItemContainer>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="framesovereignbutton" connection="signal_out1">
+        <StatusEffect type="OnUse" target="Character">
+          <Affliction identifier="givetablet" strength="1" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <StatusHUD drawhudwhenequipped="true" overlaycolor="176,0,0,120" range="3000" thermalgoggles="true" showdeadcharacters="false" showtexts="false" />
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <Item name="" identifier="navtablet" category="Equipment" Tags="" cargocontaineridentifier="metalcrate" allowasextracargo="true" description="" hideinmenus="true" scale="0.4" impactsoundtag="impact_metal_light">
+    <InventoryIcon name="nave tablet Icon" texture="Content/Items/Jobgear/TalentGear.png" sourcerect="129,184,62,52" origin="0.5,0.5" />
+    <Sprite name="nav tablet world" texture="Content/Items/Jobgear/TalentGear.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
+    <Body width="30" height="40" density="15" />
+    <Holdable slots="RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnNotContained" targettype="This" condition="-100" disabledeltatime="true" />
+      <StatusEffect type="OnActive" targettype="This,Character" condition="-100" disabledeltatime="true">
+        <Conditional removetablet="0" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" targettype="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <RemoteController target="navterminal" onlyinownsub="false" msg="ItemMsgInteractSelect" AllowInGameEditing="false" drawhudwhenequipped="true" powerconsumption="0" />
+  </Item>
+  <Item name="" identifier="immolatorframe" aliases="arsonist" category="Equipment" tags="diving,divinggear_wearableindoors,deepdiving" fireproof="true" isshootable="true" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="crewcab" />
+    <ContainedSprite name="Immolator Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+    <Price baseprice="630" sold="false" />
+    <Deconstruct time="20">
+      <Item identifier="titaniumaluminiumalloy" amount="2" />
+      <Item identifier="frame2safe" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredItem identifier="incendiumfueltank" />
+      <RequiredItem identifier="frame2" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="1" />
+      <RequiredItem identifier="flamer" />
+    </Fabricate>
+    <InventoryIcon name="Immolator Icon" texture="%ModDir%/Items/Frames/frameicons.png" sourcerect="256,258,128,126" origin="0.5,0.5" />
+    <Sprite name="Immolator" texture="%ModDir%/Items/Frames/immolator_case.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Immolator Torso" texture="immolator.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Immolator Right Lower Arm" texture="immolator.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Immolator Left Lower Arm" texture="immolator.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Immolator Right Leg" texture="immolator.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Immolator Left Leg" texture="immolator.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Immolator Left Shoe" texture="immolator.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Immolator Right Shoe" texture="immolator.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Immolator Right Forearm" texture="immolator.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Immolator Left Upper Arm" texture="immolator.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Immolator Waist" texture="immolator.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Immolator Right Thigh" texture="immolator.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Immolator Left Thigh" texture="immolator.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Immolator Right Hand" texture="immolator.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.1" />
+      <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="2" />
+      <damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.25" />
+      <StatusEffect type="OnWearing" target="Character" Comparison="And" PressureProtection="8000.0">
+        <Conditional ismale="false" />
+        <Conditional isfemale="false" />
+        <Affliction identifier="framebuff" amount="1" />
+        <Affliction identifier="immolatorimmunity" amount="1" />
+        <Affliction identifier="removeflamer" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained, Character" Condition="-0.30">
+        <RequiredItem items="mobilebattery" type="Contained" />
+        <ReduceAffliction identifier="powerlow" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+        <Conditional robotblue="0" />
+        <Conditional robotred="0" />
+        <Conditional robotgreen="0" />
+        <Conditional robotyellow="0" />
+        <Conditional robotorange="0" />
+        <Conditional robotpurple="0" />
+        <Conditional robotpink="0" />
+        <Conditional robotblack="0" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+        <Conditional robotblue="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+        <Conditional robotred="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+        <Conditional robotgreen="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+        <Conditional robotyellow="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+        <Conditional robotorange="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+        <Conditional robotpurple="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+        <Conditional robotpink="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+        <Conditional robotblack="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+        <Conditional robotwhite="1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+        <Conditional ismale="true" />
+        <Conditional isfemale="true" />
+        <Affliction identifier="lacerations" amount="1" />
+      </StatusEffect>
+      <MiniMap enableitemfinder="false" enableelectricalview="false" enablehullcondition="false" drawhudwhenequipped="true" displaybordersize="-0.1" characterusable="false" allowuioverlap="true">
+        <GuiFrame relativesize="0.25,0.25" anchor="TopRight" relativeoffset="0.006, -0.001" style="ItemUI" />
+      </MiniMap>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,radiationsickness" damagemultiplier="0.70" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomRight" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="arsonistweapon" connection="signal_out1">
+        <StatusEffect type="OnUse" target="Character">
+          <Affliction identifier="giveflamer" strength="1" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="arsonistexhaust" connection="signal_out1">
+        <StatusEffect type="OnUse" Comparison="And" target="Character">
+          <Conditional immolatorheat="gte 5" />
+          <Conditional immolatorheat="lt 10" />
+          <Conditional immolatorbuff="0" />
+          <Affliction identifier="immolatorbuff" amount="0" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" Comparison="And" target="Character">
+          <Conditional immolatorheat="gte 10" />
+          <Conditional immolatorheat="lt 20" />
+          <Conditional immolatorbuff="0" />
+          <Affliction identifier="immolatorbuff" amount="10" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" Comparison="And" target="Character">
+          <Conditional immolatorheat="gte 20" />
+          <Conditional immolatorheat="lt 30" />
+          <Conditional immolatorbuff="0" />
+          <Affliction identifier="immolatorbuff" amount="20" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" Comparison="And" target="Character">
+          <Conditional immolatorheat="gte 30" />
+          <Conditional immolatorheat="lt 40" />
+          <Conditional immolatorbuff="0" />
+          <Affliction identifier="immolatorbuff" amount="30" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" Comparison="And" target="Character">
+          <Conditional immolatorheat="gte 40" />
+          <Conditional immolatorheat="lt 50" />
+          <Conditional immolatorbuff="0" />
+          <Affliction identifier="immolatorbuff" amount="40" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" Comparison="And" target="Character">
+          <Conditional immolatorheat="gte 50" />
+          <Conditional immolatorheat="lt 60" />
+          <Conditional immolatorbuff="0" />
+          <Affliction identifier="immolatorbuff" amount="50" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" Comparison="And" target="Character">
+          <Conditional immolatorheat="gte 60" />
+          <Conditional immolatorheat="lt 70" />
+          <Conditional immolatorbuff="0" />
+          <Affliction identifier="immolatorbuff" amount="60" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" Comparison="And" target="Character">
+          <Conditional immolatorheat="gte 70" />
+          <Conditional immolatorheat="lt 80" />
+          <Conditional immolatorbuff="0" />
+          <Affliction identifier="immolatorbuff" amount="70" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" Comparison="And" target="Character">
+          <Conditional immolatorheat="gte 80" />
+          <Conditional immolatorheat="lt 90" />
+          <Conditional immolatorbuff="0" />
+          <Affliction identifier="immolatorbuff" amount="80" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" Comparison="And" target="Character">
+          <Conditional immolatorheat="gte 90" />
+          <Conditional immolatorheat="lt 99" />
+          <Conditional immolatorbuff="0" />
+          <Affliction identifier="immolatorbuff" amount="90" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" Comparison="And" target="Character">
+          <Conditional immolatorheat="gte 99" />
+          <Conditional immolatorheat="lt 100" />
+          <Conditional immolatorbuff="0" />
+          <Affliction identifier="immolatorbuff" amount="100" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction identifier="immolatorheat" amount="100" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" duration="2" target="Limb,This" targetlimbs="Torso" range="500" camerashake="5" setvalue="true" stackable="false">
+          <ParticleEmitter particle="steamspray" copytargetangle="true" particlespersecond="30" velocitymin="500" velocitymax="1000" anglemin="140" anglemax="140" distancemin="50" distancemax="55" />
+          <sound file="Content/Items/Tools/Extinguisher.ogg" type="OnUse" range="500.0" loop="true" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+      <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+    </Holdable>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="mobilebattery" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource,weldingtoolfuel" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget maxsightrange="1500" />
+  </Item>
+  <Item name="" identifier="immolatorflamer" category="Equipment" Tags="weapon,gun,mountableweapon" hideinmenus="true" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <InventoryIcon texture="%ModDir%/Items/Frames/immolatorflamericon.png" sourcerect="0,0,128,128" />
+    <Sprite texture="%ModDir%/Items/Frames/immolatorflamer.png" sourcerect="3,29,249,82" depth="0.55" origin="0.5,0.5" />
+    <Body width="150" height="77" density="25" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="25,-30" aimpos="25,-25" handle1="-86,-33" handle2="-15,15" holdangle="30" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnNotContained" targettype="This" condition="-100" disabledeltatime="true" />
+      <StatusEffect type="OnBroken" targettype="This">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="This,Character" condition="-100" disabledeltatime="true">
+        <Conditional removeflamer="0" />
+      </StatusEffect>
+    </Holdable>
+    <RepairTool firedamage="35.0" structurefixamount="0.0" range="600" barrelpos="50,10" fireprobability="0.2" repairmultiple="true" RepairMultipleWalls="false" repairthroughwalls="false" repairthroughholes="true" combatpriority="90" spread="25" unskilledspread="25">
+      <!-- the item must contain a welding fuel tank for it to work -->
+      <RequiredSkill identifier="weapons" level="50" />
+      <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="265" anglemax="275" velocitymin="0" velocitymax="50" />
+      <ParticleEmitter particle="flamethrower" particlespersecond="80" anglemin="0" anglemax="0" velocitymin="1000" velocitymax="1500" highqualitycollisiondetection="true" />
+      <ParticleEmitter particle="flamethrowersmoke" particlespersecond="80" anglemin="0" anglemax="0" velocitymin="500" velocitymax="1000" />
+      <sound file="%ModDir%/Items/Frames/immolator_flamethrower.ogg" type="OnUse" range="750.0" />
+      <StatusEffect type="OnFailure" target="This">
+        <ParticleEmitter particle="bubbles" particlespersecond="20" anglemin="-10" anglemax="10" scalemin="0.3" scalemax="0.7" velocitymin="5" velocitymax="100" copyentityangle="true" />
+        <ParticleEmitter particle="fleshsmoke" particlespersecond="10" anglemin="-10" anglemax="10" scalemin="1" scalemax="1.5" velocitymin="5" velocitymax="200" copyentityangle="true" />
+      </StatusEffect>
+      <StatusEffect type="OnSuccess" targettype="UseTarget" targets="item" Condition="-15.0">
+        <Conditional HasTag="neq weldable" />
+      </StatusEffect>
+      <StatusEffect type="OnSuccess" target="UseTarget">
+        <Affliction identifier="burn" amount="2.25" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character">
+        <Affliction identifier="immolatorheat" amount="25" />
+      </StatusEffect>
+      <!-- consume oxygen from the hull -->
+      <StatusEffect type="OnUse" target="Hull" Oxygen="-10000" />
+      <StatusEffect type="OnFailure" target="Character">
+        <Conditional InWater="false" />
+        <Affliction identifier="burn" strength="0.5" probability="0.5" />
+      </StatusEffect>
+      <LightComponent LightColor="255,174,121,255" Flicker="0.5" Range="500">
+        <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
+      </LightComponent>
+    </RepairTool>
+    <aitarget sightrange="5000" soundrange="500" fadeouttime="5" />
+    <SkillRequirementHint identifier="weapons" level="50" />
+  </Item>
+  <Item name="" identifier="sailharpoongun" category="Weapon" hideinmenus="true" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Items/Frames/sailharpoon.png" sourcerect="0,0,64,64" />
+    <Body width="180" height="30" density="25" />
+    <Holdable slots="RightHand" controlpose="true" aimpos="70,5" handle1="-25,-7" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnNotContained" targettype="This" condition="-100" disabledeltatime="true" />
+      <StatusEffect type="OnBroken" targettype="This">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="This,Character" condition="-100" disabledeltatime="true">
+        <Conditional removeharpoon="0" />
+      </StatusEffect>
+    </Holdable>
+    <RangedWeapon reload="3" launchimpulse="20.0" barrelpos="0,0" spread="1" unskilledspread="10" combatPriority="60" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="Content/Items/Weapons/HarpoonGun1.ogg" type="OnUse" range="1000" />
+      <Sound file="Content/Items/Weapons/HarpoonGun2.ogg" type="OnUse" range="1000" />
+      <Sound file="Content/Items/Weapons/HarpoonGun3.ogg" type="OnUse" range="1000" />
+      <StatusEffect type="OnUse">
+        <SpawnItem identifier="sailspear" spawnposition="ThisInventory" count="1" />
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <RequiredItems items="harpoonammo" type="Contained" msg="ItemMsgSpearRequired" />
+      <RequiredSkill identifier="weapons" level="30" />
+    </RangedWeapon>
+    <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" hideitems="true" allowaccess="false" spawnwithid="sailspear">
+      <Containable items="harpoonammo" />
+    </ItemContainer>
+    <aitarget sightrange="0" soundrange="500" fadeouttime="2" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <SkillRequirementHint identifier="weapons" level="30" />
+  </Item>
+  <Item name="" identifier="sailspear" category="Weapon" maxstacksize="32" hideinmenus="true" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Price baseprice="0" sold="false" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,968,55,55" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="85,368,168,11" depth="0.55" origin="0.5,0.5" />
+    <Body width="160" height="10" density="30" />
+    <Rope sourcepullforce="1000" targetpullforce="1000" projectilepullforce="5" maxlength="1500" snaponcollision="false" spritewidth="3" tile="true" origin="0.05,0.5" targetminmass="30" lerpforces="true" snapanimduration="0.5">
+      <Sprite texture="Content/Map/Thalamus/thalamus.png" sourcerect="617,352,174,32" depth="0.57" origin="0.5,0.5" />
+      <!-- Snap after 1 seconds if not stuck to anything -->
+      <StatusEffect type="OnUse" target="This" Snapped="true" delay="1" checkconditionalalways="true">
+        <Conditional targetitemcomponent="Projectile" IsStuckToTarget="false" />
+      </StatusEffect>
+    </Rope>
+    <Projectile characterusable="false" launchimpulse="5" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="false">
+      <Attack structuredamage="15" itemdamage="15" targetforce="20" severlimbsprobability="0.1">
+        <Affliction identifier="lacerations" strength="30" />
+        <Affliction identifier="bleeding" strength="25" />
+        <Affliction identifier="stun" strength="2.5" />
+      </Attack>
+      <StatusEffect type="OnActive" target="UseTarget,This" checkconditionalalways="true" comparison="And">
+        <Conditional Snapped="false" />
+        <Conditional mass="lt 30" />
+        <Affliction identifier="drag" strength="1" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" checkconditionalalways="true">
+        <Conditional Snapped="true" />
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+</Items>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+  <Character speciesname="Robothusk" displayname="" husk="True" humanoid="True" caninteract="True" hasinfo="True" usehuskappendage="True" needsair="False" specifiertags="true" canspeak="False" blooddecal="blood" group="husk" speciestranslationoverride="" needswater="False" noise="100" visibility="100" bleedparticleair="blooddrop" bleedparticlewater="waterblood" bleedparticlemultiplier="1" eatingspeed="10" pathfinderpriority="1" hideinsonar="False" hideinthermalgoggles="True" sonardisruption="0" disabledistance="25000" despawncontainer="despawncontainer">
+    <ragdolls folder="%ModDir%/Characters/Robothusk/Ragdolls" />
+    <animations folder="%ModDir%/Characters/Robothusk/Animations" />
+    <huskappendage affliction="rdronepod" path="%ModDir%/Characters/Robothusk/DronePod.xml" onlyfromafflictions="true" />
+    <huskappendage affliction="rdronecyst" path="%ModDir%/Characters/Robothusk/DronePodCorrupted.xml" onlyfromafflictions="true" />
+    <huskappendage affliction="rbayonet" path="%ModDir%/Characters/Robothusk/Bayonet.xml" onlyfromafflictions="true" />
+    <huskappendage affliction="rhusk" path="%ModDir%/Characters/Robothusk/PressureCyst.xml" onlyfromafflictions="true" />
+    <huskappendage affliction="rscythe" path="%ModDir%/Characters/Robothusk/BayonetCorrupted.xml" onlyfromafflictions="true" />
+    <bloodemitter particle="blood" particleamount="5" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+    <bloodemitter particle="waterblood" particleamount="1" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+    <health usehealthwindow="True" vitality="50" crushdepth="6000" doesbleed="True" bleedingreduction="10" burnreduction="0" constanthealthregeneration="1" healthregenerationwheneating="0" applyafflictioncolors="true" poisonvulnerability="0.5">
+      <MedUISilhouette texture="Content/UI/Health/MedUI_Silhouette.png" columns="8" rows="2" sourcerect="0,0,1008,748" />
+      <MedUIExtra texture="Content/UI/Health/MedUIExtra.png" columns="4" rows="4" sourcerect="0,0,1024,1024" />
+      <Limb name="Head">
+        <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,0,126,374" highlightarea="41,0,45,54" />
+        <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,515,126,374" />
+        <VitalityMultiplier type="damage" multiplier="2.0" />
+      </Limb>
+      <Limb name="Torso">
+        <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,0,126,374" highlightarea="29,56,70,134" />
+        <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,515,126,374" />
+      </Limb>
+      <Limb name="LeftArm">
+        <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,0,126,374" highlightarea="1,69,27,140" />
+        <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,515,126,374" />
+        <VitalityMultiplier type="damage" multiplier="0.5" />
+      </Limb>
+      <Limb name="RightArm">
+        <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,0,126,374" highlightarea="100,69,27,140" />
+        <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,515,126,374" />
+        <VitalityMultiplier type="damage" multiplier="0.5" />
+      </Limb>
+      <Limb name="LeftLeg">
+        <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,0,126,374" highlightarea="3,180,57,194" />
+        <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,515,126,374" />
+        <VitalityMultiplier type="damage" multiplier="0.5" />
+      </Limb>
+      <Limb name="RightLeg">
+        <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,0,126,374" highlightarea="68,180,57,194" />
+        <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,515,126,374" />
+        <VitalityMultiplier type="damage" multiplier="0.5" />
+      </Limb>
+    </health>
+    <names path="Content/Characters/Human/names.xml" />
+    <ai></ai>
+    <inventory arrowslot="9" slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface" accessiblewhenalive="True" commonness="1" />
+    <Vars>
+      <Var var="GENDER" tags="female,male,robotmale,robotfemale" />
+    </Vars>
+  </Character>
