@@ -34,7 +34,8 @@ function NTRT.Update()
         if (value ~= nil and not value.Removed and not value.IsDead) then
             Timer.Wait(function ()
                 if (value ~= nil and not value.Removed and not value.IsDead) then
-                NTRT.UpdateRobot(value) end
+                NTRT.UpdateRobot(value)
+                NTRT.UpdateHuman(value) end
             end, ((key + 1) / amountRobots) * NTRT.Deltatime * 1000)
         end
     end
@@ -138,7 +139,7 @@ NTRT.RemovedAfflictions = { -- afflictions that are periodically removed from ro
 -- its better to have it like this than verbosely plastering it all over the place
 NTRT.IsRobot = function(character)
     --return true
-    return not character.IsHuman
+    return character.SpeciesName == "Robot"
 end
 
 local limbtypes = {
