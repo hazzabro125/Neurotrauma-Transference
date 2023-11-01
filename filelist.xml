@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <contentpackage name="Recoded 3" steamworkshopid="2948488019" corepackage="false" modversion="1.15.7" gameversion="1.1.18.1" installtime="1698478787" >
   <Character file="%ModDir%/Characters/Robot/Robot.xml" />
   <Character file="%ModDir%/Characters/Robothusk/Robothusk.xml" />
@@ -8,6 +8,7 @@
   <Character file="%ModDir%/Characters/DefenseDrone/DefenseDrone.xml" />
   <Character file="%ModDir%/Characters/DefenseDroneCorrupted/DefenseDroneCorrupted.xml" />
   <Item file="%ModDir%/Items/Jobgear/misc.xml" />
+  <Item file="%ModDir%/Items/Transference/Transference.xml" />
   <Item file="%ModDir%/Items/Chipsets/chipsets.xml" />
   <Item file="%ModDir%/Items/Jobgear/Diving/divinggear.xml" />
   <Item file="%ModDir%/Items/Jobgear/Captain/captain_gear.xml" />
@@ -21,6 +22,7 @@
   <Item file="%ModDir%/Items/Medical/medical.xml" />
   <Item file="%ModDir%/Items/Cosmetics/cosmetics.xml" />
   <Text file="%ModDir%/Texts/English/EnglishRT.xml" />
+  <Text file="%ModDir%/Texts/English/Text.xml" />
   <Text file="%ModDir%/Texts/Russian/RussianRT.xml" />
   <Text file="%ModDir%/Texts/French/FrenchRT.xml" />
   <Text file="%ModDir%/Texts/German/GermanRT.xml" />
@@ -34,7 +36,9 @@
   <Text file="%ModDir%/Texts/Spanish/WestSpanishRT.xml" />
   <Afflictions file="%ModDir%/Afflictions/Afflictions.xml" />
   <NPCSets file="%ModDir%/NPC/OutpostBots.xml" />
+  <NPCSets file="%ModDir%/NPC/NPCs.xml" />
   <RandomEvents file="%ModDir%/NPC/KATEEspawn.xml" />
+  <RandomEvents file="%ModDir%/Events/Events.xml" />
   <Talents file="%ModDir%/Achievements.xml" />
   <Other file="%ModDir%/Lua/Autorun/init.lua" />
   <Other file="%ModDir%/Lua/Scripts/humanupdate.lua" />

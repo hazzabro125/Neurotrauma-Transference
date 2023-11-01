@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Randomevents>
+  <EventPrefabs>
+    <ScriptedEvent identifier="cyberassistant">
+      <SpawnAction npcsetidentifier="cyberbodies" npcidentifier="cyberassistant" spawnpointtag="triggerer_player" targettag="cyberspawn" />
+      <AfflictionAction targettag="cyberspawn" affliction="brainremoved" strength="100" />
+      <AfflictionAction targettag="cyberspawn" affliction="stun" strength="10" />
+      <GiveSkillEXPAction skill="surgery" amount="1" targettag="cyberspawn" />
+      <NPCChangeTeamAction npctag="cyberspawn" teamid="team1" addtocrew="true" />
+    </ScriptedEvent>
+    <ScriptedEvent identifier="cybercaptain">
+      <SpawnAction npcsetidentifier="cyberbodies" npcidentifier="cybercaptain" spawnpointtag="triggerer_player" targettag="cyberspawn" />
+      <AfflictionAction targettag="cyberspawn" affliction="brainremoved" strength="100" />
+      <AfflictionAction targettag="cyberspawn" affliction="stun" strength="10" />
+      <GiveSkillEXPAction skill="surgery" amount="1" targettag="cyberspawn" />
+      <NPCChangeTeamAction npctag="cyberspawn" teamid="Team1" addtocrew="true" />
+    </ScriptedEvent>
+    <ScriptedEvent identifier="cybermedic">
+      <SpawnAction npcsetidentifier="cyberbodies" npcidentifier="cybermedic" spawnpointtag="triggerer_player" targettag="cyberspawn" />
+      <AfflictionAction targettag="cyberspawn" affliction="brainremoved" strength="100" />
+      <AfflictionAction targettag="cyberspawn" affliction="stun" strength="10" />
+      <GiveSkillEXPAction skill="surgery" amount="1" targettag="cyberspawn" />
+      <NPCChangeTeamAction npctag="cyberspawn" teamid="Team1" addtocrew="true" />
+    </ScriptedEvent>
+    <ScriptedEvent identifier="cybermechanic">
+      <SpawnAction npcsetidentifier="cyberbodies" npcidentifier="cybermechanic" spawnpointtag="triggerer_player" targettag="cyberspawn" />
+      <AfflictionAction targettag="cyberspawn" affliction="brainremoved" strength="100" />
+      <AfflictionAction targettag="cyberspawn" affliction="stun" strength="10" />
+      <GiveSkillEXPAction skill="surgery" amount="1" targettag="cyberspawn" />
+      <NPCChangeTeamAction npctag="cyberspawn" teamid="Team1" addtocrew="true" />
+    </ScriptedEvent>
+    <ScriptedEvent identifier="cybersecurity">
+      <SpawnAction npcsetidentifier="cyberbodies" npcidentifier="cybersecurity" spawnpointtag="triggerer_player" targettag="cyberspawn" />
+      <AfflictionAction targettag="cyberspawn" affliction="brainremoved" strength="100" />
+      <AfflictionAction targettag="cyberspawn" affliction="stun" strength="10" />
+      <GiveSkillEXPAction skill="surgery" amount="1" targettag="cyberspawn" />
+      <NPCChangeTeamAction npctag="cyberspawn" teamid="Team1" addtocrew="true" />
+    </ScriptedEvent>
+    <ScriptedEvent identifier="cyberengineer">
+      <SpawnAction npcsetidentifier="cyberbodies" npcidentifier="cyberengineer" spawnpointtag="triggerer_player" targettag="cyberspawn" />
+      <AfflictionAction targettag="cyberspawn" affliction="brainremoved" strength="100" />
+      <AfflictionAction targettag="cyberspawn" affliction="stun" strength="10" />
+      <GiveSkillEXPAction skill="surgery" amount="1" targettag="cyberspawn" />
+      <NPCChangeTeamAction npctag="cyberspawn" teamid="Team1" addtocrew="true" />
+    </ScriptedEvent>
+  </EventPrefabs>
+</Randomevents>

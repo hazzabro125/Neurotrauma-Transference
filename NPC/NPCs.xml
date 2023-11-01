@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<npcsets>
+  <npcset identifier="cyberbodies">
+    <npc identifier="cyberassistant" job="assistant" moduleflags="none" behavior="Passive">
+      <Character speciesname="Robot" gender="robotmale" experiencepoints="17600" headspriteid="6" hairindex="0" beardindex="0" moustacheindex="0" faceattachmentindex="0" skincolor="255,255,255,255" haircolor="255,255,255,255" facialhaircolor="255,255,255,255" teamid="none">
+        <job name="Assistant" identifier="assistant">
+          <skill identifier="electrical" level="90" />
+          <skill identifier="mechanical" level="90" />
+          <skill identifier="weapons" level="90" />
+          <skill identifier="medical" level="90" />
+          <skill identifier="helm" level="90" />
+          <skill identifier="surgery" level="89" />
+        </job>
+      </Character>
+    </npc>
+    <npc identifier="cybercaptain" job="captain" moduleflags="none" behavior="Passive">
+      <Character speciesname="Robot" gender="robotmale" experiencepoints="17600" headspriteid="7" hairindex="0" beardindex="0" moustacheindex="0" faceattachmentindex="0" skincolor="255,255,255,255" haircolor="255,255,255,255" facialhaircolor="255,255,255,255" teamid="team1">
+        <job name="Captain" identifier="captain">
+          <skill identifier="electrical" level="80" />
+          <skill identifier="mechanical" level="80" />
+          <skill identifier="weapons" level="80" />
+          <skill identifier="medical" level="80" />
+          <skill identifier="helm" level="100" />
+          <skill identifier="surgery" level="79" />
+        </job>
+      </Character>
+    </npc>
+    <npc identifier="cybermedic" job="medicaldoctor" moduleflags="none" behavior="Passive">
+      <Character speciesname="Robot" gender="robotmale" experiencepoints="17600" headspriteid="3" hairindex="0" beardindex="0" moustacheindex="0" faceattachmentindex="0" skincolor="255,255,255,255" haircolor="255,255,255,255" facialhaircolor="255,255,255,255" teamid="team1">
+        <job name="Medical Doctor" identifier="medicaldoctor">
+          <skill identifier="electrical" level="80" />
+          <skill identifier="mechanical" level="80" />
+          <skill identifier="weapons" level="80" />
+          <skill identifier="medical" level="100" />
+          <skill identifier="helm" level="80" />
+          <skill identifier="surgery" level="99" />
+        </job>
+      </Character>
+    </npc>
+    <npc identifier="cybermechanic" job="mechanic" moduleflags="none" behavior="Passive">
+      <Character speciesname="Robot" gender="robotmale" experiencepoints="17600" headspriteid="1" hairindex="0" beardindex="0" moustacheindex="0" faceattachmentindex="0" skincolor="255,255,255,255" haircolor="255,255,255,255" facialhaircolor="255,255,255,255" teamid="team1">
+        <job name="Mechanic" identifier="mechanic">
+          <skill identifier="electrical" level="80" />
+          <skill identifier="mechanical" level="100" />
+          <skill identifier="weapons" level="80" />
+          <skill identifier="medical" level="80" />
+          <skill identifier="helm" level="80" />
+          <skill identifier="surgery" level="79" />
+        </job>
+      </Character>
+    </npc>
+    <npc identifier="cybersecurity" job="securityofficer" moduleflags="none" behavior="Passive">
+      <Character speciesname="Robot" gender="robotmale" experiencepoints="17600" headspriteid="12" hairindex="0" beardindex="0" moustacheindex="0" faceattachmentindex="0" skincolor="255,255,255,255" haircolor="255,255,255,255" facialhaircolor="255,255,255,255" teamid="team1">
+        <job name="Security Officer" identifier="securityofficer">
+          <skill identifier="electrical" level="80" />
+          <skill identifier="mechanical" level="80" />
+          <skill identifier="weapons" level="100" />
+          <skill identifier="medical" level="80" />
+          <skill identifier="helm" level="80" />
+          <skill identifier="surgery" level="79" />
+        </job>
+      </Character>
+    </npc>
+    <npc identifier="cyberengineer" job="engineer" moduleflags="none" behavior="Passive">
+      <Character speciesname="Robot" gender="robotmale" experiencepoints="17600" headspriteid="5" hairindex="0" beardindex="0" moustacheindex="0" faceattachmentindex="0" skincolor="255,255,255,255" haircolor="255,255,255,255" facialhaircolor="255,255,255,255" teamid="team1">
+        <job name="Engineer" identifier="engineer">
+          <skill identifier="electrical" level="100" />
+          <skill identifier="mechanical" level="80" />
+          <skill identifier="weapons" level="80" />
+          <skill identifier="medical" level="80" />
+          <skill identifier="helm" level="80" />
+          <skill identifier="surgery" level="79" />
+        </job>
+      </Character>
+    </npc>
+  </npcset>
+</npcsets>

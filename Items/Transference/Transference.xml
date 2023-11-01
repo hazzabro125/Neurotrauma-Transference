@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <Items>
+  <Item name="" identifier="cyberbodyassistant" category="Equipment" tags="largeitem" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" amount="12" />
+      <Item identifier="fulgurium" amount="6" />
+      <Item identifier="fpgacircuit" amount="20" />
+      <Item identifier="steel" amount="16" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="80" />
+      <RequiredItem identifier="cyberleg" amount="2" />
+      <RequiredItem identifier="cyberarm" amount="2" />
+      <RequiredItem identifier="cybercoreassistant" amount="1" />
+    </Fabricate>
+    <InventoryIcon name="" texture="%ModDir:2948488019%/Items/Frames/prototype_case.png" sourcerect="87,183,131,74" origin="0.5,0.5" />
+    <Sprite name="Cybernetic Body" texture="%ModDir:2948488019%/Items/Frames/prototype_case.png" sourcerect="87,183,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true"></Holdable>
+    <ItemComponent CharacterUsable="true" DeleteOnUse="true">
+      <StatusEffect type="OnUse" target="This" EventUserTag="triggerer_player">
+        <TriggerEvent identifier="cyberassistant" />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="" identifier="cyberbodycaptain" category="Equipment" tags="largeitem" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" amount="12" />
+      <Item identifier="fulgurium" amount="6" />
+      <Item identifier="fpgacircuit" amount="20" />
+      <Item identifier="steel" amount="16" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="80" />
+      <RequiredItem identifier="cyberleg" amount="2" />
+      <RequiredItem identifier="cyberarm" amount="2" />
+      <RequiredItem identifier="cybercorecaptain" amount="1" />
+    </Fabricate>
+    <InventoryIcon name="" texture="%ModDir:2948488019%/Items/Frames/prototype_case.png" sourcerect="87,183,131,74" origin="0.5,0.5" />
+    <Sprite name="Cybernetic Body" texture="%ModDir:2948488019%/Items/Frames/prototype_case.png" sourcerect="87,183,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true"></Holdable>
+    <ItemComponent CharacterUsable="true" DeleteOnUse="true">
+      <StatusEffect type="OnUse" target="This" EventUserTag="triggerer_player">
+        <TriggerEvent identifier="cybercaptain" />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="" identifier="cyberbodymedic" category="Equipment" tags="largeitem" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" amount="12" />
+      <Item identifier="fulgurium" amount="6" />
+      <Item identifier="fpgacircuit" amount="20" />
+      <Item identifier="steel" amount="16" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="80" />
+      <RequiredItem identifier="cyberleg" amount="2" />
+      <RequiredItem identifier="cyberarm" amount="2" />
+      <RequiredItem identifier="cybercoremedic" amount="1" />
+    </Fabricate>
+    <InventoryIcon name="" texture="%ModDir:2948488019%/Items/Frames/prototype_case.png" sourcerect="87,183,131,74" origin="0.5,0.5" />
+    <Sprite name="Cybernetic Body" texture="%ModDir:2948488019%/Items/Frames/prototype_case.png" sourcerect="87,183,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true"></Holdable>
+    <ItemComponent CharacterUsable="true" DeleteOnUse="true">
+      <StatusEffect type="OnUse" target="This" EventUserTag="triggerer_player">
+        <TriggerEvent identifier="cybermedic" />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="" identifier="cyberbodymechanic" category="Equipment" tags="largeitem" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" amount="12" />
+      <Item identifier="fulgurium" amount="6" />
+      <Item identifier="fpgacircuit" amount="20" />
+      <Item identifier="steel" amount="16" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="80" />
+      <RequiredItem identifier="cyberleg" amount="2" />
+      <RequiredItem identifier="cyberarm" amount="2" />
+      <RequiredItem identifier="cybercoremechanic" amount="1" />
+    </Fabricate>
+    <InventoryIcon name="" texture="%ModDir:2948488019%/Items/Frames/prototype_case.png" sourcerect="87,183,131,74" origin="0.5,0.5" />
+    <Sprite name="Cybernetic Body" texture="%ModDir:2948488019%/Items/Frames/prototype_case.png" sourcerect="87,183,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true"></Holdable>
+    <ItemComponent CharacterUsable="true" DeleteOnUse="true">
+      <StatusEffect type="OnUse" target="This" EventUserTag="triggerer_player">
+        <TriggerEvent identifier="cybermechanic" />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="" identifier="cyberbodysecurity" category="Equipment" tags="largeitem" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" amount="12" />
+      <Item identifier="fulgurium" amount="6" />
+      <Item identifier="fpgacircuit" amount="20" />
+      <Item identifier="steel" amount="16" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="80" />
+      <RequiredItem identifier="cyberleg" amount="2" />
+      <RequiredItem identifier="cyberarm" amount="2" />
+      <RequiredItem identifier="cybercoresecurity" amount="1" />
+    </Fabricate>
+    <InventoryIcon name="" texture="%ModDir:2948488019%/Items/Frames/prototype_case.png" sourcerect="87,183,131,74" origin="0.5,0.5" />
+    <Sprite name="Cybernetic Body" texture="%ModDir:2948488019%/Items/Frames/prototype_case.png" sourcerect="87,183,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true"></Holdable>
+    <ItemComponent CharacterUsable="true" DeleteOnUse="true">
+      <StatusEffect type="OnUse" target="This" EventUserTag="triggerer_player">
+        <TriggerEvent identifier="cybersecurity" />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="" identifier="cyberbodyengineer" category="Equipment" tags="largeitem" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" amount="12" />
+      <Item identifier="fulgurium" amount="6" />
+      <Item identifier="fpgacircuit" amount="20" />
+      <Item identifier="steel" amount="16" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="80" />
+      <RequiredItem identifier="cyberleg" amount="2" />
+      <RequiredItem identifier="cyberarm" amount="2" />
+      <RequiredItem identifier="cybercoreengineer" amount="1" />
+    </Fabricate>
+    <InventoryIcon name="" texture="%ModDir:2948488019%/Items/Frames/prototype_case.png" sourcerect="87,183,131,74" origin="0.5,0.5" />
+    <Sprite name="Cybernetic Body" texture="%ModDir:2948488019%/Items/Frames/prototype_case.png" sourcerect="87,183,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true"></Holdable>
+    <ItemComponent CharacterUsable="true" DeleteOnUse="true">
+      <StatusEffect type="OnUse" target="This" EventUserTag="triggerer_player">
+        <TriggerEvent identifier="cyberengineer" />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="" identifier="cybercoreassistant" category="Equipment" tags="mediumitem" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="15">
+      <Item identifier="fulgurium" amount="2" />
+      <Item identifier="fpgacircuit" amount="4" />
+      <Item identifier="titaniumaluminiumalloy" amount="4" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="alienpowercell" amount="1" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fpgacircuit" amount="4" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/Diving/MakeshiftArmor.png" sourcerect="448,0,64,64" origin="0.5,0.5" />
+    <Sprite name="Makeshift Armor Item" texture="Content/Items/Diving/MakeshiftArmor.png" sourcerect="167,25,86,126" depth="0.55" origin="0.5,0.5" />
+    <Body width="62" height="120" density="30" />
+    <Holdable slots="Any,RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="true" canbepicked="true"></Holdable>
+  </Item>
+  <Item name="" identifier="cybercorecaptain" category="Equipment" tags="mediumitem" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="15">
+      <Item identifier="fulgurium" amount="2" />
+      <Item identifier="fpgacircuit" amount="4" />
+      <Item identifier="titaniumaluminiumalloy" amount="4" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="alienpowercell" amount="1" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fpgacircuit" amount="4" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
+      <RequiredItem identifier="handheldsonar" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/Diving/MakeshiftArmor.png" sourcerect="448,0,64,64" origin="0.5,0.5" />
+    <Sprite name="Makeshift Armor Item" texture="Content/Items/Diving/MakeshiftArmor.png" sourcerect="167,25,86,126" depth="0.55" origin="0.5,0.5" />
+    <Body width="62" height="120" density="30" />
+    <Holdable slots="Any,RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="true" canbepicked="true"></Holdable>
+  </Item>
+  <Item name="" identifier="cybercoremedic" category="Equipment" tags="mediumitem" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="15">
+      <Item identifier="fulgurium" amount="2" />
+      <Item identifier="fpgacircuit" amount="4" />
+      <Item identifier="titaniumaluminiumalloy" amount="4" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="alienpowercell" amount="1" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fpgacircuit" amount="4" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
+      <RequiredItem identifier="autoinjectorheadset" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/Diving/MakeshiftArmor.png" sourcerect="448,0,64,64" origin="0.5,0.5" />
+    <Sprite name="Makeshift Armor Item" texture="Content/Items/Diving/MakeshiftArmor.png" sourcerect="167,25,86,126" depth="0.55" origin="0.5,0.5" />
+    <Body width="62" height="120" density="30" />
+    <Holdable slots="Any,RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="true" canbepicked="true"></Holdable>
+  </Item>
+  <Item name="" identifier="cybercoremechanic" category="Equipment" tags="mediumitem" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="15">
+      <Item identifier="fulgurium" amount="2" />
+      <Item identifier="fpgacircuit" amount="4" />
+      <Item identifier="titaniumaluminiumalloy" amount="4" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="alienpowercell" amount="1" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fpgacircuit" amount="4" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
+      <RequiredItem identifier="safetyharness" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/Diving/MakeshiftArmor.png" sourcerect="448,0,64,64" origin="0.5,0.5" />
+    <Sprite name="Makeshift Armor Item" texture="Content/Items/Diving/MakeshiftArmor.png" sourcerect="167,25,86,126" depth="0.55" origin="0.5,0.5" />
+    <Body width="62" height="120" density="30" />
+    <Holdable slots="Any,RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="true" canbepicked="true"></Holdable>
+  </Item>
+  <Item name="" identifier="cybercoresecurity" category="Equipment" tags="mediumitem" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="15">
+      <Item identifier="fulgurium" amount="2" />
+      <Item identifier="fpgacircuit" amount="4" />
+      <Item identifier="titaniumaluminiumalloy" amount="4" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="alienpowercell" amount="1" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fpgacircuit" amount="4" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
+      <RequiredItem identifier="bandolier" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/Diving/MakeshiftArmor.png" sourcerect="448,0,64,64" origin="0.5,0.5" />
+    <Sprite name="Makeshift Armor Item" texture="Content/Items/Diving/MakeshiftArmor.png" sourcerect="167,25,86,126" depth="0.55" origin="0.5,0.5" />
+    <Body width="62" height="120" density="30" />
+    <Holdable slots="Any,RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="true" canbepicked="true"></Holdable>
+  </Item>
+  <Item name="" identifier="cybercoreengineer" category="Equipment" tags="mediumitem" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="15">
+      <Item identifier="fulgurium" amount="2" />
+      <Item identifier="fpgacircuit" amount="4" />
+      <Item identifier="titaniumaluminiumalloy" amount="4" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="alienpowercell" amount="1" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fpgacircuit" amount="4" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
+      <RequiredItem identifier="cargoscooter" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/Diving/MakeshiftArmor.png" sourcerect="448,0,64,64" origin="0.5,0.5" />
+    <Sprite name="Makeshift Armor Item" texture="Content/Items/Diving/MakeshiftArmor.png" sourcerect="167,25,86,126" depth="0.55" origin="0.5,0.5" />
+    <Body width="62" height="120" density="30" />
+    <Holdable slots="Any,RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="true" canbepicked="true"></Holdable>
+  </Item>
+</Items>
