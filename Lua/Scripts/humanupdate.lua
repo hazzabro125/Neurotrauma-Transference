@@ -1,4 +1,45 @@
 
+NTRT.UpdateCooldown = 0
+NTRT.UpdateInterval = 120
+NTRT.Deltatime = NTRT.UpdateInterval/60 -- Time in seconds that transpires between updates
+
+Hook.Add("think", "NTRT.update", function()
+    if HF.GameIsPaused() then return end
+
+    NTRT.UpdateCooldown = NTRT.UpdateCooldown-1
+    if (NTRT.UpdateCooldown <= 0) then
+        NTRT.UpdateCooldown = NTRT.UpdateInterval
+        NTRT.Update()
+    end
+
+end)
+
+-- gets run once every two seconds
+function NTRT.Update()
+
+    local updateRobots = {}
+    local amountRobots = 0
+
+    -- fetchcharacters to update
+    for key, character in pairs(Character.CharacterList) do
+        if (character.SpeciesName == "Robot" and not character.IsDead) then
+            table.insert(updateRobots, character)
+            amountRobots = amountRobots + 1
+        end
+    end
+
+    -- we spread the characters out over the duration of an update so that the load isnt done all at once
+    for key, value in pairs(updateRobots) do
+        -- make sure theyre still alive and human
+        if (value ~= nil and not value.Removed and not value.IsDead) then
+            Timer.Wait(function ()
+                if (value ~= nil and not value.Removed and not value.IsDead) then
+                NTRT.UpdateRobot(value) end
+            end, ((key + 1) / amountRobots) * NTRT.Deltatime * 1000)
+        end
+    end
+end
+
 NTRT.Afflictions = { -- afflictions that we should not entirely ignore for robots
     givein={},
     t_paralysis={getonly=true},
@@ -97,7 +138,7 @@ NTRT.RemovedAfflictions = { -- afflictions that are periodically removed from ro
 -- its better to have it like this than verbosely plastering it all over the place
 NTRT.IsRobot = function(character)
     --return true
-    return not character.SpeciesName == "Robot"
+    return not character.IsHuman
 end
 
 local limbtypes = {
