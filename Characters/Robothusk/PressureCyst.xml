@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<huskappendage>
-  <limb id="13" name="Cyst" type="None" inheritlimbdepth="Head" width="0" height="0" notes="" flip="True" healthindex="0" attackpriority="0" steerforce="0" stepoffset="0,0" radius="20" mass="0" density="5" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0" constanttorque="0" constantangle="0" scale="0.5" attackforcemultiplier="1" minseverancedamage="0.8" severedfadeouttime="0" applytailangle="False" applysinemovement="True">
-    <sprite sourcerect="0,0,103,90" origin="0.5,0.5" depth="0.049" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="true" texture="%ModDir%/Characters/Robothusk/Cyst.png" />
-  </limb>
-  <!-- Head to husk appendage -->
-  <joint name="Head to Cyst" limb1="1" limb2="13" limb1anchor="6,-5" limb2anchor="-3.1,-7.2" upperlimit="76" weldjoint="true" lowerlimit="60" canbesevered="False" limitenabled="True" />
-</huskappendage>
