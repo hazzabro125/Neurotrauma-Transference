@@ -1,0 +1,905 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- overrides -->
+  <!-- screwdrivers -->
+  <Override>
+    <Item name="" identifier="screwdriver" category="Equipment" Tags="smallitem,simpletool,tool,electricalrepairtool" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True" useinhealthinterface="True">
+      <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer primary="reactorcab,engcab" />
+      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.2" />
+      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" amount="1" spawnprobability="0.5" />
+      <PreferredContainer primary="wreckreactorcab,abandonedreactorcab" amount="1" spawnprobability="0.5" />
+      <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.3" />
+      <PreferredContainer secondary="outposttrashcan" amount="1" spawnprobability="0.1" />
+      <Price baseprice="10" minavailable="10">
+        <Price storeidentifier="merchantoutpost" />
+        <Price storeidentifier="merchantcity" minavailable="5" />
+        <Price storeidentifier="merchantresearch" multiplier="1.25" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.25" />
+        <Price storeidentifier="merchantmine" />
+        <Price storeidentifier="merchantengineering" minavailable="10" multiplier="0.9" />
+      </Price>
+      <Deconstruct time="20">
+        <Item identifier="iron" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="10">
+        <RequiredSkill identifier="mechanical" level="20" />
+        <RequiredItem identifier="iron" amount="2" />
+      </Fabricate>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="512,0,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Tools/tools.png" sourcerect="227,189,64,14" depth="0.55" origin="0.5,0.5" />
+      <Body width="60" height="12" density="50" />
+      <SuitableTreatment identifier="ntc_loosescrews" suitability="50" />
+      <SuitableTreatment type="rinternaldamage" suitability="100" />
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-10,0" holdangle="60" reload="1.0" range="50" combatpriority="7" msg="ItemMsgPickUpSelect">
+        <Attack structuredamage="4" itemdamage="2" targetimpulse="2">
+          <Affliction identifier="lacerations" strength="5" />
+          <Affliction identifier="bleeding" strength="2" />
+          <Affliction identifier="stun" strength="0.2" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+        </Attack>
+        <StatusEffect tags="medical" type="OnSuccess" target="UseTarget, This" Comparison="And" duration="1.0">
+          <Conditional ismale="false" />
+          <Conditional isfemale="false" />
+          <ReduceAffliction identifier="internaldamage" amount="2" />
+          <ReduceAffliction identifier="rinternaldamage" amount="2" />
+          <ReduceAffliction identifier="gunshotwound" amount="2" />
+          <Sound file="Content\Sounds\RepairLoop.ogg" range="500" />
+        </StatusEffect>
+        <StatusEffect tags="medical" type="OnFailure" target="UseTarget, This" Comparison="And" duration="2.0">
+          <Conditional ismale="false" />
+          <Conditional isfemale="false" />
+          <ReduceAffliction identifier="rinternaldamage" amount="1" />
+          <ReduceAffliction identifier="internaldamage" amount="1" />
+          <ReduceAffliction identifier="gunshotwound" amount="1" />
+          <Sound file="Content\Sounds\RepairLoop.ogg" range="500" />
+        </StatusEffect>
+      </MeleeWeapon>
+      <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+      <Quality>
+        <QualityStat stattype="RepairSpeed" value="0.1" />
+      </Quality>
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+  </Override>
+  <Override>
+    <Item name="" identifier="screwdriverhardened" variantof="screwdriver" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110" addedrepairspeedmultiplier="0.25" useinhealthinterface="True">
+      <PreferredContainer secondary="respawncontainer" spawnprobability="0" notcampaign="true" />
+      <PreferredContainer primary="reactorcab,engcab" spawnprobability="0" />
+      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0" />
+      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0" />
+      <PreferredContainer primary="wreckreactorcab,abandonedreactorcab" spawnprobability="0" />
+      <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
+      <PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
+      <Price baseprice="200" sold="false" />
+      <Deconstruct>
+        <Item identifier="iron" />
+        <Item identifier="depletedfuel" />
+      </Deconstruct>
+      <Fabricate requiresrecipe="true">
+        <RequiredItem identifier="screwdriver" />
+        <RequiredItem identifier="depletedfuel" amount="2" />
+      </Fabricate>
+      <SuitableTreatment identifier="ntc_loosescrews" suitability="50" />
+      <MeleeWeapon reload="*1.3">
+        <Attack targetimpulse="8" penetration="0.25">
+          <Affliction identifier="lacerations" strength="10" />
+          <Affliction identifier="radiationsickness" strength="1" />
+          <Affliction identifier="stun" strength="0.3" />
+        </Attack>
+      </MeleeWeapon>
+    </Item>
+  </Override>
+  <Override>
+    <Item name="" identifier="screwdriverdementonite" descriptionidentifier="dementonitetool" variantof="screwdriver" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166" addedrepairspeedmultiplier="0.4" useinhealthinterface="True">
+      <PreferredContainer secondary="respawncontainer" spawnprobability="0" notcampaign="true" />
+      <PreferredContainer primary="reactorcab,engcab" spawnprobability="0" />
+      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0" />
+      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0" />
+      <PreferredContainer primary="wreckreactorcab,abandonedreactorcab" spawnprobability="0" />
+      <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
+      <PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
+      <Price baseprice="450" sold="false" />
+      <Deconstruct>
+        <Item identifier="iron" />
+        <Item identifier="dementonite" />
+      </Deconstruct>
+      <Fabricate requiresrecipe="true">
+        <RequiredItem identifier="screwdriver" />
+        <RequiredItem identifier="dementonite" amount="2" />
+      </Fabricate>
+      <SuitableTreatment identifier="ntc_loosescrews" suitability="50" />
+      <MeleeWeapon reload="*0.7">
+        <Attack targetimpulse="8">
+          <Affliction identifier="lacerations" strength="7.5" />
+          <Affliction identifier="psychosis" strength="5" />
+          <Affliction identifier="stun" strength="0.2" />
+        </Attack>
+        <StatusEffect type="OnFailure" target="Character">
+          <Sound file="Content/Items/Alien/AlienTurret1.ogg" range="500" />
+          <Affliction identifier="psychosis" strength="10" />
+        </StatusEffect>
+      </MeleeWeapon>
+    </Item>
+  </Override>
+  <!-- fpga circuit -->
+  <Override>
+    <Item name="" identifier="fpgacircuit" category="Electrical" Tags="smallitem,signal" maxstacksizecharacterinventory="8" maxstacksize="32" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_metal_light" useinhealthinterface="True">
+      <Price baseprice="80">
+        <Price storeidentifier="merchantoutpost" />
+        <Price storeidentifier="merchantcity" sold="false" />
+        <Price storeidentifier="merchantresearch" multiplier="1.25" />
+        <Price storeidentifier="merchantmilitary" />
+        <Price storeidentifier="merchantmine" />
+        <Price storeidentifier="merchantengineering" multiplier="0.9" />
+      </Price>
+      <PreferredContainer primary="engcab" />
+      <PreferredContainer secondary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" amount="1" spawnprobability="0.05" />
+      <Deconstruct time="5">
+        <Item identifier="copper" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="5">
+        <RequiredSkill identifier="electrical" level="15" />
+        <RequiredItem identifier="plastic" />
+        <RequiredItem identifier="copper" amount="2" />
+        <RequiredItem identifier="tin" />
+      </Fabricate>
+      <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="true" amount="2">
+        <RequiredSkill identifier="electrical" level="15" />
+        <RequiredItem identifier="plastic" />
+        <RequiredItem identifier="copper" amount="2" />
+        <RequiredItem identifier="tin" />
+      </Fabricate>
+      <SuitableTreatment identifier="ntc_damagedelectronics" suitability="50" />
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="512,64,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="225,33,36,36" origin="0.5,0.5" />
+      <Body width="36" height="36" density="15" />
+      <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" />
+    </Item>
+  </Override>
+  <!-- welding tool -->
+  <Override>
+    <Item name="" identifier="weldingtool" category="Equipment" Tags="smallitem,weldingequipment,tool" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light" useinhealthinterface="True">
+      <PreferredContainer primary="engcab" amount="1" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer secondary="supplycab" amount="1" spawnprobability="0.2" notcampaign="true" />
+      <PreferredContainer primary="outpostsupplycab" amount="1" spawnprobability="0.5" />
+      <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+      <PreferredContainer primary="wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.05" />
+      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05" />
+      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" amount="1" spawnprobability="0.1" />
+      <Price baseprice="150">
+        <Price storeidentifier="merchantoutpost" minavailable="3" />
+        <Price storeidentifier="merchantcity" minavailable="2" />
+        <Price storeidentifier="merchantresearch" multiplier="1.25" minavailable="2" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.25" minavailable="2" />
+        <Price storeidentifier="merchantmine" multiplier="0.9" minavailable="10" />
+        <Price storeidentifier="merchantengineering" minavailable="5" multiplier="0.9" />
+      </Price>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="64,64,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Tools/tools.png" sourcerect="0,3,152,88" depth="0.55" origin="0.5,0.5" />
+      <!-- the item takes 10 seconds to break down in a deconstructor and turns into steel and plastic -->
+      <Deconstruct time="10">
+        <Item identifier="steel" />
+        <Item identifier="plastic" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredItem identifier="steel" amount="2" />
+        <RequiredItem identifier="plastic" amount="2" />
+      </Fabricate>
+      <!-- physics body -->
+      <Body width="150" height="60" density="40" />
+      <!-- the character will hold the item 50 pixels in front of him, with his hands at the handle1 and handle2 positions -->
+      <SuitableTreatment identifier="ntc_bentmetal" suitability="50" />
+      <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="60,0" handle1="-62,-16" handle2="-10,-6" msg="ItemMsgPickUpSelect" />
+      <RepairTool firedamage="10.0" structurefixamount="2.0" range="150" barrelpos="35,10" particles="weld" repairmultiple="true" repairthroughwalls="false" combatpriority="10" levelwallfixamount="-0.425" targetforce="10">
+        <!-- the item must contain a welding fuel tank for it to work -->
+        <RequiredItems items="weldingtoolfuel,oxygensource" type="Contained" msg="ItemMsgWeldingFuelRequired" />
+        <ParticleEmitter particle="weld" particlespersecond="50" copyentityangle="true" />
+        <ParticleEmitterHitStructure particle="weldspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="200" velocitymax="800" />
+        <ParticleEmitterHitStructure particle="GlowDot" particlespersecond="60" emitinterval="0.7" particleamount="10" scalemin="0.9" scalemax="1.0" anglemin="0" anglemax="360" velocitymin="10" velocitymax="50" />
+        <ParticleEmitterHitStructure particle="MistSmoke" particlespersecond="20" anglemin="-10" anglemax="10" velocitymin="0" velocitymax="50" />
+        <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="weldspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="200" velocitymax="800" />
+        <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="MistSmoke" particlespersecond="20" anglemin="-10" anglemax="10" velocitymin="10" velocitymax="100" />
+        <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
+        <sound file="Content/Items/Tools/WeldingLoop.ogg" type="OnUse" range="500.0" loop="true" />
+        <!-- when using, the contained welding fuel tank will detoriate (= lose fuel) -->
+        <StatusEffect type="OnUse" targettype="Contained" targets="weldingfueltank" Condition="-1.0" />
+        <StatusEffect type="OnUse" targettype="Contained" targets="incendiumfueltank" Condition="-0.6" />
+        <!-- welding a door, it will get stuck after a while -->
+        <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock" Stuck="5.0" Condition="3.0" />
+        <!-- do burn damage to characters -->
+        <StatusEffect type="OnUse" targettype="Limb">
+          <Affliction identifier="burn" amount="1.0" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="UseTarget" Condition="-3.0" />
+        <StatusEffect type="OnUse" targettype="Contained" targets="oxygentank" delay="1.0" stackable="false" Condition="-100.0" disabledeltatime="true">
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="5000" />
+          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="5000" />
+          <Explosion range="250.0" structuredamage="50" force="3.0" ignorefireeffectsfortags="oxygensource,weldingtoolfuel">
+            <Affliction identifier="burn" strength="50" />
+            <Affliction identifier="stun" strength="4" />
+          </Explosion>
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="oxygenitetank" delay="1.0" stackable="false" Condition="-100.0" disabledeltatime="true">
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="5000" />
+          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="5000" />
+          <Explosion range="250.0" structuredamage="110" force="6.0" ignorefireeffectsfortags="oxygensource,weldingtoolfuel">
+            <Affliction identifier="burn" strength="75" />
+            <Affliction identifier="stun" strength="4" />
+          </Explosion>
+        </StatusEffect>
+        <StatusEffect tags="mechanical" type="OnSuccess" target="UseTarget, Contained" Comparison="And" Condition="-0.30" duration="4.0">
+          <Conditional SpeciesName="human" />
+          <Conditional ismale="false" />
+          <Conditional isfemale="false" />
+          <ReduceAffliction identifier="lacerations" amount="5" />
+          <ReduceAffliction identifier="bitewounds" amount="5" />
+          <Sound file="Content\Items\Tools\WeldingLoop.ogg" range="500" />
+        </StatusEffect>
+        <StatusEffect tags="mechanical" type="OnFailure" target="UseTarget, Contained" Comparison="And" Condition="-0.50" duration="7.0">
+          <Conditional SpeciesName="human" />
+          <Conditional ismale="false" />
+          <Conditional isfemale="false" />
+          <ReduceAffliction identifier="lacerations" amount="3" />
+          <ReduceAffliction identifier="bitewounds" amount="3" />
+          <Sound file="Content\Items\Tools\WeldingLoop.ogg" range="500" />
+        </StatusEffect>
+        <!-- the tool can fix structures, i.e. walls and windows -->
+        <Fixable identifier="structure" />
+        <!-- mechanic skill 20 required to use the item -->
+        <RequiredSkill identifier="mechanical" level="20" />
+        <!-- if the skill requirement isn't met the welding fuel will be used 3 times as fast -->
+        <StatusEffect type="OnFailure" targettype="Contained" targets="weldingfueltank" Condition="-3.0" />
+        <StatusEffect type="OnFailure" targettype="Contained" targets="incendiumfueltank" Condition="-1.5" />
+        <LightComponent LightColor="1.0,0.9,0.7,1.0" Flicker="0.5">
+          <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
+        </LightComponent>
+      </RepairTool>
+      <!-- one welding fuel or oxygen tank can be contained inside the welding tool -->
+      <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="8,-35" containedspritedepth="0.56" containedstateindicatorstyle="tank">
+        <Containable items="weldingtoolfuel,oxygensource" />
+      </ItemContainer>
+      <aitarget sightrange="2000" soundrange="500" fadeouttime="3" />
+      <Quality>
+        <QualityStat stattype="RepairToolStructureRepairMultiplier" value="0.1" />
+      </Quality>
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <Upgrade gameversion="0.14.0.0">
+        <RepairTool>
+          <RequiredItems items="weldingtoolfuel,oxygensource" type="Contained" msg="ItemMsgWeldingFuelRequired" />
+        </RepairTool>
+      </Upgrade>
+      <Upgrade gameversion="0.15.4.0">
+        <ItemContainer itempos="8,-35" />
+      </Upgrade>
+    </Item>
+  </Override>
+  <!-- steel -->
+  <Override>
+    <Item name="" identifier="steel" category="Material" maxstacksizecharacterinventory="8" maxstacksize="32" Tags="smallitem,petfood3" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.4" impactsoundtag="impact_metal_light" useinhealthinterface="True">
+      <PreferredContainer primary="storagecab" />
+      <PreferredContainer secondary="wreckstorage,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
+      <Price baseprice="28">
+        <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="7" />
+        <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="10" />
+        <Price storeidentifier="merchantresearch" minavailable="6" />
+        <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="15" />
+        <Price storeidentifier="merchantmine" multiplier="0.9" minavailable="20" />
+      </Price>
+      <Fabricate suitablefabricators="fabricator" requiredtime="5">
+        <RequiredSkill identifier="mechanical" level="20" />
+        <RequiredItem identifier="carbon" />
+        <RequiredItem identifier="iron" amount="2" />
+      </Fabricate>
+      <Deconstruct time="5">
+        <Item identifier="carbon" copycondition="true" />
+        <Item identifier="iron" copycondition="true" />
+      </Deconstruct>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,128,64,64" />
+      <Sprite texture="Content/Items/Materials/Minerals.png" sourcerect="4,171,54,27" depth="0.55" origin="0.5,0.5" />
+      <Body width="50" height="25" density="30" />
+      <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+        <!-- Remove the item when fully used -->
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <!-- for scrap cannon -->
+      <Projectile characterusable="false" hitscan="true" hitscancount="16" removeonhit="true" spread="25">
+        <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,100" scalemultiplier="1,0.5" />
+        <Attack structuredamage="1" targetforce="4" itemdamage="15" severlimbsprobability="0.5">
+          <Affliction identifier="lacerations" strength="6" />
+          <Affliction identifier="bleeding" strength="6" />
+          <Affliction identifier="stun" strength="0.1" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+        </StatusEffect>
+      </Projectile>
+      <AiTarget sightrange="1000" static="true" />
+    </Item>
+  </Override>
+  <!-- crowbar -->
+  <Override>
+    <Item name="" identifier="crowbar" category="Equipment" Tags="smallitem,tool,simpletool,dooropeningtool,crowbaritem" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True" useinhealthinterface="True">
+      <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer primary="engcab" />
+      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
+      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" amount="1" spawnprobability="0.2" />
+      <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.2" />
+      <Price baseprice="20" minavailable="10">
+        <Price storeidentifier="merchantoutpost" />
+        <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="15" />
+        <Price storeidentifier="merchantresearch" multiplier="1.25" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.25" />
+        <Price storeidentifier="merchantmine" />
+      </Price>
+      <Deconstruct time="10">
+        <Item identifier="iron" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="30" />
+        <RequiredItem identifier="iron" amount="2" />
+      </Fabricate>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,0,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Tools/tools.png" sourcerect="227,225,130,30" depth="0.55" origin="0.5,0.5" />
+      <Body width="120" height="20" density="50" />
+      <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="60" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+        <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+          <Affliction identifier="blunttrauma" strength="10" />
+          <Affliction identifier="stun" strength="0.5" />
+          <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+          <StatusEffect type="OnUse" targettype="This,Character">
+            <Conditional robotorange="gt 0" />
+            <GiveTalentInfo talentidentifiers="highlytrainedprofessional" />
+          </StatusEffect>
+        </Attack>
+      </MeleeWeapon>
+      <aitarget sightrange="1000" soundrange="500" fadeouttime="1" />
+      <Quality>
+        <QualityStat stattype="StrikingPowerMultiplier" value="0.1" />
+      </Quality>
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+    <Item name="" identifier="v1frame" aliases="Combatframe3" category="Equipment" tags="diving,deepdiving,divinggear_wearableindoors" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+      <PreferredContainer primary="crewcab" />
+      <ContainedSprite name="V1 Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Images/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+      <Price baseprice="630" sold="false" />
+      <Deconstruct time="20">
+        <Item identifier="dementonite" />
+        <Item identifier="plastic" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="30">
+        <RequiredSkill identifier="mechanical" level="70" />
+        <RequiredSkill identifier="weapons" level="80" />
+        <RequiredItem identifier="dementonite" amount="3" />
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+        <RequiredItem identifier="aliencircuitry" />
+        <RequiredItem identifier="plastic" amount="2" />
+      </Fabricate>
+      <InventoryIcon name="Prototype Frame Icon" texture="%ModDir%/Images/frameicons.png" sourcerect="128,0,128,128" origin="0.5,0.5" />
+      <Sprite name="Prototype Combat Frame" texture="%ModDir%/Images/prototype_case.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+      <Body radius="45" width="34" density="20" />
+      <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+        <sprite name="Prototype Combat Frame Torso" texture="prototype.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+        <sprite name="Prototype Combat Frame Right Lower Arm" texture="prototype.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+        <sprite name="Prototype Combat Frame Left Lower Arm" texture="prototype.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+        <sprite name="Prototype Combat Frame Right Leg" texture="prototype.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+        <sprite name="Prototype Combat Frame Left Leg" texture="prototype.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+        <sprite name="Prototype Combat Frame Left Shoe" texture="prototype.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+        <sprite name="Prototype Combat Frame Right Shoe" texture="prototype.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+        <sprite name="Prototype Combat Frame Right Upper Arm" texture="prototype.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+        <sprite name="Prototype Combat Frame Left Upper Arm" texture="prototype.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+        <sprite name="Prototype Combat Frame Waist" texture="prototype.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+        <sprite name="Prototype Combat Frame Right Thigh" texture="prototype.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+        <sprite name="Prototype Combat Frame Left Thigh" texture="prototype.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+        <StatusEffect type="OnWearing" target="Character" Comparison="And" SpeedMultiplier="1.1" setvalue="true" disabledeltatime="true" PressureProtection="10000.0">
+          <Conditional ismale="false" />
+          <Conditional isfemale="false" />
+          <Affliction identifier="framebuff" amount="1" />
+          <Affliction identifier="v1buff" amount="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained, Character" Condition="-0.20">
+          <RequiredItem items="reactorfuel,mobilebattery" type="Contained" />
+          <ReduceAffliction identifier="stun" amount="0.15" />
+          <ReduceAffliction identifier="powerlow" amount="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained, Character" SpeedMultiplier="1.2" setvalue="true" disabledeltatime="true">
+          <RequiredItem items="reactorfuel" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+          <Conditional ismale="true" />
+          <Conditional isfemale="true" />
+          <Affliction identifier="lacerations" amount="2" />
+          <Affliction identifier="bleeding" amount="2" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="NearbyCharacters" range="300">
+          <Conditional bleeding="gt 3" />
+          <Affliction identifier="v1debuff" amount="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character,Contained" Condition="+2" Comparison="And">
+          <Conditional v1buff="gt 0" />
+          <Conditional v1debuff="gt 0" />
+          <ReduceAffliction identifier="damage" amount="5" />
+          <ReduceAffliction identifier="ntc_loosescrews" amount="5" />
+          <ReduceAffliction identifier="ntc_materialloss" amount="5" />
+          <ReduceAffliction identifier="ntc_bentmetal" amount="5" />
+          <ReduceAffliction identifier="ntc_damagedelectronics" amount="5" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+          <Conditional robotblue="0" />
+          <Conditional robotred="0" />
+          <Conditional robotgreen="0" />
+          <Conditional robotyellow="0" />
+          <Conditional robotorange="0" />
+          <Conditional robotpurple="0" />
+          <Conditional robotpink="0" />
+          <Conditional robotblack="0" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+          <Conditional robotblue="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+          <Conditional robotred="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+          <Conditional robotgreen="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+          <Conditional robotyellow="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+          <Conditional robotorange="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+          <Conditional robotpurple="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+          <Conditional robotpink="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+          <Conditional robotblack="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+          <Conditional robotwhite="1" />
+        </StatusEffect>
+        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,bitewounds,lacerations,burn,radiationsickness,gunshotwound" damagemultiplier="0.50" damagesound="LimbArmor" deflectprojectiles="true" />
+        <damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.4" />
+        <SkillModifier skillidentifier="weapons" skillvalue="15" />
+      </Wearable>
+      <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+        <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+      </Holdable>
+      <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+        <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable items="mobilebattery,reactorfuel" />
+        </SubContainer>
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable items="oxygensource,weldingtoolfuel" />
+        </SubContainer>
+      </ItemContainer>
+      <aitarget maxsightrange="1500" />
+    </Item>
+  </Override>
+  <Override>
+    <Item name="" identifier="medicframe" category="Equipment" tags="diving,deepdiving,divinggear_wearableindoors" scale="0.5" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+      <PreferredContainer primary="crewcab" />
+      <ContainedSprite name="Frame MK. II Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Items/Frames/mk1_case.png" sourcerect="176,20,74,153" depth="0.55" origin="-0.18,-0.25" />
+      <Price baseprice="500" minleveldifficulty="15">
+        <Price storeidentifier="merchantoutpost" sold="false" />
+        <Price storeidentifier="merchantcity" sold="false" />
+        <Price storeidentifier="merchantresearch" multiplier="1" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.5" />
+        <Price storeidentifier="merchantmine" sold="false" />
+      </Price>
+      <Deconstruct time="20">
+        <Item identifier="aluminium" />
+        <Item identifier="steel" />
+        <Item identifier="titanium" />
+        <Item identifier="plastic" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="30">
+        <RequiredSkill identifier="mechanical" level="50" />
+        <RequiredSkill identifier="medical" level="20" />
+        <RequiredItem identifier="rubber" amount="2" />
+        <RequiredItem identifier="frame2" />
+        <RequiredItem identifier="titaniumaluminiumalloy" />
+        <RequiredItem identifier="opium" amount="2" />
+      </Fabricate>
+      <InventoryIcon name="Lazarus Frame Icon" texture="%ModDir%/Images/frameicons.png" sourcerect="1,259,128,128" origin="0.5,0.5" />
+      <Sprite name="Lazarus Frame" texture="%ModDir%/Images/mediccase.png" sourcerect="7,44,131,74" depth="0.55" origin="0.5,0.5" />
+      <Body radius="45" width="34" density="20" />
+      <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect">
+        <sprite name="Lazarus Torso" texture="medicframe.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+        <sprite name="Lazarus Right Lower Arm" texture="medicframe.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="false" inheritsourcerect="true" />
+        <sprite name="Lazarus Left Lower Arm" texture="medicframe.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" hideotherwearables="false" inheritsourcerect="true" />
+        <sprite name="Lazarus Right Leg" texture="medicframe.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+        <sprite name="Lazarus Left Leg" texture="medicframe.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+        <sprite name="Lazarus Left Shoe" texture="medicframe.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+        <sprite name="Lazarus Right Shoe" texture="medicframe.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" hideotherwearables="true" inheritsourcerect="true" />
+        <sprite name="Lazarus Right Upper Arm" texture="medicframe.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+        <sprite name="Lazarus Left Upper Arm" texture="medicframe.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+        <sprite name="Lazarus Waist" texture="medicframe.png" limb="Waist" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+        <sprite name="Lazarus Right Thigh" texture="medicframe.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+        <sprite name="Lazarus Left Thigh" texture="medicframe.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="true" inheritsourcerect="true" />
+        <StatusEffect type="OnWearing" target="Character" Comparison="And" PressureProtection="7000.0">
+          <Conditional ismale="false" />
+          <Conditional isfemale="false" />
+          <Affliction identifier="framebuff" amount="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained, Character" targetslot="0" Condition="-0.25">
+          <RequiredItem items="mobilebattery" type="Contained" />
+          <ReduceAffliction identifier="powerlow" amount="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character" Comparison="And">
+          <Conditional ismale="false" />
+          <Conditional isfemale="false" />
+          <Affliction identifier="mediccharge" amount="3" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character" Comparison="Or">
+          <Conditional ismale="true" />
+          <Conditional isfemale="true" />
+          <Affliction identifier="lacerations" amount="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" Comparison="And" spritecolor="255,255,255,255">
+          <Conditional robotblue="0" />
+          <Conditional robotred="0" />
+          <Conditional robotgreen="0" />
+          <Conditional robotyellow="0" />
+          <Conditional robotorange="0" />
+          <Conditional robotpurple="0" />
+          <Conditional robotpink="0" />
+          <Conditional robotblack="0" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="53,120,168,255">
+          <Conditional robotblue="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="198,45,45,255">
+          <Conditional robotred="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="89,122,86,255">
+          <Conditional robotgreen="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="242,210,67,255">
+          <Conditional robotyellow="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="224,122,33,255">
+          <Conditional robotorange="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="165,79,198,255">
+          <Conditional robotpurple="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,140,222,255">
+          <Conditional robotpink="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="76,76,76,255">
+          <Conditional robotblack="1" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character, This" spritecolor="255,255,255,255">
+          <Conditional robotwhite="1" />
+        </StatusEffect>
+        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,radiationsickness,burn" damagemultiplier="0.70" damagesound="LimbArmor" deflectprojectiles="true" />
+      </Wearable>
+      <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
+        <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />
+      </Holdable>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+        <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+        <Button text="medframedischarge" connection="signal_out1">
+          <StatusEffect type="OnUse" target="Character">
+            <Conditional mediccharge="gte 99" />
+            <Spawnitem identifier="mediblast" spawnposition="This" />
+            <ReduceAffliction identifier="mediccharge" amount="100" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+      <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="battery" containedstateindicatorslot="0">
+        <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable items="mobilebattery" />
+        </SubContainer>
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable items="oxygensource,weldingtoolfuel" />
+        </SubContainer>
+        <SubContainer capacity="6" maxstacksize="8">
+          <Containable items="chem,medical,syringe" />
+        </SubContainer>
+      </ItemContainer>
+      <aitarget maxsightrange="1500" />
+    </Item>
+  </Override>
+  <Item name="" identifier="cyberbodyassistant" category="Equipment" tags="largeitem" scale="0.5" impactsoundtag="impact_metal_heavy" useinhealthinterface="True">
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" amount="12" />
+      <Item identifier="fulgurium" amount="6" />
+      <Item identifier="fpgacircuit" amount="20" />
+      <Item identifier="steel" amount="16" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="80" />
+      <RequiredItem identifier="cyberleg" amount="2" />
+      <RequiredItem identifier="cyberarm" amount="2" />
+      <RequiredItem identifier="cybercore" amount="1" />
+      <RequiredItem identifier="cyberskull" amount="1" />
+    </Fabricate>
+    <InventoryIcon name="" texture="%ModDir%/Images/prototype_case.png" sourcerect="87,183,131,74" origin="0.5,0.5" />
+    <Sprite name="Cybernetic Body" texture="%ModDir%/Images/prototype_case.png" sourcerect="87,183,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true"></Holdable>
+    <ItemComponent CharacterUsable="true" DeleteOnUse="true">
+      <StatusEffect type="OnUse" target="This" EventUserTag="triggerer_player">
+              <TriggerEvent identifier="cyberassistant" />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="" identifier="cyberbodycaptain" category="Equipment" tags="largeitem" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" amount="12" />
+      <Item identifier="fulgurium" amount="6" />
+      <Item identifier="fpgacircuit" amount="20" />
+      <Item identifier="steel" amount="16" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="80" />
+      <RequiredItem identifier="cyberleg" amount="2" />
+      <RequiredItem identifier="cyberarm" amount="2" />
+      <RequiredItem identifier="cybercore" amount="1" />
+      <RequiredItem identifier="cyberskull" amount="1" />
+    </Fabricate>
+    <InventoryIcon name="" texture="%ModDir%/Images/prototype_case.png" sourcerect="87,183,131,74" origin="0.5,0.5" />
+    <Sprite name="Cybernetic Body" texture="%ModDir%/Images/prototype_case.png" sourcerect="87,183,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true"></Holdable>
+    <ItemComponent CharacterUsable="true" DeleteOnUse="true">
+      <StatusEffect type="OnUse" target="This" EventUserTag="triggerer_player">
+        <TriggerEvent identifier="cybercaptain" />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="" identifier="cyberbodymedic" category="Equipment" tags="largeitem" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" amount="12" />
+      <Item identifier="fulgurium" amount="6" />
+      <Item identifier="fpgacircuit" amount="20" />
+      <Item identifier="steel" amount="16" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="80" />
+      <RequiredItem identifier="cyberleg" amount="2" />
+      <RequiredItem identifier="cyberarm" amount="2" />
+      <RequiredItem identifier="cybercore" amount="1" />
+      <RequiredItem identifier="cyberskull" amount="1" />
+    </Fabricate>
+    <InventoryIcon name="" texture="%ModDir%/Images/prototype_case.png" sourcerect="87,183,131,74" origin="0.5,0.5" />
+    <Sprite name="Cybernetic Body" texture="%ModDir%/Images/prototype_case.png" sourcerect="87,183,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true"></Holdable>
+    <ItemComponent CharacterUsable="true" DeleteOnUse="true">
+      <StatusEffect type="OnUse" target="This" EventUserTag="triggerer_player">
+        <TriggerEvent identifier="cybermedic" />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="" identifier="cyberbodymechanic" category="Equipment" tags="largeitem" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" amount="12" />
+      <Item identifier="fulgurium" amount="6" />
+      <Item identifier="fpgacircuit" amount="20" />
+      <Item identifier="steel" amount="16" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="80" />
+      <RequiredItem identifier="cyberleg" amount="2" />
+      <RequiredItem identifier="cyberarm" amount="2" />
+      <RequiredItem identifier="cybercore" amount="1" />
+      <RequiredItem identifier="cyberskull" amount="1" />
+    </Fabricate>
+    <InventoryIcon name="" texture="%ModDir%/Images/prototype_case.png" sourcerect="87,183,131,74" origin="0.5,0.5" />
+    <Sprite name="Cybernetic Body" texture="%ModDir%/Images/prototype_case.png" sourcerect="87,183,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true"></Holdable>
+    <ItemComponent CharacterUsable="true" DeleteOnUse="true">
+      <StatusEffect type="OnUse" target="This" EventUserTag="triggerer_player">
+        <TriggerEvent identifier="cybermechanic" />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="" identifier="cyberbodysecurity" category="Equipment" tags="largeitem" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" amount="12" />
+      <Item identifier="fulgurium" amount="6" />
+      <Item identifier="fpgacircuit" amount="20" />
+      <Item identifier="steel" amount="16" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="80" />
+      <RequiredItem identifier="cyberleg" amount="2" />
+      <RequiredItem identifier="cyberarm" amount="2" />
+      <RequiredItem identifier="cybercore" amount="1" />
+      <RequiredItem identifier="cyberskull" amount="1" />
+    </Fabricate>
+    <InventoryIcon name="" texture="%ModDir%/Images/prototype_case.png" sourcerect="87,183,131,74" origin="0.5,0.5" />
+    <Sprite name="Cybernetic Body" texture="%ModDir%/Images/prototype_case.png" sourcerect="87,183,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true"></Holdable>
+    <ItemComponent CharacterUsable="true" DeleteOnUse="true">
+      <StatusEffect type="OnUse" target="This" EventUserTag="triggerer_player">
+        <TriggerEvent identifier="cybersecurity" />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="" identifier="cyberbodyengineer" category="Equipment" tags="largeitem" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" amount="12" />
+      <Item identifier="fulgurium" amount="6" />
+      <Item identifier="fpgacircuit" amount="20" />
+      <Item identifier="steel" amount="16" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="80" />
+      <RequiredItem identifier="cyberleg" amount="2" />
+      <RequiredItem identifier="cyberarm" amount="2" />
+      <RequiredItem identifier="cybercore" amount="1" />
+      <RequiredItem identifier="cyberskull" amount="1" />
+    </Fabricate>
+    <InventoryIcon name="" texture="%ModDir%/Images/prototype_case.png" sourcerect="87,183,131,74" origin="0.5,0.5" />
+    <Sprite name="Cybernetic Body" texture="%ModDir%/Images/prototype_case.png" sourcerect="87,183,131,74" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="20" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true"></Holdable>
+    <ItemComponent CharacterUsable="true" DeleteOnUse="true">
+      <StatusEffect type="OnUse" target="This" EventUserTag="triggerer_player">
+        <TriggerEvent identifier="cyberengineer" />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="" identifier="cybercore" category="Equipment" tags="mediumitem" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="15">
+      <Item identifier="fulgurium" amount="2" />
+      <Item identifier="fpgacircuit" amount="2" />
+      <Item identifier="titaniumaluminiumalloy" amount="4" />
+      <Item identifier="steel" amount="8" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="medical" level="20" />
+      <RequiredItem identifier="alienpowercell" amount="1" />
+      <RequiredItem identifier="fulgurium" amount="2" />
+      <RequiredItem identifier="fpgacircuit" amount="2" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
+      <RequiredItem identifier="steel" amount="8" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/Images/smallchest.png" sourcerect="0,0,99,75" origin="0.5,0.5" />
+    <Sprite name="Makeshift Armor Item" texture="%ModDir%/Images/smallchest.png" sourcerect="0,0,99,75" depth="0.55" origin="0.5,0.5" />
+    <Body width="100" height="76" density="30" />
+    <Holdable slots="Any,RightHand+LeftHand" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpSelect" canbeselected="true" canbepicked="true"></Holdable>
+  </Item>
+	<Item name="" identifier="brainjar" category="Equipment" tags="mediumitem,braincontainer" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.4" fireproof="true" description="" impactsoundtag="impact_soft">
+		<PreferredContainer primary="medcab"/>
+		<Deconstruct time="20">
+			<Item identifier="silicon" />
+			<Item identifier="steel" />
+		</Deconstruct>
+		<Fabricate suitablefabricators="fabricator" requiredtime="30" requiresrecipe="false">
+			<Item identifier="silicon" />
+			<Item identifier="steel" />
+			<Item identifier="mannitol" />
+		</Fabricate>
+		<InventoryIcon texture="%ModDir%/Images/MainAtlas.png" sourcerect="0,256,87,128" origin="0.5,0.5" />
+		<Sprite texture="%ModDir%/Images/MainAtlas.png" depth="0.51" sourcerect="0,256,87,128" origin="0.5,0.5" />
+		<Body width="45" height="80" density="15" />
+		<Holdable slots="Any,RightHand,LeftHand" holdpos="0,-70" handle1="0,45" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" allowswappingwhenpicked="false" />
+		<ItemContainer capacity="1" hideitems="false">
+			<Containable items="braintransplant"/>
+		</ItemContainer>
+	</Item>
+	<Item name="" identifier="cyberskull" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" description="" useinhealthinterface="True" impactsoundtag="impact_metal_heavy" scale="0.325">
+    <PreferredContainer primary="secarmcab" amount="0" notcampaign="true"/>
+    <PreferredContainer secondary="wreckarmcab,abandonedarmcab,outpostarmcab" amount="1" spawnprobability="0.01" />
+    <PreferredContainer secondary="armcab"/>
+    <Price baseprice="50" sold="false">
+      <Price storeidentifier="merchantoutpost" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" />
+      <Price storeidentifier="merchantresearch"  />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" />
+      <Price storeidentifier="merchantmine"  />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="iron" amount="2" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="medical" level="70" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="steel" amount="4" />
+      <RequiredItem identifier="fpgacircuit" amount="4" />
+      <RequiredItem identifier="fulgurium" amount="2" /> 
+      <RequiredItem identifier="brainjar" amount="1" />
+    </Fabricate> 
+    <Body width="70" height="80" density="30"/>
+    <Holdable slots="Any,RightHand,LeftHand" holdpos="0,-70" handle1="0,45" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" allowswappingwhenpicked="false" />
+    <Sprite name="Makeshift Helmet Item" texture="%ModDir%/Images/headlightssmall.png" sourcerect="0,0,99,120" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Override>
+  <Item name="" identifier="cyberarm" category="Equipment" maxstacksizecharacterinventory="1" maxstacksize="2" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
+    <Price baseprice="500" soldbydefault="false">
+      <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+    </Price>
+    <PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
+    <PreferredContainer primary="locker" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="medical" level="20" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="steel" amount="4" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="fulgurium" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="steel" amount="3" />
+      <Item identifier="fpgacircuit" amount="3" />
+      <Item identifier="fulgurium" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="10,4,228,47" origin="0.5,0.5" depth="0.6" />
+    <InventoryIcon texture="%ModDir%/Images//InventoryItemIconAtlas.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
+    <Body width="114" height="23" density="50" />
+    <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="60" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+        <Affliction identifier="blunttrauma" strength="10" />
+        <Affliction identifier="stun" strength="0.5" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+    <SkillRequirementHint identifier="mechanical" level="70" />
+  </Item>
+  <Item name="" identifier="cyberleg" category="Equipment" maxstacksizecharacterinventory="1" maxstacksize="2" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
+    <Price baseprice="500" soldbydefault="false">
+      <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+    </Price>
+    <PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
+    <PreferredContainer primary="locker" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="medical" level="20" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+      <RequiredItem identifier="steel" amount="4" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="fulgurium" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="steel" amount="3" />
+      <Item identifier="fpgacircuit" amount="3" />
+      <Item identifier="fulgurium" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="4,64,63,238" origin="0.5,0.5" depth="0.6" />
+    <InventoryIcon texture="%ModDir%/Images//InventoryItemIconAtlas.png" sourcerect="128,0,128,128" origin="0.5,0.5" />
+    <Body width="30" height="115" density="50" />
+    <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="330" reload="1" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="10" itemdamage="5" targetimpulse="10">
+        <Affliction identifier="blunttrauma" strength="10" />
+        <Affliction identifier="stun" strength="0.5" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+    <SkillRequirementHint identifier="mechanical" level="70" />
+  </Item>
+  </Override>
+</Items>

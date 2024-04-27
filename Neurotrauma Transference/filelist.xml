@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Transference Testing" corepackage="false" modversion="1.3.3" gameversion="1.1.19.3" installtime="1699521421">
+	<Character file="%ModDir%/XML/Characters/Human/Human.xml" />
+	<Other file="%ModDir%/XML/Characters/Human/Ragdolls/HumanDefaultRagdoll.xml" />
+	<Item file="%ModDir%/XML/Items/items.xml" />
+	<Other file="%ModDir%/Images/Human/Human_female_mask.png" />
+	<Other file="%ModDir%/Images/Human/Human_male_mask.png" />
+	<Other file="%ModDir%/Images/Human/Human_female.png" />
+	<Other file="%ModDir%/Images/Human/Human_male.png" />
+	<Other file="%ModDir%/Lua/Autorun/init.lua" />
+	<Other file="%ModDir%/Lua/Scripts/humanupdate.lua" />
+	<Other file="%ModDir%/Lua/Scripts/items.lua" />
+	<Other file="%ModDir%/Lua/Scripts/helperfunctions.lua" />
+	<Afflictions file="%ModDir%/XML/Afflictions.xml" />
+	<RandomEvents file="%ModDir%/XML/Events.xml" />
+	<NPCSets file="%ModDir%/XML/NPCs.xml" />
+	<Text file="%ModDir%/XML/Text.xml" />
+</contentpackage>

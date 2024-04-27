@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Afflictions>
+	<Affliction name="" identifier="ow" healableinmedicalclinic="false" description="You are dead, stupid." limbspecific="false" indicatorlimb="Torso" maxstrength="1" affectmachines="false">
+    <Effect minstrength="0" maxstrength="1" multiplybymaxvitality="true" minvitalitydecrease="200" maxvitalitydecrease="300"></Effect>
+  </Affliction>
+	
+  <Affliction name="FATAL ERROR" identifier="roboterror" healableinmedicalclinic="false" description="NULL REFERENCE EXCEPTION" limbspecific="false" indicatorlimb="Torso" maxstrength="1" affectmachines="false">
+    <Effect minstrength="0" maxstrength="1" multiplybymaxvitality="true">
+      <StatusEffect target="Character" setvalue="true">
+        <Affliction identifier="stun" amount="1" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+	
+<Affliction name="Robitified" identifier="robotspawned" healableinmedicalclinic="false" description="You are now a robot!" limbspecific="false" indicatorlimb="Torso" maxstrength="1" affectmachines="false" showinhealthscannerthreshold="100" showiconthreshold="100"></Affliction>
+	
+	<Affliction name="" identifier="ntt_unscrewed" description="" targets="human" healableinmedicalclinic="false" limbspecific="false" indicatorlimb="Head" showiconthreshold="1" showinhealthscannerthreshold="1" type="gaze" isbuff="false" iconcolors="255,255,0,255;255,255,0,255" maxstrength="100">
+		<icon texture="%ModDir%/Images/AfflictionIcons3.png" sheetindex="0,1" sheetelementsize="128,128" origin="0,0" />
+	</Affliction>
+	<Affliction name="" identifier="ntt_cyberchest" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="1" showinhealthscannerthreshold="500" iconcolors="76,102,145,255;76,102,145,255">
+		<icon texture="%ModDir%/Images/AfflictionIcons3.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" />
+	</Affliction>
+	<Affliction name="" identifier="ntt_cyberskull" description="" healableinmedicalclinic="false" targets="human" type="resistance" isbuff="true" limbspecific="true" maxstrength="100" showiconthreshold="1" showinhealthscannerthreshold="500" iconcolors="76,102,145,255;76,102,145,255">
+		<icon texture="%ModDir%/Images/AfflictionIcons3.png" sheetindex="1,1" sheetelementsize="128,128" origin="0,0" />
+	</Affliction>
+	<Affliction name="" identifier="ntt_systemshock" description="" targets="human" healableinmedicalclinic="false" limbspecific="false" indicatorlimb="Torso" showiconthreshold="1" showinhealthscannerthreshold="1" type="gaze" isbuff="false" iconcolors="255,255,0,255;255,255,0,255" maxstrength="100">
+		<icon texture="%ModDir%/Images/AfflictionIcons3.png" sheetindex="0,0" sheetelementsize="128,128" origin="0,0" />
+		<Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="2"/>
+	</Affliction>
+	<Affliction name="" identifier="ntt_resistance" description="" targets="human" healableinmedicalclinic="false" limbspecific="false" indicatorlimb="Torso" showiconthreshold="500" showinhealthscannerthreshold="500" type="gaze" isbuff="true" iconcolors="76,102,145,255;76,102,145,255" maxstrength="100">
+		<Effect minstrength="1" maxstrength="1"
+		  resistancefor="damage,stun"
+		  minresistance="0.75"
+		  maxresistance="0.75"/>
+	</Affliction>
+	<Affliction name="" identifier="transh_amputation" description="" healableinmedicalclinic="false" targets="human" isbuff="true" type="s_amputation" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="false" indicatorlimb="Head" showiconthreshold="20" maxstrength="100" iconcolors="127,127,127,255;127,127,127,255">
+		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="4,6" sheetelementsize="128,128" origin="0,0" />
+	</Affliction>
+</Afflictions>

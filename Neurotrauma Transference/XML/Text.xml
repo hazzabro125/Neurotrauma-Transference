@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <entityname.cyberbodyassistant>Cybernetic Body (Assistant)</entityname.cyberbodyassistant>
+  <entityname.cyberbodycaptain>Cybernetic Body (Captain)</entityname.cyberbodycaptain>
+  <entityname.cyberbodymedic>Cybernetic Body (Medic)</entityname.cyberbodymedic>
+  <entityname.cyberbodymechanic>Cybernetic Body (Mechanic)</entityname.cyberbodymechanic>
+  <entityname.cyberbodysecurity>Cybernetic Body (Security Officer)</entityname.cyberbodysecurity>
+  <entityname.cyberbodyengineer>Cybernetic Body (Engineer)</entityname.cyberbodyengineer>
+
+  <entitydescription.cyberbodyassistant>An artificial body made entirely from metal. It seems to emanate an aura of incompetence.</entitydescription.cyberbodyassistant>
+  <entitydescription.cyberbodycaptain>An artificial body made entirely from metal. Adorned with an admiral's crest, a strange sense of authority is commanded by this vacant shell.</entitydescription.cyberbodycaptain>
+  <entitydescription.cyberbodymedic>An artificial body made entirely from metal. A sickly aroma of blood is present, thinly veiled by sterile chemicals.</entitydescription.cyberbodymedic>
+  <entitydescription.cyberbodymechanic>An artificial body made entirely from metal. The faint sound of gears grinding can be heard from within.</entitydescription.cyberbodymechanic>
+  <entitydescription.cyberbodysecurity>An artificial body made entirely from metal. Sporadic shockwaves shoot through the cold, hard, steel.</entitydescription.cyberbodysecurity>
+  <entitydescription.cyberbodyengineer>An artificial body made entirely from metal. You can feel sharp jolts of electicity running through it.</entitydescription.cyberbodyengineer>
+
+  <charactername.cyberassistant>Cyber-Assistant</charactername.cyberassistant>
+  <charactername.cybercaptain>Cyber-Captain</charactername.cybercaptain>
+  <charactername.cybermedic>Cyber-Medic</charactername.cybermedic>
+  <charactername.cybermechanic>Cyber-Mechanic</charactername.cybermechanic>
+  <charactername.cybersecurity>Cyber-Officer</charactername.cybersecurity>
+  <charactername.cyberengineer>Cyber-Engineer</charactername.cyberengineer>
+
+  <afflictionname.ntt_unscrewed>Unscrewed</afflictionname.ntt_unscrewed>
+  <afflictiondescription.ntt_unscrewed>The metal plating has been unfastened, leaving the brain exposed.</afflictiondescription.ntt_unscrewed>
+  <afflictionname.ntt_systemshock>System Shock</afflictionname.ntt_systemshock>
+  <afflictiondescription.ntt_systemshock>Vital components are damaged!</afflictiondescription.ntt_systemshock>
+	<afflictionname.ntt_cyberskull>Cyberskull</afflictionname.ntt_cyberskull>
+	<afflictiondescription.ntt_cyberskull>The skull is made of metal and electronics.</afflictiondescription.ntt_cyberskull>
+	<afflictionname.ntt_cyberchest>Cybernetic Disposition</afflictionname.ntt_cyberchest>
+	<afflictiondescription.ntt_cyberchest>A synthetic vessel composed of metal and electronics. Not quite a machine, but no longer a man.</afflictiondescription.ntt_cyberchest>
+	<afflictionname.transh_amputation>Amputation</afflictionname.transh_amputation>
+	<afflictiondescription.transh_amputation>The head was surgically amputated.</afflictiondescription.transh_amputation>
+
+  <entityname.cybercore>Cybernetic Core</entityname.cybercore>
+  <entitydescription.cybercore>An incomplete metallic chassis.</entitydescription.cybercore>
+
+  <entityname.brainjar>Brain jar</entityname.brainjar>
+  <entitydescription.brainjar>A container to hold brain transplants indefinitely</entitydescription.brainjar>
+
+  <entityname.cyberskull>Cybernetic Skull</entityname.cyberskull>
+  <entitydescription.cyberskull>A cybernetic skull designed to house a human brain.</entitydescription.cyberskull>
+</infotexts>
